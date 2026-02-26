@@ -2,7 +2,7 @@ const SECRET_PATTERNS: Array<RegExp> = [
   /\b(?![0-9a-f]{40}\b)[A-Za-z0-9]{32,}\b/g, // generic API keys / tokens (skip git SHA-1 hashes)
   /\bAKIA[0-9A-Z]{16}\b/g, // AWS access key id
   /\bghp_[A-Za-z0-9]{30,64}\b/g, // GitHub personal access token (variable length)
-  /\b(?![0-9a-f]{40}\b)[A-Za-z0-9+/]{40,}=*/g // base64-like secrets (skip git SHA-1 hashes)
+  /\b(?![0-9a-f]{40}\b)[A-Za-z0-9+]{40,}=*/g // base64-like secrets (skip git SHA-1 hashes; excludes '/' to avoid matching paths)
 ];
 
 const FILE_DENYLIST = [/\.env/i, /secrets/i, /config\.(json|yaml|yml)/i];

@@ -202,7 +202,7 @@
         },
         "runtimePerf": {
           "type": "object",
-          "additionalProperties": false,
+          "additionalProperties": true,
           "properties": {
             "latencyMsP50": { "type": ["number", "null"] },
             "latencyMsP95": { "type": ["number", "null"] },
