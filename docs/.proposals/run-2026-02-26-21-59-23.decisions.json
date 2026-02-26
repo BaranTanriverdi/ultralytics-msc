@@ -357,33 +357,6 @@
     ]
   },
   {
-    "jsonPath": "$.governance.assessments",
-    "decision": "accept",
-    "anchors": [
-      {
-        "path": ".github/workflows/conda-check-prs.yml",
-        "startLine": 1,
-        "endLine": 80,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      },
-      {
-        "path": ".github/workflows/docs.yml",
-        "startLine": 1,
-        "endLine": 80,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      },
-      {
-        "path": "tests/test_cli.py",
-        "startLine": 1,
-        "endLine": 200,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      }
-    ]
-  },
-  {
     "jsonPath": "$.governance.policies",
     "decision": "accept",
     "anchors": [
@@ -439,40 +412,6 @@
     ]
   },
   {
-    "jsonPath": "$.governance.riskRegister",
-    "decision": "accept",
-    "anchors": [
-      {
-        "path": "docs/en/help/environmental-health-safety.md",
-        "startLine": 1,
-        "endLine": 40,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "docs"
-      },
-      {
-        "path": "tests/test_exports.py",
-        "startLine": 1,
-        "endLine": 260,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      },
-      {
-        "path": "ultralytics/cfg/__init__.py",
-        "startLine": 560,
-        "endLine": 820,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      },
-      {
-        "path": "pyproject.toml",
-        "startLine": 40,
-        "endLine": 120,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      }
-    ]
-  },
-  {
     "jsonPath": "$.integration.api",
     "decision": "accept",
     "anchors": [
@@ -507,60 +446,6 @@
     ]
   },
   {
-    "jsonPath": "$.integration.driftSignals",
-    "decision": "accept",
-    "anchors": [
-      {
-        "path": "docs/en/guides/model-evaluation-insights.md",
-        "startLine": 1,
-        "endLine": 80,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "docs"
-      },
-      {
-        "path": "docs/en/guides/model-monitoring-and-maintenance.md",
-        "startLine": 1,
-        "endLine": 80,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "docs"
-      },
-      {
-        "path": "tests/test_python.py",
-        "startLine": 430,
-        "endLine": 520,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      }
-    ]
-  },
-  {
-    "jsonPath": "$.integration.errorModel",
-    "decision": "accept",
-    "anchors": [
-      {
-        "path": "docs/en/guides/yolo-performance-metrics.md",
-        "startLine": 1,
-        "endLine": 100,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "docs"
-      },
-      {
-        "path": "tests/test_exports.py",
-        "startLine": 1,
-        "endLine": 200,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      },
-      {
-        "path": "ultralytics/trackers/README.md",
-        "startLine": 40,
-        "endLine": 140,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "docs"
-      }
-    ]
-  },
-  {
     "jsonPath": "$.integration.fallbacks",
     "decision": "accept",
     "anchors": [
@@ -582,74 +467,6 @@
         "path": "ultralytics/data/base.py",
         "startLine": 200,
         "endLine": 320,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      }
-    ]
-  },
-  {
-    "jsonPath": "$.integration.observability",
-    "decision": "accept",
-    "anchors": [
-      {
-        "path": "docs/en/integrations/tensorboard.md",
-        "startLine": 1,
-        "endLine": 40,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "docs"
-      },
-      {
-        "path": "docs/en/integrations/weights-biases.md",
-        "startLine": 1,
-        "endLine": 40,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "docs"
-      },
-      {
-        "path": "tests/test_integrations.py",
-        "startLine": 1,
-        "endLine": 120,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      },
-      {
-        "path": "tests/test_python.py",
-        "startLine": 260,
-        "endLine": 340,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      }
-    ]
-  },
-  {
-    "jsonPath": "$.integration.operationalQualities",
-    "decision": "accept",
-    "anchors": [
-      {
-        "path": "README.md",
-        "startLine": 40,
-        "endLine": 100,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "docs"
-      },
-      {
-        "path": "pyproject.toml",
-        "startLine": 20,
-        "endLine": 80,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      },
-      {
-        "path": "tests/test_cuda.py",
-        "startLine": 1,
-        "endLine": 200,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "code"
-      },
-      {
-        "path": "tests/test_exports.py",
-        "startLine": 1,
-        "endLine": 200,
         "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
         "kind": "code"
       }
@@ -899,19 +716,6 @@
         "path": "docs/en/tasks/index.md",
         "startLine": 1,
         "endLine": 60,
-        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
-        "kind": "docs"
-      }
-    ]
-  },
-  {
-    "jsonPath": "$.mlCore.qualities",
-    "decision": "accept",
-    "anchors": [
-      {
-        "path": "README.md",
-        "startLine": 120,
-        "endLine": 230,
         "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
         "kind": "docs"
       }
