@@ -1,0 +1,1030 @@
+[
+  {
+    "jsonPath": "$.business.executiveSummary",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 1,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/README.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "pyproject.toml",
+        "startLine": 1,
+        "endLine": 60,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.business.hazardousUseCases",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/en/help/environmental-health-safety.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/help/privacy.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.business.intendedUse",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 40,
+        "endLine": 160,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/solutions/index.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/tasks/index.md",
+        "startLine": 1,
+        "endLine": 60,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.business.kpis",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 120,
+        "endLine": 230,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.business.outOfScopeUse",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 1,
+        "endLine": 60,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "pyproject.toml",
+        "startLine": 20,
+        "endLine": 60,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.business.userPopulations",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 230,
+        "endLine": 280,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/README.md",
+        "startLine": 60,
+        "endLine": 110,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.devInsight.architecture.dataFlow",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "ultralytics/data/augment.py",
+        "startLine": 1,
+        "endLine": 260,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/data/base.py",
+        "startLine": 1,
+        "endLine": 260,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/engine/exporter.py",
+        "startLine": 1,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/engine/trainer.py",
+        "startLine": 1,
+        "endLine": 200,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/engine/validator.py",
+        "startLine": 1,
+        "endLine": 200,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.devInsight.architecture.depsSummary",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "pyproject.toml",
+        "startLine": 40,
+        "endLine": 140,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.devInsight.architecture.publicApis",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "pyproject.toml",
+        "startLine": 90,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/__init__.py",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/cfg/__init__.py",
+        "startLine": 250,
+        "endLine": 520,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.devInsight.codeOverview.components",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/en/integrations/index.md",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "ultralytics/data/augment.py",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/engine/trainer.py",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/models/yolo/model.py",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/trackers/README.md",
+        "startLine": 1,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.devInsight.codeOverview.entrypoints",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/build_docs.py",
+        "startLine": 1,
+        "endLine": 60,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "pyproject.toml",
+        "startLine": 90,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/__init__.py",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/cfg/__init__.py",
+        "startLine": 520,
+        "endLine": 760,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.devInsight.codeOverview.languages",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "examples/YOLOv8-ONNXRuntime-CPP/README.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "examples/YOLOv8-ONNXRuntime-Rust/Cargo.toml",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "pyproject.toml",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.devInsight.qualitySignals.complexityHints",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "ultralytics/data/augment.py",
+        "startLine": 1,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/engine/exporter.py",
+        "startLine": 1,
+        "endLine": 160,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/solutions/solutions.py",
+        "startLine": 1,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/trackers/README.md",
+        "startLine": 1,
+        "endLine": 200,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.devInsight.runtimePerf",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 120,
+        "endLine": 230,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.governance.assessments",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": ".github/workflows/conda-check-prs.yml",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/workflows/docs.yml",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "tests/test_cli.py",
+        "startLine": 1,
+        "endLine": 200,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.governance.policies",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "LICENSE",
+        "startLine": 1,
+        "endLine": 20,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "README.md",
+        "startLine": 230,
+        "endLine": 280,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/help/code-of-conduct.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/help/contributing.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/help/environmental-health-safety.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/help/privacy.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/help/security.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.governance.riskRegister",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/en/help/environmental-health-safety.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "tests/test_exports.py",
+        "startLine": 1,
+        "endLine": 260,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/cfg/__init__.py",
+        "startLine": 560,
+        "endLine": 820,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "pyproject.toml",
+        "startLine": 40,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.integration.api",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "examples/tutorial.ipynb",
+        "startLine": 80,
+        "endLine": 200,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/__init__.py",
+        "startLine": 1,
+        "endLine": 20,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/cfg/__init__.py",
+        "startLine": 520,
+        "endLine": 880,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/engine/results.py",
+        "startLine": 1,
+        "endLine": 200,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.integration.driftSignals",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/en/guides/model-evaluation-insights.md",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/guides/model-monitoring-and-maintenance.md",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "tests/test_python.py",
+        "startLine": 430,
+        "endLine": 520,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.integration.errorModel",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/en/guides/yolo-performance-metrics.md",
+        "startLine": 1,
+        "endLine": 100,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "tests/test_exports.py",
+        "startLine": 1,
+        "endLine": 200,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/trackers/README.md",
+        "startLine": 40,
+        "endLine": 140,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.integration.fallbacks",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "tests/test_cuda.py",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "tests/test_exports.py",
+        "startLine": 200,
+        "endLine": 420,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/data/base.py",
+        "startLine": 200,
+        "endLine": 320,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.integration.observability",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/en/integrations/tensorboard.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/integrations/weights-biases.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "tests/test_integrations.py",
+        "startLine": 1,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "tests/test_python.py",
+        "startLine": 260,
+        "endLine": 340,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.integration.operationalQualities",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 40,
+        "endLine": 100,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "pyproject.toml",
+        "startLine": 20,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "tests/test_cuda.py",
+        "startLine": 1,
+        "endLine": 200,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "tests/test_exports.py",
+        "startLine": 1,
+        "endLine": 200,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.meta.links",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/datasets/detect/coco.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.meta.maturity",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": ".github/workflows/publish.yml",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "pyproject.toml",
+        "startLine": 20,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.meta.owners",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "pyproject.toml",
+        "startLine": 20,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.meta.title",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "pyproject.toml",
+        "startLine": 20,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.mlCore.artifactURIs",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 40,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "README.md",
+        "startLine": 120,
+        "endLine": 170,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docker/Dockerfile",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.mlCore.baselines",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/model_data.py",
+        "startLine": 1,
+        "endLine": 260,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.mlCore.datasets",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 120,
+        "endLine": 210,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/datasets/classify/imagenet.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/datasets/detect/coco.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/datasets/obb/dota-v2.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/datasets/pose/coco.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/datasets/segment/coco.md",
+        "startLine": 1,
+        "endLine": 40,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.mlCore.failureModes",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "docs/en/guides/model-evaluation-insights.md",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/guides/model-testing.md",
+        "startLine": 1,
+        "endLine": 60,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "tests/test_exports.py",
+        "startLine": 1,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/trackers/README.md",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.mlCore.features",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 40,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/guides/yolo-data-augmentation.md",
+        "startLine": 1,
+        "endLine": 60,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/modes/export.md",
+        "startLine": 1,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/solutions/index.md",
+        "startLine": 1,
+        "endLine": 60,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.mlCore.problem",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 40,
+        "endLine": 80,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "docs/en/tasks/index.md",
+        "startLine": 1,
+        "endLine": 60,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.mlCore.qualities",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 120,
+        "endLine": 230,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.mlCore.training",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": "README.md",
+        "startLine": 80,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "README.md",
+        "startLine": 120,
+        "endLine": 210,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "docs"
+      },
+      {
+        "path": "pyproject.toml",
+        "startLine": 40,
+        "endLine": 90,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": "ultralytics/cfg/default.yaml",
+        "startLine": 1,
+        "endLine": 120,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "config"
+      }
+    ]
+  },
+  {
+    "jsonPath": "$.provenance.changelog[0]",
+    "decision": "accept",
+    "anchors": [
+      {
+        "path": ".dockerignore",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/bug-report.yml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/config.yml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/feature-request.yml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/question.yml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/dependabot.yml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/workflows/cla.yml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/workflows/conda-check-prs.yml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/workflows/docker.yml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      },
+      {
+        "path": ".github/workflows/docs.yml",
+        "startLine": 1,
+        "endLine": 1,
+        "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+        "kind": "code"
+      }
+    ]
+  }
+]
