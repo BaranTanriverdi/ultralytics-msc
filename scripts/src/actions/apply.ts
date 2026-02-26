@@ -41,6 +41,31 @@ interface ApplyArgs {
   coverageThreshold?: number;
 }
 
+/**
+ * Repair facts whose jsonPointer was corrupted by the secret-redaction pass.
+ * The base64-like pattern could match path-separator-rich pointers, turning
+ * e.g. "/devInsight/qualitySignals/complexityHints" into "/<redacted>".
+ * We recover the correct pointer from jsonPath (always present, never redacted).
+ */
+function repairRedactedPointers(facts: Fact[]): void {
+  for (const fact of facts) {
+    if (fact.jsonPointer && fact.jsonPointer.includes("<redacted>")) {
+      const derived = jsonPathToPointer(fact.jsonPath);
+      if (derived) {
+        logger.warn(`Repairing redacted jsonPointer for ${fact.jsonPath}: "${fact.jsonPointer}" → "${derived}"`);
+        fact.jsonPointer = derived;
+      }
+    }
+  }
+}
+
+/** Convert a JSONPath like "$.foo.bar.baz" to a JSON Pointer "/foo/bar/baz". */
+function jsonPathToPointer(jsonPath: string): string | null {
+  if (!jsonPath || !jsonPath.startsWith("$.")) return null;
+  const segments = jsonPath.slice(2).split(".");
+  return "/" + segments.join("/");
+}
+
 async function main(): Promise<void> {
   const args = parseArgs();
   logger.info("Applying proposal", { runId: args.runId });
@@ -48,6 +73,7 @@ async function main(): Promise<void> {
   await ensureSeedArtifacts();
 
   const proposal = await readProposal(args.runId);
+  repairRedactedPointers(proposal.facts);
   const decisions = await readDecisions(args.runId);
 
   if (process.env.EVAL_STRICT === "1") {
