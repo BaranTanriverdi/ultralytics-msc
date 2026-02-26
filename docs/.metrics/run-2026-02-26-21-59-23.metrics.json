@@ -47,7 +47,7 @@
   "apply_success": 0,
   "schema_valid": 0,
   "yaml_hash": "",
-  "apply_attempts_until_success": 3,
+  "apply_attempts_until_success": 4,
   "receipt_path": "",
   "blocked_reason": "other:apply_failed_unknown"
 }
