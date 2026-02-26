@@ -1,0 +1,62 @@
+{
+  "name": "ml-system-card-scripts",
+  "version": "0.1.0",
+  "description": "CLI utilities for the ML System Card workflow",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && cp -r prompts dist/scripts/prompts 2>/dev/null || true",
+    "lint": "eslint --ext .ts src",
+    "test": "vitest run",
+    "test:live": "vitest run test/live",
+    "test:watch": "vitest",
+    "format": "prettier --write ..",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "workflow:generator": "cd .. && node scripts/dist/scripts/src/actions/generator.js",
+    "workflow:apply": "cd .. && node scripts/dist/scripts/src/actions/apply.js",
+    "workflow:metrics": "cd .. && node scripts/dist/scripts/src/metrics/collect.js",
+    "workflow:metrics-aggregate": "cd .. && node scripts/dist/scripts/src/metrics/aggregate.js",
+    "workflow:ci": "cd .. && node scripts/dist/scripts/src/actions/ci.js",
+    "workflow:diff-reporter": "cd .. && node scripts/dist/scripts/src/actions/diff-reporter.js",
+    "workflow:post-summary": "cd .. && node scripts/dist/scripts/src/actions/post-summary.js",
+    "report": "tsx src/generate_report.ts"
+  },
+  "dependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "fast-deep-equal": "^3.1.3",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "glob": "^13.0.0",
+    "js-tiktoken": "^1.0.21",
+    "js-yaml": "^4.1.0",
+    "jsonpath-plus": "^10.1.0",
+    "lodash-es": "^4.17.22",
+    "rfc6902": "^5.1.1",
+    "tree-sitter-python": "^0.25.0",
+    "web-tree-sitter": "^0.26.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/glob": "^8.1.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.12.12",
+    "@vitest/coverage-v8": "^1.6.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsonc": "^2.15.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^3.3.2",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.3",
+    "tsup": "^8.0.1",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^8.7.0",
+    "vitest": "^1.6.0"
+  }
+}

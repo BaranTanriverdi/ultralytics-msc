@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/ml-system-card/decisions.schema.json",
+  "title": "ML System Card Decisions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["jsonPath", "decision"],
+    "additionalProperties": false,
+    "properties": {
+      "jsonPath": { "type": "string", "minLength": 1 },
+      "decision": { "type": "string", "enum": ["accept", "reject", "edit"] },
+      "editedValue": {},
+      "anchors": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/anchor" }
+      },
+      "lock": { "type": "boolean" },
+      "skipGeneration": { "type": "boolean" }
+    },
+    "allOf": [
+      {
+        "if": { "properties": { "decision": { "const": "edit" } } },
+        "then": { "required": ["editedValue"] }
+      }
+    ]
+  },
+  "definitions": {
+    "anchor": {
+      "type": "object",
+      "required": ["path", "startLine", "endLine", "commit"],
+      "additionalProperties": false,
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "startLine": { "type": "integer", "minimum": 0 },
+        "endLine": { "type": "integer", "minimum": 0 },
+        "commit": { "type": "string", "pattern": "^([0-9a-fA-F]{7,40}|<redacted>)$" },
+        "fingerprint": { "type": "string" },
+        "kind": {
+          "type": "string",
+          "enum": ["code", "openapi", "metrics", "docs", "config", "test"]
+        }
+      }
+    }
+  }
+}

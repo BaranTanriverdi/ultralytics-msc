@@ -1,0 +1,49 @@
+$schema: ../lib/ml_system_card.schema.json
+meta:
+  title: New ML System Card
+  language: en
+  owners: []
+  tags: []
+  links: {}
+  createdAt: '2026-02-26T21:59:05.697Z'
+  lastUpdated: '2026-02-26T21:59:05.697Z'
+business:
+  nonGoals: []
+  kpis: []
+  outOfScopeUse: []
+  userPopulations: []
+  hazardousUseCases: []
+devInsight:
+  codeOverview:
+    languages: []
+    entrypoints: []
+    components: []
+  architecture:
+    publicApis: []
+    dataFlow: []
+    depsSummary: []
+  qualitySignals:
+    complexityHints: []
+    todoHotspots: []
+  runtimePerf: {}
+mlCore:
+  problem: null
+  datasets: []
+  features: []
+  baselines: []
+  qualities: []
+  failureModes: []
+integration:
+  errorModel: []
+  operationalQualities: []
+  fallbacks: []
+  observability: []
+  driftSignals: []
+governance:
+  policies: []
+  assessments: []
+  riskRegister: []
+  signOffs: []
+provenance:
+  changelog: []
+ai: {}
