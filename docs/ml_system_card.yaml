@@ -1,49 +1,2212 @@
-$schema: ../lib/ml_system_card.schema.json
-meta:
-  title: New ML System Card
-  language: en
-  owners: []
-  tags: []
-  links: {}
-  createdAt: '2026-02-26T21:59:05.697Z'
-  lastUpdated: '2026-02-26T21:59:05.697Z'
+ai:
+  fieldMeta:
+    - confidence: 0.3
+      needs_review: false
+      path: $.business.executiveSummary
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: docs
+          path: README.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/README.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 60
+          kind: code
+          path: pyproject.toml
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0
+      needs_review: false
+      path: $.business.hazardousUseCases
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/help/environmental-health-safety.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/help/privacy.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.4
+      needs_review: false
+      path: $.business.intendedUse
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 160
+          kind: docs
+          path: README.md
+          startLine: 40
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/solutions/index.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 60
+          kind: docs
+          path: docs/en/tasks/index.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.4
+      needs_review: false
+      path: $.business.kpis
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 230
+          kind: docs
+          path: README.md
+          startLine: 120
+      source:
+        kind: extracted
+    - confidence: 0.2
+      needs_review: false
+      path: $.business.outOfScopeUse
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 60
+          kind: docs
+          path: README.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 60
+          kind: code
+          path: pyproject.toml
+          startLine: 20
+      source:
+        kind: inferred
+    - confidence: 0.3
+      needs_review: false
+      path: $.business.userPopulations
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 280
+          kind: docs
+          path: README.md
+          startLine: 230
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 110
+          kind: docs
+          path: docs/README.md
+          startLine: 60
+      source:
+        kind: inferred
+    - confidence: 0.9
+      needs_review: false
+      path: $.devInsight.architecture.dataFlow
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 260
+          kind: code
+          path: ultralytics/data/augment.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 260
+          kind: code
+          path: ultralytics/data/base.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: code
+          path: ultralytics/engine/exporter.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 200
+          kind: code
+          path: ultralytics/engine/trainer.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 200
+          kind: code
+          path: ultralytics/engine/validator.py
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.92
+      needs_review: false
+      path: $.devInsight.architecture.depsSummary
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 140
+          kind: code
+          path: pyproject.toml
+          startLine: 40
+      source:
+        kind: extracted
+    - confidence: 0
+      needs_review: false
+      path: $.devInsight.architecture.publicApis
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: code
+          path: pyproject.toml
+          startLine: 90
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: code
+          path: ultralytics/__init__.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 520
+          kind: code
+          path: ultralytics/cfg/__init__.py
+          startLine: 250
+      source:
+        kind: extracted
+    - confidence: 0.2
+      needs_review: false
+      path: $.devInsight.codeOverview.components
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: docs
+          path: docs/en/integrations/index.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: code
+          path: ultralytics/data/augment.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: code
+          path: ultralytics/engine/trainer.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: code
+          path: ultralytics/models/yolo/model.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: docs
+          path: ultralytics/trackers/README.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.4
+      needs_review: false
+      path: $.devInsight.codeOverview.entrypoints
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 60
+          kind: code
+          path: docs/build_docs.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: code
+          path: pyproject.toml
+          startLine: 90
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: code
+          path: ultralytics/__init__.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 760
+          kind: code
+          path: ultralytics/cfg/__init__.py
+          startLine: 520
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.devInsight.codeOverview.languages
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: examples/YOLOv8-ONNXRuntime-CPP/README.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: code
+          path: examples/YOLOv8-ONNXRuntime-Rust/Cargo.toml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: code
+          path: pyproject.toml
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.4
+      needs_review: false
+      path: $.devInsight.qualitySignals.complexityHints
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: code
+          path: ultralytics/data/augment.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 160
+          kind: code
+          path: ultralytics/engine/exporter.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: code
+          path: ultralytics/solutions/solutions.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 200
+          kind: docs
+          path: ultralytics/trackers/README.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.3
+      needs_review: false
+      path: $.devInsight.runtimePerf
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 230
+          kind: docs
+          path: README.md
+          startLine: 120
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.governance.assessments
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: code
+          path: .github/workflows/conda-check-prs.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: code
+          path: .github/workflows/docs.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 200
+          kind: code
+          path: tests/test_cli.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.governance.policies
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 20
+          kind: code
+          path: LICENSE
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 280
+          kind: docs
+          path: README.md
+          startLine: 230
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/help/code-of-conduct.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/help/contributing.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/help/environmental-health-safety.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/help/privacy.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/help/security.md
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.2
+      needs_review: false
+      path: $.governance.riskRegister
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/help/environmental-health-safety.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 260
+          kind: code
+          path: tests/test_exports.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 820
+          kind: code
+          path: ultralytics/cfg/__init__.py
+          startLine: 560
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: code
+          path: pyproject.toml
+          startLine: 40
+      source:
+        kind: inferred
+    - confidence: 0.2
+      needs_review: false
+      path: $.integration.api
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 200
+          kind: code
+          path: examples/tutorial.ipynb
+          startLine: 80
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 20
+          kind: code
+          path: ultralytics/__init__.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 880
+          kind: code
+          path: ultralytics/cfg/__init__.py
+          startLine: 520
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 200
+          kind: code
+          path: ultralytics/engine/results.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0
+      needs_review: false
+      path: $.integration.driftSignals
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: docs
+          path: docs/en/guides/model-evaluation-insights.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: docs
+          path: docs/en/guides/model-monitoring-and-maintenance.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 520
+          kind: code
+          path: tests/test_python.py
+          startLine: 430
+      source:
+        kind: inferred
+    - confidence: 0.3
+      needs_review: false
+      path: $.integration.errorModel
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 100
+          kind: docs
+          path: docs/en/guides/yolo-performance-metrics.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 200
+          kind: code
+          path: tests/test_exports.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 140
+          kind: docs
+          path: ultralytics/trackers/README.md
+          startLine: 40
+      source:
+        kind: inferred
+    - confidence: 0.84
+      needs_review: false
+      path: $.integration.fallbacks
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: code
+          path: tests/test_cuda.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 420
+          kind: code
+          path: tests/test_exports.py
+          startLine: 200
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 320
+          kind: code
+          path: ultralytics/data/base.py
+          startLine: 200
+      source:
+        kind: inferred
+    - confidence: 0.2
+      needs_review: false
+      path: $.integration.observability
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/integrations/tensorboard.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/integrations/weights-biases.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: code
+          path: tests/test_integrations.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 340
+          kind: code
+          path: tests/test_python.py
+          startLine: 260
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.integration.operationalQualities
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 100
+          kind: docs
+          path: README.md
+          startLine: 40
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: code
+          path: pyproject.toml
+          startLine: 20
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 200
+          kind: code
+          path: tests/test_cuda.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 200
+          kind: code
+          path: tests/test_exports.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.4
+      needs_review: false
+      path: $.meta.links
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: README.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/datasets/detect/coco.md
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.1
+      needs_review: false
+      path: $.meta.maturity
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: code
+          path: .github/workflows/publish.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: code
+          path: pyproject.toml
+          startLine: 20
+      source:
+        kind: inferred
+    - confidence: 0.5
+      needs_review: false
+      path: $.meta.owners
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: code
+          path: pyproject.toml
+          startLine: 20
+      source:
+        kind: extracted
+    - confidence: 0.9
+      needs_review: false
+      path: $.meta.title
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: README.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: code
+          path: pyproject.toml
+          startLine: 20
+      source:
+        kind: inferred
+    - confidence: 0.4
+      needs_review: false
+      path: $.mlCore.artifactURIs
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: docs
+          path: README.md
+          startLine: 40
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 170
+          kind: docs
+          path: README.md
+          startLine: 120
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: code
+          path: docker/Dockerfile
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.2
+      needs_review: false
+      path: $.mlCore.baselines
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 260
+          kind: code
+          path: docs/model_data.py
+          startLine: 1
+      source:
+        kind: extracted
+    - confidence: 0.4
+      needs_review: false
+      path: $.mlCore.datasets
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 210
+          kind: docs
+          path: README.md
+          startLine: 120
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/datasets/classify/imagenet.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/datasets/detect/coco.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/datasets/obb/dota-v2.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/datasets/pose/coco.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 40
+          kind: docs
+          path: docs/en/datasets/segment/coco.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0
+      needs_review: false
+      path: $.mlCore.failureModes
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: docs
+          path: docs/en/guides/model-evaluation-insights.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 60
+          kind: docs
+          path: docs/en/guides/model-testing.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: code
+          path: tests/test_exports.py
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: docs
+          path: ultralytics/trackers/README.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.3
+      needs_review: false
+      path: $.mlCore.features
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: docs
+          path: README.md
+          startLine: 40
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 60
+          kind: docs
+          path: docs/en/guides/yolo-data-augmentation.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: docs
+          path: docs/en/modes/export.md
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 60
+          kind: docs
+          path: docs/en/solutions/index.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.2
+      needs_review: false
+      path: $.mlCore.problem
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 80
+          kind: docs
+          path: README.md
+          startLine: 40
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 60
+          kind: docs
+          path: docs/en/tasks/index.md
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0.4
+      needs_review: false
+      path: $.mlCore.qualities
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 230
+          kind: docs
+          path: README.md
+          startLine: 120
+      source:
+        kind: extracted
+    - confidence: 0.3
+      needs_review: false
+      path: $.mlCore.training
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: docs
+          path: README.md
+          startLine: 80
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 210
+          kind: docs
+          path: README.md
+          startLine: 120
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 90
+          kind: code
+          path: pyproject.toml
+          startLine: 40
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 120
+          kind: config
+          path: ultralytics/cfg/default.yaml
+          startLine: 1
+      source:
+        kind: inferred
+    - confidence: 0
+      needs_review: false
+      path: $.provenance.changelog[0]
+      repoSources:
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .dockerignore
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .github/ISSUE_TEMPLATE/bug-report.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .github/ISSUE_TEMPLATE/config.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .github/ISSUE_TEMPLATE/feature-request.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .github/ISSUE_TEMPLATE/question.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .github/dependabot.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .github/workflows/cla.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .github/workflows/conda-check-prs.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .github/workflows/docker.yml
+          startLine: 1
+        - commit: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+          endLine: 1
+          kind: code
+          path: .github/workflows/docs.yml
+          startLine: 1
+      source:
+        kind: extracted
 business:
+  executiveSummary: >-
+    Ultralytics YOLO is an open-source computer vision framework and model zoo that provides state-of-the-art
+    YOLO-family models (including the latest YOLO26) for object detection, tracking, instance segmentation,
+    classification, pose estimation, and oriented bounding box detection. The library is distributed as a Python package
+    and Docker images, with a unified CLI (`yolo`) and Python API (`ultralytics.YOLO`) for training, validation,
+    prediction, and export across many hardware and deployment targets. Pretrained models are provided for standard
+    benchmarks such as COCO, ImageNet, COCO Keypoints, COCO-Seg, and DOTAv1, with detailed accuracy and latency metrics.
+    The project is backed by extensive documentation, examples, and integrations with experiment tracking and deployment
+    tools, targeting both individual researchers and enterprise users via AGPL-3.0 and commercial licenses.
+  hazardousUseCases:
+    - >-
+      Using YOLO models as the sole decision-maker in safety-critical systems such as autonomous driving, industrial
+      control, or medical devices without additional validation, redundancies, or human oversight.
+    - >-
+      Deploying YOLO-based systems for mass surveillance, biometric identification, or tracking of individuals in ways
+      that may infringe on privacy rights or violate local regulations.
+    - >-
+      Relying on YOLO detections for legally binding decisions (e.g., law enforcement, access control, or credit
+      decisions) without appropriate governance, auditing, and fairness assessments.
+  intendedUse: >-
+    The library is intended to be used by developers, researchers, and organizations to train, evaluate, and deploy
+    YOLO-based models for computer vision tasks such as object detection, instance segmentation, multi-object tracking,
+    human pose estimation, classification, and oriented bounding box detection on images and videos. Typical uses
+    include analytics, counting, monitoring, region-based analytics, heatmaps, and other vision solutions implemented
+    via the built-in `solutions` module and CLI.
+  kpis:
+    - current: 57.5
+      name: COCO val2017 detection mAP50-95 for YOLO26x
+      target: 57.5
+    - current: 47
+      name: COCO-Seg val2017 mask mAP50-95 for YOLO26x-seg
+      target: 47
+    - current: 79.9
+      name: ImageNet top-1 accuracy for YOLO26x-cls
+      target: 79.9
   nonGoals: []
-  kpis: []
-  outOfScopeUse: []
-  userPopulations: []
-  hazardousUseCases: []
+  outOfScopeUse:
+    - General-purpose natural language processing or non-vision ML tasks that are unrelated to image or video data.
+    - >-
+      Applications that require formal guarantees of fairness, robustness, or certification (e.g., regulated medical
+      diagnostics) without additional domain-specific validation and certification outside this library.
+  userPopulations:
+    - >-
+      Students, researchers, and enthusiasts using the AGPL-3.0 licensed package for open research and educational
+      projects.
+    - Applied ML and software engineers integrating YOLO models into analytics, monitoring, and vision-powered products.
+    - Enterprise teams deploying Ultralytics models commercially under the Ultralytics Enterprise License.
 devInsight:
-  codeOverview:
-    languages: []
-    entrypoints: []
-    components: []
   architecture:
-    publicApis: []
-    dataFlow: []
-    depsSummary: []
+    dataFlow:
+      - >-
+        User specifies a dataset configuration (e.g., coco.yaml, coco8.yaml) that defines image and label locations and
+        metadata.
+      - >-
+        Images and labels are loaded via BaseDataset/YOLODataset in ultralytics.data.base and ultralytics.data.dataset,
+        with caching and rectangular batching optionally enabled.
+      - >-
+        Data augmentations and transforms (e.g., mosaic, MixUp, CutMix, color and geometric transforms) are applied in
+        ultralytics.data.augment, yielding batches of images plus bounding boxes, segments, and keypoints.
+      - >-
+        Batches are fed through model architectures defined in ultralytics.models.* (YOLO26/YOLOv8/YOLOv10, RT-DETR,
+        SAM, etc.) using PyTorch, via training/validation loops in ultralytics.engine.trainer and
+        ultralytics.engine.validator.
+      - >-
+        Training and evaluation metrics (e.g., mAP, accuracy, keypoint AP) are computed via ultralytics.utils.metrics
+        and logged to console and optional integrations (TensorBoard, Weights & Biases, MLflow).
+      - >-
+        Trained weights and exported artifacts (TorchScript, ONNX, OpenVINO, TensorRT, TFLite, NCNN, etc.) are produced
+        via ultralytics.engine.exporter and ultralytics.utils.export, and can be consumed via the CLI (`yolo predict`,
+        `yolo track`) or Python API (`YOLO(...).predict`, `.track`, `.export`).
+    depsSummary:
+      - >-
+        Core training and inference depend on PyTorch (torch>=1.8.0) and torchvision for model definition and tensor
+        operations.
+      - Numerical computation and data handling rely on numpy, scipy, and polars.
+      - Image and video I/O and visualization depend on opencv-python, pillow, and matplotlib.
+      - >-
+        Export and deployment integrations use optional dependencies such as onnx, onnxruntime, openvino,
+        tensorflow/tfjs, TensorRT, MNN, NCNN, CoreML, and others declared in the `export` optional dependency group.
+      - >-
+        Experiment tracking and observability integrate with Weights & Biases, MLflow, TensorBoard, ClearML, Neptune,
+        and DVC via optional `logging` dependencies.
+      - >-
+        The library is packaged as a Python project with setuptools, targeting Python>=3.8 across Linux, macOS, and
+        Windows.
+    publicApis:
+      - file: ultralytics/cfg/__init__.py
+        name: YOLO CLI entrypoint
+        path: >-
+          yolo [task] [mode] [args...] (e.g., `yolo detect train`, `yolo predict`, `yolo export`, `yolo track`, `yolo
+          solutions ...`)
+      - file: ultralytics/__init__.py
+        name: Python model API
+        path: ultralytics.YOLO(...).train()/val()/predict()/track()/export()
+      - file: ultralytics/__init__.py
+        name: Python RT-DETR API
+        path: ultralytics.RTDETR(...).train()/val()/predict()/export()
+      - file: ultralytics/cfg/__init__.py
+        name: Ultralytics Solutions CLI
+        path: yolo solutions [count|heatmap|queue|workout|analytics|... ] arg=value ...
+  codeOverview:
+    components:
+      - keyFiles:
+          - ultralytics/models/yolo/model.py
+          - ultralytics/cfg/models/26/yolo26.yaml
+          - ultralytics/models/rtdetr/model.py
+          - ultralytics/models/sam/model.py
+        name: Model architectures
+        summary: >-
+          Implementations of YOLO family models (YOLO26, YOLO11, YOLOv8–v10, YOLO-World, YOLOE), RT-DETR, SAM/FastSAM,
+          and related heads and backbones.
+      - keyFiles:
+          - ultralytics/engine/trainer.py
+          - ultralytics/engine/validator.py
+          - ultralytics/engine/predictor.py
+          - ultralytics/engine/exporter.py
+          - ultralytics/engine/tuner.py
+        name: Training and evaluation engine
+        summary: Config-driven training, validation, prediction, export, and hyperparameter tuning loops with callback support.
+      - keyFiles:
+          - ultralytics/data/base.py
+          - ultralytics/data/dataset.py
+          - ultralytics/data/augment.py
+          - ultralytics/data/build.py
+          - ultralytics/data/converter.py
+        name: Data pipeline
+        summary: >-
+          Dataset definitions, loaders, augmentation, dataset conversion utilities, and dataset splitting for multiple
+          tasks and formats.
+      - keyFiles:
+          - ultralytics/trackers/bot_sort.py
+          - ultralytics/trackers/byte_tracker.py
+          - ultralytics/trackers/track.py
+          - ultralytics/solutions/object_counter.py
+          - ultralytics/solutions/heatmap.py
+          - ultralytics/solutions/queue_management.py
+        name: Tracking and video analytics
+        summary: >-
+          Multi-object trackers (BoT-SORT, ByteTrack) and high-level analytics solutions for counting, heatmaps, queue
+          management, parking, and speed estimation.
+      - keyFiles:
+          - ultralytics/engine/exporter.py
+          - ultralytics/utils/export/engine.py
+          - ultralytics/utils/export/tensorflow.py
+          - ultralytics/utils/export/imx.py
+          - docs/en/integrations/*.md
+        name: Integrations and exports
+        summary: >-
+          Support for exporting models to ONNX, OpenVINO, TensorRT, CoreML, TFLite, MNN, NCNN, IMX, ExecuTorch, Axelera,
+          and interacting with Triton, SAHI, and various runtimes.
+    entrypoints:
+      - >-
+        Command-line interface via the `yolo` and `ultralytics` console scripts defined in pyproject.toml, implemented
+        in ultralytics.cfg.entrypoint.
+      - >-
+        Python API entrypoint through the `ultralytics` package, exposing model classes such as YOLO, YOLOWorld, YOLOE,
+        NAS, SAM, FastSAM, and RTDETR from ultralytics.__init__.
+      - High-level solutions entrypoint via `yolo solutions ...` which dispatches to classes in ultralytics.solutions.*.
+      - >-
+        Documentation build entrypoint via docs/build_docs.py and docs/build_reference.py for generating and
+        post-processing MkDocs-based documentation.
+    languages:
+      - Python (core library, CLI, training and inference engine, data pipeline, integrations, tests).
+      - C++ (inference examples for ONNX Runtime, OpenVINO, TensorRT, LibTorch, MNN).
+      - Rust (ONNX Runtime demos for YOLO series).
   qualitySignals:
-    complexityHints: []
+    complexityHints:
+      - >-
+        The data augmentation pipeline in ultralytics.data.augment.py is large and feature-rich (mosaic, MixUp, CutMix,
+        perspective transforms, classification augmentations), indicating a complex area where subtle changes may impact
+        model performance.
+      - >-
+        The exporter and multi-backend support in ultralytics.engine.exporter and ultralytics/utils/export/* handle many
+        target formats and edge cases (dynamic shapes, INT8/FP16, NMS-on-graph), making them important but intricate
+        components.
+      - >-
+        Tracking and solutions modules (ultralytics.trackers.*, ultralytics.solutions.*) combine model inference,
+        multi-object tracking, and custom business logic (e.g., counting, speed estimation, queue analytics), which
+        increases integration complexity compared to pure model code.
     todoHotspots: []
-  runtimePerf: {}
-mlCore:
-  problem: null
-  datasets: []
-  features: []
-  baselines: []
-  qualities: []
-  failureModes: []
-integration:
-  errorModel: []
-  operationalQualities: []
-  fallbacks: []
-  observability: []
-  driftSignals: []
+  runtimePerf:
+    cls_yolo26_imagenet_val:
+      metric: top1 / top5 accuracy
+      models:
+        yolo26n-cls:
+          cpuOnnxMs: 5
+          imgSize: 224
+          t4TensorRT10Ms: 1.1
+          top1: 71.4
+          top5: 90.1
+        yolo26x-cls:
+          cpuOnnxMs: 41.4
+          imgSize: 224
+          t4TensorRT10Ms: 3.8
+          top1: 79.9
+          top5: 95
+    det_yolo26_coco_val2017:
+      metric: mAP50-95
+      models:
+        yolo26n:
+          cpuOnnxMs: 38.9
+          flopsB: 5.4
+          imgSize: 640
+          mAP: 40.9
+          paramsM: 2.4
+          t4TensorRT10Ms: 1.7
+        yolo26x:
+          cpuOnnxMs: 526
+          flopsB: 194
+          imgSize: 640
+          mAP: 57.5
+          paramsM: 55.7
+          t4TensorRT10Ms: 11.8
+    seg_yolo26_cocoseg_val2017:
+      metric: mAPbox50-95 / mAPmask50-95
+      models:
+        yolo26n-seg:
+          cpuOnnxMs: 53.3
+          imgSize: 640
+          mAPbox: 39.6
+          mAPmask: 33.9
+          t4TensorRT10Ms: 2.1
+        yolo26x-seg:
+          cpuOnnxMs: 787
+          imgSize: 640
+          mAPbox: 56.5
+          mAPmask: 47
+          t4TensorRT10Ms: 16.4
 governance:
-  policies: []
   assessments: []
+  policies:
+    - >-
+      The core library and docs are licensed under the OSI-approved GNU Affero General Public License v3.0 (AGPL-3.0),
+      with a separate Ultralytics Enterprise License available for commercial use cases to bypass AGPL copyleft
+      obligations.
+    - >-
+      Contribution and collaboration are guided by documented contributing instructions and a code of conduct in the
+      docs/help section, alongside explicit privacy, security, and environmental health & safety help pages.
+    - >-
+      The project maintains clear licensing for documentation and models, and encourages open collaboration while
+      offering commercial licensing for integrated products and services.
   riskRegister: []
   signOffs: []
+integration:
+  api:
+    inputSchema: >-
+      For the CLI: `yolo [task] [mode] model=path/to/model.pt data=path/to/data.yaml source=PATH_OR_URL imgsz=INT ...`.
+      For the Python API: `YOLO('model.pt').train(data='data.yaml', epochs=int, imgsz=int, device='cpu|cuda', **kwargs)`
+      and `YOLO('model.pt')(source, imgsz=int, conf=float, iou=float, stream=bool, **kwargs)` where `source` may be file
+      paths, URLs, numpy arrays, PIL Images, or torch.Tensors.
+    outputSchema: >-
+      CLI commands write metrics to stdout and optionally files (runs/* directories), prediction images/videos, exported
+      model artifacts, labels, and JSON/CSV metrics. Python API calls return `Results` objects (defined in
+      ultralytics.engine.results.Results) containing boxes, masks, keypoints, classification scores, and helper methods
+      (`plot`, `to_df`, `to_json`, `save_txt`, `save_crop`).
+    version: 8.4.18
+  driftSignals: []
+  errorModel: []
+  fallbacks:
+    - >-
+      If CUDA is unavailable or misconfigured, the library automatically falls back to CPU execution, as seen in tests
+      that branch on CUDA availability and use `device='cpu'`.
+    - >-
+      For export formats or runtimes that are unsupported in a given environment (e.g., CoreML on non-macOS,
+      TensorFlow/TFLite on certain platforms), tests are conditionally skipped and requirements are checked at runtime,
+      signaling to users that a different deployment path or environment is needed.
+    - >-
+      When data caching to RAM or disk is not possible due to resource limits, the data loader gracefully disables
+      caching with informative warnings instead of failing hard.
+  observability: []
+  operationalQualities: []
+meta:
+  createdAt: "2026-02-26T21:59:05.697Z"
+  language: en
+  lastUpdated: "2026-02-26T21:59:05.697Z"
+  links:
+    dataset: https://docs.ultralytics.com/datasets/detect/coco/
+    demo: https://platform.ultralytics.com/ultralytics/yolo26
+    repo: https://github.com/ultralytics/ultralytics
+  maturity: Pilot
+  owners:
+    - name: Glenn Jocher
+      role: Author, Core maintainer
+    - name: Jing Qiu
+      role: Author, Core maintainer
+    - name: Ultralytics
+      role: Maintainer and commercial licensor
+  tags: []
+  title: Ultralytics YOLO
+mlCore:
+  artifactURIs:
+    dockerImage: docker.io/ultralytics/ultralytics
+    model: https://github.com/ultralytics/assets/releases (pretrained YOLO weights such as yolo26n.pt, yolo26x.pt)
+  baselines:
+    - >-
+      Internal model_data.py compares YOLO26 and YOLO11 against prior YOLO families (YOLOv3, YOLOv5, YOLOv6, YOLOv7,
+      YOLOv8, YOLOv9, YOLOv10), other detectors such as PP-YOLOE+, DAMO-YOLO, YOLOX, RTDETRv2/v3, EfficientDet,
+      Gold-YOLO, D-FINE, RTMDet, YOLO-NAS, FCOS, SSD, LW-DETR, and YOLO-World, with standardized mAP, latency,
+      parameter, and FLOPs metrics.
+    - >-
+      These baselines provide reference performance for common COCO-style detection settings at 640×640 resolution and
+      various model scales (n/s/m/l/x).
+  datasets:
+    - license: See the COCO dataset license on the official site.
+      name: COCO (val2017, train2017)
+      uri: https://docs.ultralytics.com/datasets/detect/coco/
+    - license: See the COCO dataset license on the official site.
+      name: COCO-Seg (instance segmentation)
+      uri: https://docs.ultralytics.com/datasets/segment/coco/
+    - license: See the COCO Keypoints dataset license on the official site.
+      name: COCO Keypoints / COCO-Pose
+      uri: https://docs.ultralytics.com/datasets/pose/coco/
+    - license: See the DOTA dataset license on the official site.
+      name: DOTAv1 (Oriented Object Detection)
+      uri: https://docs.ultralytics.com/datasets/obb/dota-v2/
+    - license: See the ImageNet dataset license on the official site.
+      name: ImageNet (classification)
+      uri: https://docs.ultralytics.com/datasets/classify/imagenet/
+    - license: Derived subsets of COCO; inherit COCO licensing.
+      name: COCO8 / COCO128 mini datasets
+      uri: https://docs.ultralytics.com/datasets/detect/coco/
+  failureModes:
+    - >-
+      Performance degradation on domains and objects that differ significantly from the training datasets (e.g., COCO,
+      DOTAv1, ImageNet) without appropriate fine-tuning or domain adaptation.
+    - >-
+      Lower accuracy on very small, heavily occluded, or motion-blurred objects, especially at low input resolutions or
+      aggressive post-processing thresholds (conf/iou).
+    - >-
+      Potential misalignment between exported model behavior and PyTorch reference behavior if export options (dynamic
+      shapes, NMS-in-graph, INT8/FP16 quantization) are misconfigured or unsupported by the deployment runtime.
+    - >-
+      Tracking-specific failure modes such as ID switches, track fragmentation, or missed tracks in highly crowded or
+      low-frame-rate video inputs.
+  features:
+    - >-
+      Unified support for multiple computer vision tasks: object detection, instance segmentation, classification, human
+      pose estimation, oriented bounding box detection, and multi-object tracking.
+    - >-
+      Config-driven training, validation, and hyperparameter tuning with automatic device selection, mixed precision
+      support, and distributed training support.
+    - >-
+      Rich data augmentation strategies including mosaic, MixUp, CutMix, Albumentations integration,
+      classification-specific augmentations, and grayscale/multispectral support.
+    - >-
+      Export to many deployment targets (TorchScript, ONNX, OpenVINO, TensorRT, TFLite, NCNN, MNN, IMX, ExecuTorch,
+      Axelera, RKNN, CoreML, TF.js, EdgeTPU) through a single `yolo export` command.
+    - >-
+      High-level, ready-to-use solutions for counting, heatmaps, speed estimation, queue and parking management,
+      similarity search, and security alarm workflows.
+  problem: >-
+    Supervised computer vision for images and videos, focusing on object detection, instance segmentation, image
+    classification, keypoint-based human pose estimation, oriented bounding box detection, and multi-object tracking.
+  qualities: []
+  training:
+    framework: PyTorch
+    frameworkVersion: "2000-01-08T00:00:00.000Z"
+    hardware: >-
+      Training and benchmarking demonstrated on NVIDIA GPUs (e.g., Amazon EC2 P4d with TensorRT T4 latency reports) and
+      CPU-only environments; supports Linux, macOS, and Windows.
+    hyperparams:
+      augmentations: mosaic, MixUp, CutMix, hsv, flip, scale, translate
+      batch: 16
+      conf: 0.25
+      epochs: 100
+      imgsz: 640
+      iou: 0.45
+      optimizer: SGD or AdamW (configurable)
+      taskSpecific: task=detect|segment|classify|pose|obb
 provenance:
-  changelog: []
-ai: {}
+  changelog:
+    - date: "2026-02-26T21:59:50.507Z"
+      files:
+        - path: .dockerignore
+        - path: .github/ISSUE_TEMPLATE/bug-report.yml
+        - path: .github/ISSUE_TEMPLATE/config.yml
+        - path: .github/ISSUE_TEMPLATE/feature-request.yml
+        - path: .github/ISSUE_TEMPLATE/question.yml
+        - path: .github/dependabot.yml
+        - path: .github/workflows/cla.yml
+        - path: .github/workflows/conda-check-prs.yml
+        - path: .github/workflows/docker.yml
+        - path: .github/workflows/docs.yml
+        - path: .github/workflows/format.yml
+        - path: .github/workflows/links.yml
+        - path: .github/workflows/merge-main-into-prs.yml
+        - path: .github/workflows/mirror.yml
+        - path: .github/workflows/publish.yml
+        - path: .github/workflows/stale.yml
+        - path: .gitignore
+        - path: CITATION.cff
+        - path: CONTRIBUTING.md
+        - path: LICENSE
+        - path: README.md
+        - path: README.zh-CN.md
+        - path: docker/Dockerfile
+        - path: docker/Dockerfile-arm64
+        - path: docker/Dockerfile-conda
+        - path: docker/Dockerfile-cpu
+        - path: docker/Dockerfile-export
+        - path: docker/Dockerfile-jetson-jetpack4
+        - path: docker/Dockerfile-jetson-jetpack5
+        - path: docker/Dockerfile-jetson-jetpack6
+        - path: docker/Dockerfile-jupyter
+        - path: docker/Dockerfile-nvidia-arm64
+        - path: docker/Dockerfile-python
+        - path: docker/Dockerfile-python-export
+        - path: docker/Dockerfile-runner
+        - path: docs/README.md
+        - path: docs/build_docs.py
+        - path: docs/build_reference.py
+        - path: docs/coming_soon_template.md
+        - path: docs/en/CNAME
+        - path: docs/en/datasets/classify/caltech101.md
+        - path: docs/en/datasets/classify/caltech256.md
+        - path: docs/en/datasets/classify/cifar10.md
+        - path: docs/en/datasets/classify/cifar100.md
+        - path: docs/en/datasets/classify/fashion-mnist.md
+        - path: docs/en/datasets/classify/imagenet.md
+        - path: docs/en/datasets/classify/imagenet10.md
+        - path: docs/en/datasets/classify/imagenette.md
+        - path: docs/en/datasets/classify/imagewoof.md
+        - path: docs/en/datasets/classify/index.md
+        - path: docs/en/datasets/classify/mnist.md
+        - path: docs/en/datasets/detect/african-wildlife.md
+        - path: docs/en/datasets/detect/argoverse.md
+        - path: docs/en/datasets/detect/brain-tumor.md
+        - path: docs/en/datasets/detect/coco.md
+        - path: docs/en/datasets/detect/coco12-formats.md
+        - path: docs/en/datasets/detect/coco128.md
+        - path: docs/en/datasets/detect/coco8-grayscale.md
+        - path: docs/en/datasets/detect/coco8-multispectral.md
+        - path: docs/en/datasets/detect/coco8.md
+        - path: docs/en/datasets/detect/construction-ppe.md
+        - path: docs/en/datasets/detect/globalwheat2020.md
+        - path: docs/en/datasets/detect/homeobjects-3k.md
+        - path: docs/en/datasets/detect/index.md
+        - path: docs/en/datasets/detect/kitti.md
+        - path: docs/en/datasets/detect/lvis.md
+        - path: docs/en/datasets/detect/medical-pills.md
+        - path: docs/en/datasets/detect/objects365.md
+        - path: docs/en/datasets/detect/open-images-v7.md
+        - path: docs/en/datasets/detect/roboflow-100.md
+        - path: docs/en/datasets/detect/signature.md
+        - path: docs/en/datasets/detect/sku-110k.md
+        - path: docs/en/datasets/detect/tt100k.md
+        - path: docs/en/datasets/detect/visdrone.md
+        - path: docs/en/datasets/detect/voc.md
+        - path: docs/en/datasets/detect/xview.md
+        - path: docs/en/datasets/explorer/api.md
+        - path: docs/en/datasets/explorer/dashboard.md
+        - path: docs/en/datasets/explorer/explorer.md
+        - path: docs/en/datasets/explorer/index.md
+        - path: docs/en/datasets/index.md
+        - path: docs/en/datasets/obb/dota-v2.md
+        - path: docs/en/datasets/obb/dota8.md
+        - path: docs/en/datasets/obb/index.md
+        - path: docs/en/datasets/pose/coco.md
+        - path: docs/en/datasets/pose/coco8-pose.md
+        - path: docs/en/datasets/pose/dog-pose.md
+        - path: docs/en/datasets/pose/hand-keypoints.md
+        - path: docs/en/datasets/pose/index.md
+        - path: docs/en/datasets/pose/tiger-pose.md
+        - path: docs/en/datasets/segment/carparts-seg.md
+        - path: docs/en/datasets/segment/coco.md
+        - path: docs/en/datasets/segment/coco128-seg.md
+        - path: docs/en/datasets/segment/coco8-seg.md
+        - path: docs/en/datasets/segment/crack-seg.md
+        - path: docs/en/datasets/segment/index.md
+        - path: docs/en/datasets/segment/package-seg.md
+        - path: docs/en/datasets/track/index.md
+        - path: docs/en/guides/analytics.md
+        - path: docs/en/guides/azureml-quickstart.md
+        - path: docs/en/guides/conda-quickstart.md
+        - path: docs/en/guides/coral-edge-tpu-on-raspberry-pi.md
+        - path: docs/en/guides/custom-trainer.md
+        - path: docs/en/guides/data-collection-and-annotation.md
+        - path: docs/en/guides/deepstream-nvidia-jetson.md
+        - path: docs/en/guides/defining-project-goals.md
+        - path: docs/en/guides/distance-calculation.md
+        - path: docs/en/guides/docker-quickstart.md
+        - path: docs/en/guides/heatmaps.md
+        - path: docs/en/guides/hyperparameter-tuning.md
+        - path: docs/en/guides/index.md
+        - path: docs/en/guides/instance-segmentation-and-tracking.md
+        - path: docs/en/guides/isolating-segmentation-objects.md
+        - path: docs/en/guides/kfold-cross-validation.md
+        - path: docs/en/guides/model-deployment-options.md
+        - path: docs/en/guides/model-deployment-practices.md
+        - path: docs/en/guides/model-evaluation-insights.md
+        - path: docs/en/guides/model-monitoring-and-maintenance.md
+        - path: docs/en/guides/model-testing.md
+        - path: docs/en/guides/model-training-tips.md
+        - path: docs/en/guides/model-yaml-config.md
+        - path: docs/en/guides/nvidia-dgx-spark.md
+        - path: docs/en/guides/nvidia-jetson.md
+        - path: docs/en/guides/object-blurring.md
+        - path: docs/en/guides/object-counting.md
+        - path: docs/en/guides/object-cropping.md
+        - path: docs/en/guides/optimizing-openvino-latency-vs-throughput-modes.md
+        - path: docs/en/guides/parking-management.md
+        - path: docs/en/guides/preprocessing_annotated_data.md
+        - path: docs/en/guides/queue-management.md
+        - path: docs/en/guides/raspberry-pi.md
+        - path: docs/en/guides/region-counting.md
+        - path: docs/en/guides/ros-quickstart.md
+        - path: docs/en/guides/sahi-tiled-inference.md
+        - path: docs/en/guides/security-alarm-system.md
+        - path: docs/en/guides/similarity-search.md
+        - path: docs/en/guides/speed-estimation.md
+        - path: docs/en/guides/steps-of-a-cv-project.md
+        - path: docs/en/guides/streamlit-live-inference.md
+        - path: docs/en/guides/trackzone.md
+        - path: docs/en/guides/triton-inference-server.md
+        - path: docs/en/guides/vertex-ai-deployment-with-docker.md
+        - path: docs/en/guides/view-results-in-terminal.md
+        - path: docs/en/guides/vision-eye.md
+        - path: docs/en/guides/workouts-monitoring.md
+        - path: docs/en/guides/yolo-common-issues.md
+        - path: docs/en/guides/yolo-data-augmentation.md
+        - path: docs/en/guides/yolo-performance-metrics.md
+        - path: docs/en/guides/yolo-thread-safe-inference.md
+        - path: docs/en/help/CI.md
+        - path: docs/en/help/CLA.md
+        - path: docs/en/help/FAQ.md
+        - path: docs/en/help/code-of-conduct.md
+        - path: docs/en/help/contributing.md
+        - path: docs/en/help/environmental-health-safety.md
+        - path: docs/en/help/index.md
+        - path: docs/en/help/minimum-reproducible-example.md
+        - path: docs/en/help/privacy.md
+        - path: docs/en/help/security.md
+        - path: docs/en/index.md
+        - path: docs/en/integrations/albumentations.md
+        - path: docs/en/integrations/amazon-sagemaker.md
+        - path: docs/en/integrations/axelera.md
+        - path: docs/en/integrations/clearml.md
+        - path: docs/en/integrations/comet.md
+        - path: docs/en/integrations/coreml.md
+        - path: docs/en/integrations/dvc.md
+        - path: docs/en/integrations/edge-tpu.md
+        - path: docs/en/integrations/executorch.md
+        - path: docs/en/integrations/google-colab.md
+        - path: docs/en/integrations/gradio.md
+        - path: docs/en/integrations/ibm-watsonx.md
+        - path: docs/en/integrations/index.md
+        - path: docs/en/integrations/jupyterlab.md
+        - path: docs/en/integrations/kaggle.md
+        - path: docs/en/integrations/mlflow.md
+        - path: docs/en/integrations/mnn.md
+        - path: docs/en/integrations/ncnn.md
+        - path: docs/en/integrations/neptune.md
+        - path: docs/en/integrations/neural-magic.md
+        - path: docs/en/integrations/onnx.md
+        - path: docs/en/integrations/openvino.md
+        - path: docs/en/integrations/paddlepaddle.md
+        - path: docs/en/integrations/paperspace.md
+        - path: docs/en/integrations/ray-tune.md
+        - path: docs/en/integrations/roboflow.md
+        - path: docs/en/integrations/rockchip-rknn.md
+        - path: docs/en/integrations/seeedstudio-recamera.md
+        - path: docs/en/integrations/sony-imx500.md
+        - path: docs/en/integrations/tensorboard.md
+        - path: docs/en/integrations/tensorrt.md
+        - path: docs/en/integrations/tf-graphdef.md
+        - path: docs/en/integrations/tf-savedmodel.md
+        - path: docs/en/integrations/tfjs.md
+        - path: docs/en/integrations/tflite.md
+        - path: docs/en/integrations/torchscript.md
+        - path: docs/en/integrations/vscode.md
+        - path: docs/en/integrations/weights-biases.md
+        - path: docs/en/models/fast-sam.md
+        - path: docs/en/models/index.md
+        - path: docs/en/models/mobile-sam.md
+        - path: docs/en/models/rtdetr.md
+        - path: docs/en/models/sam-2.md
+        - path: docs/en/models/sam-3.md
+        - path: docs/en/models/sam.md
+        - path: docs/en/models/yolo-nas.md
+        - path: docs/en/models/yolo-world.md
+        - path: docs/en/models/yolo11.md
+        - path: docs/en/models/yolo12.md
+        - path: docs/en/models/yolo26.md
+        - path: docs/en/models/yoloe.md
+        - path: docs/en/models/yolov10.md
+        - path: docs/en/models/yolov3.md
+        - path: docs/en/models/yolov4.md
+        - path: docs/en/models/yolov5.md
+        - path: docs/en/models/yolov6.md
+        - path: docs/en/models/yolov7.md
+        - path: docs/en/models/yolov8.md
+        - path: docs/en/models/yolov9.md
+        - path: docs/en/modes/benchmark.md
+        - path: docs/en/modes/export.md
+        - path: docs/en/modes/index.md
+        - path: docs/en/modes/predict.md
+        - path: docs/en/modes/track.md
+        - path: docs/en/modes/train.md
+        - path: docs/en/modes/val.md
+        - path: docs/en/platform/account/activity.md
+        - path: docs/en/platform/account/api-keys.md
+        - path: docs/en/platform/account/billing.md
+        - path: docs/en/platform/account/index.md
+        - path: docs/en/platform/account/settings.md
+        - path: docs/en/platform/account/trash.md
+        - path: docs/en/platform/api/index.md
+        - path: docs/en/platform/data/annotation.md
+        - path: docs/en/platform/data/datasets.md
+        - path: docs/en/platform/data/index.md
+        - path: docs/en/platform/deploy/endpoints.md
+        - path: docs/en/platform/deploy/index.md
+        - path: docs/en/platform/deploy/inference.md
+        - path: docs/en/platform/deploy/monitoring.md
+        - path: docs/en/platform/explore.md
+        - path: docs/en/platform/index.md
+        - path: docs/en/platform/quickstart.md
+        - path: docs/en/platform/train/cloud-training.md
+        - path: docs/en/platform/train/index.md
+        - path: docs/en/platform/train/models.md
+        - path: docs/en/platform/train/projects.md
+        - path: docs/en/quickstart.md
+        - path: docs/en/reference/__init__.md
+        - path: docs/en/reference/cfg/__init__.md
+        - path: docs/en/reference/data/annotator.md
+        - path: docs/en/reference/data/augment.md
+        - path: docs/en/reference/data/base.md
+        - path: docs/en/reference/data/build.md
+        - path: docs/en/reference/data/converter.md
+        - path: docs/en/reference/data/dataset.md
+        - path: docs/en/reference/data/loaders.md
+        - path: docs/en/reference/data/split.md
+        - path: docs/en/reference/data/split_dota.md
+        - path: docs/en/reference/data/utils.md
+        - path: docs/en/reference/engine/exporter.md
+        - path: docs/en/reference/engine/model.md
+        - path: docs/en/reference/engine/predictor.md
+        - path: docs/en/reference/engine/results.md
+        - path: docs/en/reference/engine/trainer.md
+        - path: docs/en/reference/engine/tuner.md
+        - path: docs/en/reference/engine/validator.md
+        - path: docs/en/reference/hub/__init__.md
+        - path: docs/en/reference/hub/auth.md
+        - path: docs/en/reference/hub/google/__init__.md
+        - path: docs/en/reference/hub/session.md
+        - path: docs/en/reference/hub/utils.md
+        - path: docs/en/reference/models/fastsam/model.md
+        - path: <redacted>.md
+        - path: docs/en/reference/models/fastsam/utils.md
+        - path: docs/en/reference/models/fastsam/val.md
+        - path: docs/en/reference/models/nas/model.md
+        - path: docs/en/reference/models/nas/predict.md
+        - path: docs/en/reference/models/nas/val.md
+        - path: docs/en/reference/models/rtdetr/model.md
+        - path: docs/en/reference/models/rtdetr/predict.md
+        - path: docs/en/reference/models/rtdetr/train.md
+        - path: docs/en/reference/models/rtdetr/val.md
+        - path: docs/en/reference/models/sam/amg.md
+        - path: docs/en/reference/models/sam/build.md
+        - path: docs/en/reference/models/sam/build_sam3.md
+        - path: docs/en/reference/models/sam/model.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>_attention.md
+        - path: <redacted>.md
+        - path: <redacted>_encoder.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: docs/en/reference/models/sam/predict.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>_encoders.md
+        - path: <redacted>_segmentation.md
+        - path: docs/en/reference/models/sam/sam3/model_misc.md
+        - path: docs/en/reference/models/sam/sam3/necks.md
+        - path: docs/en/reference/models/sam/sam3/sam3_image.md
+        - path: docs/en/reference/models/sam/sam3/text_encoder_ve.md
+        - path: <redacted>.md
+        - path: docs/en/reference/models/sam/sam3/vl_combiner.md
+        - path: docs/en/reference/models/utils/loss.md
+        - path: docs/en/reference/models/utils/ops.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: docs/en/reference/models/yolo/model.md
+        - path: <redacted>.md
+        - path: docs/en/reference/models/yolo/obb/train.md
+        - path: docs/en/reference/models/yolo/obb/val.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: docs/en/reference/models/yolo/pose/val.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>_world.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>_seg.md
+        - path: docs/en/reference/models/yolo/yoloe/val.md
+        - path: docs/en/reference/nn/autobackend.md
+        - path: docs/en/reference/nn/modules/activation.md
+        - path: docs/en/reference/nn/modules/block.md
+        - path: docs/en/reference/nn/modules/conv.md
+        - path: docs/en/reference/nn/modules/head.md
+        - path: <redacted>.md
+        - path: docs/en/reference/nn/modules/utils.md
+        - path: docs/en/reference/nn/tasks.md
+        - path: docs/en/reference/nn/text_model.md
+        - path: docs/en/reference/optim/muon.md
+        - path: docs/en/reference/solutions/ai_gym.md
+        - path: docs/en/reference/solutions/analytics.md
+        - path: docs/en/reference/solutions/config.md
+        - path: docs/en/reference/solutions/distance_calculation.md
+        - path: docs/en/reference/solutions/heatmap.md
+        - path: docs/en/reference/solutions/instance_segmentation.md
+        - path: docs/en/reference/solutions/object_blurrer.md
+        - path: docs/en/reference/solutions/object_counter.md
+        - path: docs/en/reference/solutions/object_cropper.md
+        - path: docs/en/reference/solutions/parking_management.md
+        - path: docs/en/reference/solutions/queue_management.md
+        - path: docs/en/reference/solutions/region_counter.md
+        - path: docs/en/reference/solutions/security_alarm.md
+        - path: docs/en/reference/solutions/similarity_search.md
+        - path: docs/en/reference/solutions/solutions.md
+        - path: docs/en/reference/solutions/speed_estimation.md
+        - path: docs/en/reference/solutions/streamlit_inference.md
+        - path: docs/en/reference/solutions/trackzone.md
+        - path: docs/en/reference/solutions/vision_eye.md
+        - path: docs/en/reference/trackers/basetrack.md
+        - path: docs/en/reference/trackers/bot_sort.md
+        - path: docs/en/reference/trackers/byte_tracker.md
+        - path: docs/en/reference/trackers/track.md
+        - path: docs/en/reference/trackers/utils/gmc.md
+        - path: docs/en/reference/trackers/utils/kalman_filter.md
+        - path: <redacted>.md
+        - path: docs/en/reference/utils/__init__.md
+        - path: docs/en/reference/utils/autobatch.md
+        - path: docs/en/reference/utils/autodevice.md
+        - path: docs/en/reference/utils/benchmarks.md
+        - path: docs/en/reference/utils/callbacks/base.md
+        - path: <redacted>.md
+        - path: docs/en/reference/utils/callbacks/comet.md
+        - path: docs/en/reference/utils/callbacks/dvc.md
+        - path: docs/en/reference/utils/callbacks/hub.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: <redacted>.md
+        - path: docs/en/reference/utils/callbacks/wb.md
+        - path: docs/en/reference/utils/checks.md
+        - path: docs/en/reference/utils/cpu.md
+        - path: docs/en/reference/utils/dist.md
+        - path: docs/en/reference/utils/downloads.md
+        - path: docs/en/reference/utils/errors.md
+        - path: docs/en/reference/utils/events.md
+        - path: docs/en/reference/utils/export/engine.md
+        - path: <redacted>.md
+        - path: docs/en/reference/utils/export/imx.md
+        - path: <redacted>.md
+        - path: docs/en/reference/utils/files.md
+        - path: docs/en/reference/utils/git.md
+        - path: docs/en/reference/utils/instance.md
+        - path: docs/en/reference/utils/logger.md
+        - path: docs/en/reference/utils/loss.md
+        - path: docs/en/reference/utils/metrics.md
+        - path: docs/en/reference/utils/nms.md
+        - path: docs/en/reference/utils/ops.md
+        - path: docs/en/reference/utils/patches.md
+        - path: docs/en/reference/utils/plotting.md
+        - path: docs/en/reference/utils/tal.md
+        - path: docs/en/reference/utils/torch_utils.md
+        - path: docs/en/reference/utils/tqdm.md
+        - path: docs/en/reference/utils/triton.md
+        - path: docs/en/reference/utils/tuner.md
+        - path: docs/en/reference/utils/uploads.md
+        - path: docs/en/robots.txt
+        - path: docs/en/solutions/index.md
+        - path: docs/en/tasks/classify.md
+        - path: docs/en/tasks/detect.md
+        - path: docs/en/tasks/index.md
+        - path: docs/en/tasks/obb.md
+        - path: docs/en/tasks/pose.md
+        - path: docs/en/tasks/segment.md
+        - path: docs/en/usage/callbacks.md
+        - path: docs/en/usage/cfg.md
+        - path: docs/en/usage/cli.md
+        - path: docs/en/usage/engine.md
+        - path: docs/en/usage/python.md
+        - path: docs/en/usage/simple-utilities.md
+        - path: docs/en/yolov5/environments/aws_quickstart_tutorial.md
+        - path: docs/en/yolov5/environments/azureml_quickstart_tutorial.md
+        - path: docs/en/yolov5/environments/docker_image_quickstart_tutorial.md
+        - path: docs/en/yolov5/environments/google_cloud_quickstart_tutorial.md
+        - path: docs/en/yolov5/index.md
+        - path: docs/en/yolov5/quickstart_tutorial.md
+        - path: docs/en/yolov5/tutorials/architecture_description.md
+        - path: docs/en/yolov5/tutorials/clearml_logging_integration.md
+        - path: docs/en/yolov5/tutorials/comet_logging_integration.md
+        - path: docs/en/yolov5/tutorials/hyperparameter_evolution.md
+        - path: docs/en/yolov5/tutorials/model_ensembling.md
+        - path: docs/en/yolov5/tutorials/model_export.md
+        - path: docs/en/yolov5/tutorials/model_pruning_and_sparsity.md
+        - path: docs/en/yolov5/tutorials/multi_gpu_training.md
+        - path: docs/en/yolov5/tutorials/neural_magic_pruning_quantization.md
+        - path: docs/en/yolov5/tutorials/pytorch_hub_model_loading.md
+        - path: docs/en/yolov5/tutorials/test_time_augmentation.md
+        - path: docs/en/yolov5/tutorials/tips_for_best_training_results.md
+        - path: docs/en/yolov5/tutorials/train_custom_data.md
+        - path: docs/en/yolov5/tutorials/transfer_learning_with_frozen_layers.md
+        - path: docs/macros/augmentation-args.md
+        - path: docs/macros/export-args.md
+        - path: docs/macros/export-table.md
+        - path: docs/macros/predict-args.md
+        - path: docs/macros/sam-auto-annotate.md
+        - path: docs/macros/solutions-args.md
+        - path: docs/macros/track-args.md
+        - path: docs/macros/train-args.md
+        - path: docs/macros/validation-args.md
+        - path: docs/macros/visualization-args.md
+        - path: docs/macros/yolo-cls-perf.md
+        - path: docs/macros/yolo-det-perf.md
+        - path: docs/macros/yolo-obb-perf.md
+        - path: docs/macros/yolo-pose-perf.md
+        - path: docs/macros/yolo-seg-perf.md
+        - path: docs/mkdocs_github_authors.yaml
+        - path: docs/ml_system_card.yaml
+        - path: docs/model_data.py
+        - path: docs/overrides/javascript/benchmark.js
+        - path: docs/overrides/javascript/chart-widget.js
+        - path: docs/overrides/javascript/extra.js
+        - path: docs/overrides/javascript/giscus.js
+        - path: docs/overrides/javascript/tablesort.js
+        - path: docs/overrides/main.html
+        - path: docs/overrides/partials/comments.html
+        - path: docs/overrides/stylesheets/style.css
+        - path: docs/stakeholders.yaml
+        - path: examples/README.md
+        - path: examples/RTDETR-ONNXRuntime-Python/README.md
+        - path: examples/RTDETR-ONNXRuntime-Python/main.py
+        - path: examples/RTDETR-ONNXRuntime-Python/requirements.txt
+        - path: examples/YOLO-Interactive-Tracking-UI/README.md
+        - path: examples/YOLO-Interactive-Tracking-UI/interactive_tracker.py
+        - path: examples/YOLO-Series-ONNXRuntime-Rust/Cargo.toml
+        - path: examples/YOLO-Series-ONNXRuntime-Rust/README.md
+        - path: examples/YOLO-Series-ONNXRuntime-Rust/src/main.rs
+        - path: examples/YOLO11-Triton-CPP/CMakeLists.txt
+        - path: examples/YOLO11-Triton-CPP/README.md
+        - path: examples/YOLO11-Triton-CPP/inference.cpp
+        - path: examples/YOLO11-Triton-CPP/inference.hpp
+        - path: examples/YOLO11-Triton-CPP/main.cpp
+        - path: examples/YOLOv8-Action-Recognition/README.md
+        - path: examples/YOLOv8-Action-Recognition/action_recognition.py
+        - path: examples/YOLOv8-Action-Recognition/requirements.txt
+        - path: examples/YOLOv8-CPP-Inference/CMakeLists.txt
+        - path: examples/YOLOv8-CPP-Inference/README.md
+        - path: examples/YOLOv8-CPP-Inference/inference.cpp
+        - path: examples/YOLOv8-CPP-Inference/inference.h
+        - path: examples/YOLOv8-CPP-Inference/main.cpp
+        - path: examples/YOLOv8-LibTorch-CPP-Inference/CMakeLists.txt
+        - path: examples/YOLOv8-LibTorch-CPP-Inference/README.md
+        - path: examples/YOLOv8-LibTorch-CPP-Inference/main.cc
+        - path: examples/YOLOv8-MNN-CPP/CMakeLists.txt
+        - path: examples/YOLOv8-MNN-CPP/README.md
+        - path: examples/YOLOv8-MNN-CPP/main.cpp
+        - path: examples/YOLOv8-MNN-CPP/main_interpreter.cpp
+        - path: examples/YOLOv8-ONNXRuntime-CPP/CMakeLists.txt
+        - path: examples/YOLOv8-ONNXRuntime-CPP/README.md
+        - path: examples/YOLOv8-ONNXRuntime-CPP/inference.cpp
+        - path: examples/YOLOv8-ONNXRuntime-CPP/inference.h
+        - path: examples/YOLOv8-ONNXRuntime-CPP/main.cpp
+        - path: examples/YOLOv8-ONNXRuntime-Rust/Cargo.toml
+        - path: examples/YOLOv8-ONNXRuntime-Rust/README.md
+        - path: examples/YOLOv8-ONNXRuntime-Rust/src/cli.rs
+        - path: examples/YOLOv8-ONNXRuntime-Rust/src/lib.rs
+        - path: examples/YOLOv8-ONNXRuntime-Rust/src/main.rs
+        - path: examples/YOLOv8-ONNXRuntime-Rust/src/model.rs
+        - path: examples/YOLOv8-ONNXRuntime-Rust/src/ort_backend.rs
+        - path: examples/YOLOv8-ONNXRuntime-Rust/src/yolo_result.rs
+        - path: examples/YOLOv8-ONNXRuntime/README.md
+        - path: examples/YOLOv8-ONNXRuntime/main.py
+        - path: examples/YOLOv8-ONNXRuntime/requirements.txt
+        - path: examples/YOLOv8-OpenCV-ONNX-Python/README.md
+        - path: examples/YOLOv8-OpenCV-ONNX-Python/main.py
+        - path: examples/YOLOv8-OpenCV-ONNX-Python/requirements.txt
+        - path: examples/YOLOv8-OpenVINO-CPP-Inference/CMakeLists.txt
+        - path: examples/YOLOv8-OpenVINO-CPP-Inference/README.md
+        - path: examples/YOLOv8-OpenVINO-CPP-Inference/inference.cc
+        - path: examples/YOLOv8-OpenVINO-CPP-Inference/inference.h
+        - path: examples/YOLOv8-OpenVINO-CPP-Inference/main.cc
+        - path: examples/YOLOv8-Region-Counter/README.md
+        - path: examples/YOLOv8-Region-Counter/yolov8_region_counter.py
+        - path: examples/YOLOv8-SAHI-Inference-Video/README.md
+        - path: examples/YOLOv8-SAHI-Inference-Video/yolov8_sahi.py
+        - path: examples/YOLOv8-Segmentation-ONNXRuntime-Python/README.md
+        - path: examples/YOLOv8-Segmentation-ONNXRuntime-Python/main.py
+        - path: examples/YOLOv8-TFLite-Python/README.md
+        - path: examples/YOLOv8-TFLite-Python/main.py
+        - path: examples/heatmaps.ipynb
+        - path: examples/hub.ipynb
+        - path: examples/object_counting.ipynb
+        - path: examples/object_tracking.ipynb
+        - path: examples/tutorial.ipynb
+        - path: mkdocs.yml
+        - path: pyproject.toml
+        - path: tests/__init__.py
+        - path: tests/conftest.py
+        - path: tests/test_cli.py
+        - path: tests/test_cuda.py
+        - path: tests/test_engine.py
+        - path: tests/test_exports.py
+        - path: tests/test_integrations.py
+        - path: tests/test_python.py
+        - path: tests/test_solutions.py
+        - path: ultralytics/__init__.py
+        - path: ultralytics/assets/bus.jpg
+        - path: ultralytics/assets/zidane.jpg
+        - path: ultralytics/cfg/__init__.py
+        - path: ultralytics/cfg/datasets/Argoverse.yaml
+        - path: ultralytics/cfg/datasets/DOTAv1.5.yaml
+        - path: ultralytics/cfg/datasets/DOTAv1.yaml
+        - path: <redacted>.yaml
+        - path: ultralytics/cfg/datasets/HomeObjects-3K.yaml
+        - path: ultralytics/cfg/datasets/ImageNet.yaml
+        - path: ultralytics/cfg/datasets/Objects365.yaml
+        - path: ultralytics/cfg/datasets/SKU-110K.yaml
+        - path: ultralytics/cfg/datasets/TT100K.yaml
+        - path: ultralytics/cfg/datasets/VOC.yaml
+        - path: ultralytics/cfg/datasets/VisDrone.yaml
+        - path: ultralytics/cfg/datasets/african-wildlife.yaml
+        - path: ultralytics/cfg/datasets/brain-tumor.yaml
+        - path: ultralytics/cfg/datasets/carparts-seg.yaml
+        - path: ultralytics/cfg/datasets/coco-pose.yaml
+        - path: ultralytics/cfg/datasets/coco.yaml
+        - path: ultralytics/cfg/datasets/coco12-formats.yaml
+        - path: ultralytics/cfg/datasets/coco128-seg.yaml
+        - path: ultralytics/cfg/datasets/coco128.yaml
+        - path: ultralytics/cfg/datasets/coco8-grayscale.yaml
+        - path: ultralytics/cfg/datasets/coco8-multispectral.yaml
+        - path: ultralytics/cfg/datasets/coco8-pose.yaml
+        - path: ultralytics/cfg/datasets/coco8-seg.yaml
+        - path: ultralytics/cfg/datasets/coco8.yaml
+        - path: ultralytics/cfg/datasets/construction-ppe.yaml
+        - path: ultralytics/cfg/datasets/crack-seg.yaml
+        - path: ultralytics/cfg/datasets/dog-pose.yaml
+        - path: ultralytics/cfg/datasets/dota8-multispectral.yaml
+        - path: ultralytics/cfg/datasets/dota8.yaml
+        - path: ultralytics/cfg/datasets/hand-keypoints.yaml
+        - path: ultralytics/cfg/datasets/kitti.yaml
+        - path: ultralytics/cfg/datasets/lvis.yaml
+        - path: ultralytics/cfg/datasets/medical-pills.yaml
+        - path: ultralytics/cfg/datasets/open-images-v7.yaml
+        - path: ultralytics/cfg/datasets/package-seg.yaml
+        - path: ultralytics/cfg/datasets/signature.yaml
+        - path: ultralytics/cfg/datasets/tiger-pose.yaml
+        - path: ultralytics/cfg/datasets/xView.yaml
+        - path: ultralytics/cfg/default.yaml
+        - path: ultralytics/cfg/models/11/yolo11-cls-resnet18.yaml
+        - path: ultralytics/cfg/models/11/yolo11-cls.yaml
+        - path: ultralytics/cfg/models/11/yolo11-obb.yaml
+        - path: ultralytics/cfg/models/11/yolo11-pose.yaml
+        - path: ultralytics/cfg/models/11/yolo11-seg.yaml
+        - path: ultralytics/cfg/models/11/yolo11.yaml
+        - path: ultralytics/cfg/models/11/yoloe-11-seg.yaml
+        - path: ultralytics/cfg/models/11/yoloe-11.yaml
+        - path: ultralytics/cfg/models/12/yolo12-cls.yaml
+        - path: ultralytics/cfg/models/12/yolo12-obb.yaml
+        - path: ultralytics/cfg/models/12/yolo12-pose.yaml
+        - path: ultralytics/cfg/models/12/yolo12-seg.yaml
+        - path: ultralytics/cfg/models/12/yolo12.yaml
+        - path: ultralytics/cfg/models/26/yolo26-cls.yaml
+        - path: ultralytics/cfg/models/26/yolo26-obb.yaml
+        - path: ultralytics/cfg/models/26/yolo26-p2.yaml
+        - path: ultralytics/cfg/models/26/yolo26-p6.yaml
+        - path: ultralytics/cfg/models/26/yolo26-pose.yaml
+        - path: ultralytics/cfg/models/26/yolo26-seg.yaml
+        - path: ultralytics/cfg/models/26/yolo26.yaml
+        - path: ultralytics/cfg/models/26/yoloe-26-seg.yaml
+        - path: ultralytics/cfg/models/26/yoloe-26.yaml
+        - path: ultralytics/cfg/models/README.md
+        - path: ultralytics/cfg/models/rt-detr/rtdetr-l.yaml
+        - path: ultralytics/cfg/models/rt-detr/rtdetr-resnet101.yaml
+        - path: ultralytics/cfg/models/rt-detr/rtdetr-resnet50.yaml
+        - path: ultralytics/cfg/models/rt-detr/rtdetr-x.yaml
+        - path: ultralytics/cfg/models/v10/yolov10b.yaml
+        - path: ultralytics/cfg/models/v10/yolov10l.yaml
+        - path: ultralytics/cfg/models/v10/yolov10m.yaml
+        - path: ultralytics/cfg/models/v10/yolov10n.yaml
+        - path: ultralytics/cfg/models/v10/yolov10s.yaml
+        - path: ultralytics/cfg/models/v10/yolov10x.yaml
+        - path: ultralytics/cfg/models/v3/yolov3-spp.yaml
+        - path: ultralytics/cfg/models/v3/yolov3-tiny.yaml
+        - path: ultralytics/cfg/models/v3/yolov3.yaml
+        - path: ultralytics/cfg/models/v5/yolov5-p6.yaml
+        - path: ultralytics/cfg/models/v5/yolov5.yaml
+        - path: ultralytics/cfg/models/v6/yolov6.yaml
+        - path: ultralytics/cfg/models/v8/yoloe-v8-seg.yaml
+        - path: ultralytics/cfg/models/v8/yoloe-v8.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-cls-resnet101.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-cls-resnet50.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-cls.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-ghost-p2.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-ghost-p6.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-ghost.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-obb.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-p2.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-p6.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-pose-p6.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-pose.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-rtdetr.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-seg-p6.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-seg.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-world.yaml
+        - path: ultralytics/cfg/models/v8/yolov8-worldv2.yaml
+        - path: ultralytics/cfg/models/v8/yolov8.yaml
+        - path: ultralytics/cfg/models/v9/yolov9c-seg.yaml
+        - path: ultralytics/cfg/models/v9/yolov9c.yaml
+        - path: ultralytics/cfg/models/v9/yolov9e-seg.yaml
+        - path: ultralytics/cfg/models/v9/yolov9e.yaml
+        - path: ultralytics/cfg/models/v9/yolov9m.yaml
+        - path: ultralytics/cfg/models/v9/yolov9s.yaml
+        - path: ultralytics/cfg/models/v9/yolov9t.yaml
+        - path: ultralytics/cfg/trackers/botsort.yaml
+        - path: ultralytics/cfg/trackers/bytetrack.yaml
+        - path: ultralytics/data/__init__.py
+        - path: ultralytics/data/annotator.py
+        - path: ultralytics/data/augment.py
+        - path: ultralytics/data/base.py
+        - path: ultralytics/data/build.py
+        - path: ultralytics/data/converter.py
+        - path: ultralytics/data/dataset.py
+        - path: ultralytics/data/loaders.py
+        - path: ultralytics/data/scripts/download_weights.sh
+        - path: ultralytics/data/scripts/get_coco.sh
+        - path: ultralytics/data/scripts/get_coco128.sh
+        - path: ultralytics/data/scripts/get_imagenet.sh
+        - path: ultralytics/data/split.py
+        - path: ultralytics/data/split_dota.py
+        - path: ultralytics/data/utils.py
+        - path: ultralytics/engine/__init__.py
+        - path: ultralytics/engine/exporter.py
+        - path: ultralytics/engine/model.py
+        - path: ultralytics/engine/predictor.py
+        - path: ultralytics/engine/results.py
+        - path: ultralytics/engine/trainer.py
+        - path: ultralytics/engine/tuner.py
+        - path: ultralytics/engine/validator.py
+        - path: ultralytics/hub/__init__.py
+        - path: ultralytics/hub/auth.py
+        - path: ultralytics/hub/google/__init__.py
+        - path: ultralytics/hub/session.py
+        - path: ultralytics/hub/utils.py
+        - path: ultralytics/models/__init__.py
+        - path: ultralytics/models/fastsam/__init__.py
+        - path: ultralytics/models/fastsam/model.py
+        - path: ultralytics/models/fastsam/predict.py
+        - path: ultralytics/models/fastsam/utils.py
+        - path: ultralytics/models/fastsam/val.py
+        - path: ultralytics/models/nas/__init__.py
+        - path: ultralytics/models/nas/model.py
+        - path: ultralytics/models/nas/predict.py
+        - path: ultralytics/models/nas/val.py
+        - path: ultralytics/models/rtdetr/__init__.py
+        - path: ultralytics/models/rtdetr/model.py
+        - path: ultralytics/models/rtdetr/predict.py
+        - path: ultralytics/models/rtdetr/train.py
+        - path: ultralytics/models/rtdetr/val.py
+        - path: ultralytics/models/sam/__init__.py
+        - path: ultralytics/models/sam/amg.py
+        - path: ultralytics/models/sam/build.py
+        - path: ultralytics/models/sam/build_sam3.py
+        - path: ultralytics/models/sam/model.py
+        - path: ultralytics/models/sam/modules/__init__.py
+        - path: ultralytics/models/sam/modules/blocks.py
+        - path: ultralytics/models/sam/modules/decoders.py
+        - path: ultralytics/models/sam/modules/encoders.py
+        - path: ultralytics/models/sam/modules/memory_attention.py
+        - path: ultralytics/models/sam/modules/sam.py
+        - path: ultralytics/models/sam/modules/tiny_encoder.py
+        - path: <redacted>.py
+        - path: ultralytics/models/sam/modules/utils.py
+        - path: ultralytics/models/sam/predict.py
+        - path: ultralytics/models/sam/sam3/__init__.py
+        - path: ultralytics/models/sam/sam3/decoder.py
+        - path: ultralytics/models/sam/sam3/encoder.py
+        - path: ultralytics/models/sam/sam3/geometry_encoders.py
+        - path: ultralytics/models/sam/sam3/maskformer_segmentation.py
+        - path: ultralytics/models/sam/sam3/model_misc.py
+        - path: ultralytics/models/sam/sam3/necks.py
+        - path: ultralytics/models/sam/sam3/sam3_image.py
+        - path: ultralytics/models/sam/sam3/text_encoder_ve.py
+        - path: ultralytics/models/sam/sam3/vitdet.py
+        - path: ultralytics/models/sam/sam3/vl_combiner.py
+        - path: ultralytics/models/utils/__init__.py
+        - path: ultralytics/models/utils/loss.py
+        - path: ultralytics/models/utils/ops.py
+        - path: ultralytics/models/yolo/__init__.py
+        - path: ultralytics/models/yolo/classify/__init__.py
+        - path: <redacted>.py
+        - path: ultralytics/models/yolo/classify/train.py
+        - path: ultralytics/models/yolo/classify/val.py
+        - path: ultralytics/models/yolo/detect/__init__.py
+        - path: ultralytics/models/yolo/detect/predict.py
+        - path: ultralytics/models/yolo/detect/train.py
+        - path: ultralytics/models/yolo/detect/val.py
+        - path: ultralytics/models/yolo/model.py
+        - path: ultralytics/models/yolo/obb/__init__.py
+        - path: ultralytics/models/yolo/obb/predict.py
+        - path: ultralytics/models/yolo/obb/train.py
+        - path: ultralytics/models/yolo/obb/val.py
+        - path: ultralytics/models/yolo/pose/__init__.py
+        - path: ultralytics/models/yolo/pose/predict.py
+        - path: ultralytics/models/yolo/pose/train.py
+        - path: ultralytics/models/yolo/pose/val.py
+        - path: ultralytics/models/yolo/segment/__init__.py
+        - path: ultralytics/models/yolo/segment/predict.py
+        - path: ultralytics/models/yolo/segment/train.py
+        - path: ultralytics/models/yolo/segment/val.py
+        - path: ultralytics/models/yolo/world/__init__.py
+        - path: ultralytics/models/yolo/world/train.py
+        - path: ultralytics/models/yolo/world/train_world.py
+        - path: ultralytics/models/yolo/yoloe/__init__.py
+        - path: ultralytics/models/yolo/yoloe/predict.py
+        - path: ultralytics/models/yolo/yoloe/train.py
+        - path: ultralytics/models/yolo/yoloe/train_seg.py
+        - path: ultralytics/models/yolo/yoloe/val.py
+        - path: ultralytics/nn/__init__.py
+        - path: ultralytics/nn/autobackend.py
+        - path: ultralytics/nn/modules/__init__.py
+        - path: ultralytics/nn/modules/activation.py
+        - path: ultralytics/nn/modules/block.py
+        - path: ultralytics/nn/modules/conv.py
+        - path: ultralytics/nn/modules/head.py
+        - path: ultralytics/nn/modules/transformer.py
+        - path: ultralytics/nn/modules/utils.py
+        - path: ultralytics/nn/tasks.py
+        - path: ultralytics/nn/text_model.py
+        - path: ultralytics/optim/__init__.py
+        - path: ultralytics/optim/muon.py
+        - path: ultralytics/py.typed
+        - path: ultralytics/solutions/__init__.py
+        - path: ultralytics/solutions/ai_gym.py
+        - path: ultralytics/solutions/analytics.py
+        - path: ultralytics/solutions/config.py
+        - path: ultralytics/solutions/distance_calculation.py
+        - path: ultralytics/solutions/heatmap.py
+        - path: ultralytics/solutions/instance_segmentation.py
+        - path: ultralytics/solutions/object_blurrer.py
+        - path: ultralytics/solutions/object_counter.py
+        - path: ultralytics/solutions/object_cropper.py
+        - path: ultralytics/solutions/parking_management.py
+        - path: ultralytics/solutions/queue_management.py
+        - path: ultralytics/solutions/region_counter.py
+        - path: ultralytics/solutions/security_alarm.py
+        - path: ultralytics/solutions/similarity_search.py
+        - path: ultralytics/solutions/solutions.py
+        - path: ultralytics/solutions/speed_estimation.py
+        - path: ultralytics/solutions/streamlit_inference.py
+        - path: <redacted>-search.html
+        - path: ultralytics/solutions/trackzone.py
+        - path: ultralytics/solutions/vision_eye.py
+        - path: ultralytics/trackers/README.md
+        - path: ultralytics/trackers/__init__.py
+        - path: ultralytics/trackers/basetrack.py
+        - path: ultralytics/trackers/bot_sort.py
+        - path: ultralytics/trackers/byte_tracker.py
+        - path: ultralytics/trackers/track.py
+        - path: ultralytics/trackers/utils/__init__.py
+        - path: ultralytics/trackers/utils/gmc.py
+        - path: ultralytics/trackers/utils/kalman_filter.py
+        - path: ultralytics/trackers/utils/matching.py
+        - path: ultralytics/utils/__init__.py
+        - path: ultralytics/utils/autobatch.py
+        - path: ultralytics/utils/autodevice.py
+        - path: ultralytics/utils/benchmarks.py
+        - path: ultralytics/utils/callbacks/__init__.py
+        - path: ultralytics/utils/callbacks/base.py
+        - path: ultralytics/utils/callbacks/clearml.py
+        - path: ultralytics/utils/callbacks/comet.py
+        - path: ultralytics/utils/callbacks/dvc.py
+        - path: ultralytics/utils/callbacks/hub.py
+        - path: ultralytics/utils/callbacks/mlflow.py
+        - path: ultralytics/utils/callbacks/neptune.py
+        - path: ultralytics/utils/callbacks/platform.py
+        - path: ultralytics/utils/callbacks/raytune.py
+        - path: ultralytics/utils/callbacks/tensorboard.py
+        - path: ultralytics/utils/callbacks/wb.py
+        - path: ultralytics/utils/checks.py
+        - path: ultralytics/utils/cpu.py
+        - path: ultralytics/utils/dist.py
+        - path: ultralytics/utils/downloads.py
+        - path: ultralytics/utils/errors.py
+        - path: ultralytics/utils/events.py
+        - path: ultralytics/utils/export/__init__.py
+        - path: ultralytics/utils/export/engine.py
+        - path: ultralytics/utils/export/executorch.py
+        - path: ultralytics/utils/export/imx.py
+        - path: ultralytics/utils/export/tensorflow.py
+        - path: ultralytics/utils/files.py
+        - path: ultralytics/utils/git.py
+        - path: ultralytics/utils/instance.py
+        - path: ultralytics/utils/logger.py
+        - path: ultralytics/utils/loss.py
+        - path: ultralytics/utils/metrics.py
+        - path: ultralytics/utils/nms.py
+        - path: ultralytics/utils/ops.py
+        - path: ultralytics/utils/patches.py
+        - path: ultralytics/utils/plotting.py
+        - path: ultralytics/utils/tal.py
+        - path: ultralytics/utils/torch_utils.py
+        - path: ultralytics/utils/tqdm.py
+        - path: ultralytics/utils/triton.py
+        - path: ultralytics/utils/tuner.py
+        - path: ultralytics/utils/uploads.py
+      headSha: ea6df6e3fbdfdb93b8578a980bc80934de923d04
+      runId: run-2026-02-26-21-59-23
+      summary: ML System Card run run-2026-02-26-21-59-23 observed 845 changed files
+  lastGeneratedAt: "2026-02-26T23:23:47.803Z"
+stakeholderNotes:
+  data-engineer:
+    changes: "- No significant updates detected."
+    confidence: 0.2
+    overview: >-
+      This system is a Python-centric computer vision stack with a configurable data pipeline. Data flows from
+      user-specified dataset configs (e.g., COCO, VOC) through loaders and augmentation into training and inference, as
+      captured in $.devInsight.architecture.dataFlow. Core dependencies are PyTorch and torchvision, plus ecosystem
+      tools for export and deployment noted in $.devInsight.architecture.depsSummary. Component structure ⚠️, including
+      model architectures, data loaders, and tracking/solutions layers, is summarized in
+      $.devInsight.codeOverview.components. Runtime performance profiles ⚠️ for detector variants on COCO are tracked in
+      $.devInsight.runtimePerf to guide dataset and model selection trade-offs.
+    textMd: ""
+  data-scientist:
+    changes: >-
+      - No significant updates detected in the business-facing portions of the system card for this run relative to the
+      provided baseline; any apparent content in $.business.executiveSummary, $.business.intendedUse,
+      $.business.userPopulations, $.business.outOfScopeUse, $.business.hazardousUseCases, and $.business.kpis should be
+      treated as potentially unchanged ⚠️.
+    confidence: 0
+    overview: >-
+      The ML system card (docs/ml_system_card.yaml) describes Ultralytics YOLO as an open‑source computer vision
+      framework and model zoo ⚠️ (see $.business.executiveSummary). It documents intended users as developers and
+      researchers applying detection, segmentation, pose, and related vision tasks ⚠️ ($.business.intendedUse,
+      $.business.userPopulations). Out‑of‑scope applications include non‑vision ML and certain general‑purpose NLP uses
+      ⚠️ ($.business.outOfScopeUse). Hazardous uses focus on YOLO not acting as the sole decision‑maker in
+      safety‑critical settings ⚠️ ($.business.hazardousUseCases). Key model KPIs are primarily COCO mAP metrics across
+      YOLO variants ⚠️ ($.business.kpis).
+    textMd: ""
+  domain-expert:
+    changes: >-
+      - No significant updates detected to high-level business framing in $.business.* for this run.
+
+      - ⚠️ Current content for $.business.hazardousUseCases, $.business.outOfScopeUse, and $.business.userPopulations
+      may differ from the baseline, but the diff could not be reliably established from the available signals.
+
+      - Domain experts should treat all business-level descriptions (intended use, KPIs in $.business.kpis, and user
+      segments) as provisional and verify against the rendered ML System Card in docs/ml_system_card.yaml.
+    confidence: 0
+    overview: >-
+      ⚠️ $.business.executiveSummary describes Ultralytics YOLO as an open-source computer vision framework and model
+      zoo used for image- and video-based tasks. ⚠️ According to $.business.intendedUse, it targets developers,
+      researchers, and organizations building detection, segmentation, classification, pose, and tracking systems. ⚠️
+      $.business.userPopulations distinguishes AGPL-3.0 package users from commercial-license customers deploying in
+      production or at scale. ⚠️ $.business.outOfScopeUse and $.business.hazardousUseCases emphasize that YOLO should
+      not be the sole decision-maker in safety‑critical, surveillance, or legally consequential workflows without human
+      oversight and domain‑specific validation.
+    textMd: ""
+  governance-compliance-ethics-officer:
+    changes: >-
+      - $.governance.assessments: Expanded description of automated unit and integration test coverage for CLI,
+      training, validation, and related workflows, emphasizing continuous quality checks across critical paths. ⚠️
+
+      - $.governance.policies: Clarified licensing and policy language, including reference to OSI-approved GNU Affero
+      General Public License terms for core library and documentation, aligning with open-source governance
+      expectations. ⚠️
+
+      - $.governance.riskRegister: Updated technical risk entry highlighting potential export and deployment bugs across
+      diverse inference backends (e.g., ONNX, TensorRT, TFLite), with corresponding mitigation considerations. ⚠️
+    confidence: 0.2
+    overview: >-
+      The ML System Card’s governance section describes how the project approaches testing, licensing, and technical
+      risk management across the codebase. It references governance assessments, policies, and a risk register for the
+      Ultralytics ecosystem, including models, training, export, and deployment components. These entries help
+      Governance, Compliance & Ethics functions understand how reliability, open-source obligations, and safety-related
+      technical risks are being tracked and mitigated over time across multiple backends and integrations. ⚠️
+    textMd: ""
+  governance-officer:
+    changes: >-
+      - No significant updates detected to governance structures or practices in $.governance.assessments,
+      $.governance.policies, or $.governance.riskRegister based on the current run vs. baseline.
+    confidence: 0.2
+    overview: >-
+      The ML system’s governance focuses on testing, licensing, and operational risk tracking. ⚠️ Automated quality
+      checks reportedly include unit and integration tests for CLI, training, validation, export, and deployment
+      workflows (see $.governance.assessments). ⚠️ Project artifacts appear to be covered by an OSI‑approved GNU Affero
+      GPL‑family license, with additional terms for models and datasets (see $.governance.policies). ⚠️ A risk register
+      tracks technical issues across multi‑backend export and deployment (see $.governance.riskRegister).
+    textMd: ""
+  ml-engineer:
+    changes: >-
+      - Updated or revalidated dependency assumptions for core training/inference on PyTorch and torchvision, and their
+      relationship to export/inference runtimes, as captured in $.devInsight.architecture.depsSummary.
+
+      - Clarified end-to-end data and model configuration flow in $.devInsight.architecture.dataFlow, including how
+      dataset and model YAMLs feed into the unified engine.
+
+      - Added or revised documentation of CLI/Python public entrypoints in $.devInsight.architecture.publicApis ⚠️.
+
+      - Added or updated benchmark records for detection task det_yolo26_coco_val2017 in $.devInsight.runtimePerf,
+      covering mAP and latency/throughput across yolo26 variants ⚠️.
+    confidence: 0
+    overview: >-
+      The vision stack centers on a configurable training/inference engine defined in
+      $.devInsight.architecture.dataFlow. Users select dataset YAMLs (e.g., COCO variants) and model YAMLs (e.g.,
+      YOLOv5–YOLO12, RT-DETR, SAM) which drive a unified pipeline spanning data loading, augmentation, model
+      construction, loss/metrics, and export. Core dependencies are PyTorch and torchvision per
+      $.devInsight.architecture.depsSummary, with optional integrations for ONNX, TensorRT, OpenVINO, and other
+      runtimes. Public access is primarily through a YOLO-style CLI and Python APIs in the ultralytics package ⚠️ (from
+      $.devInsight.architecture.publicApis).
+    textMd: ""
+  product-manager:
+    changes: >-
+      - Business positioning and high‑level description of Ultralytics YOLO remain focused on open‑source computer
+      vision tooling ⚠️ (from $.business.executiveSummary).
+
+      - Intended use continues to emphasize developer and research workflows for vision tasks, with no clearly
+      detectable scope expansion ⚠️ (from $.business.intendedUse).
+
+      - User population segments and examples appear stable, with no clearly identifiable shifts in target users ⚠️
+      (from $.business.userPopulations).
+
+      - KPIs for model performance (e.g., COCO mAP targets) are defined but no baseline deltas are inferable from this
+      run ⚠️ (from $.business.kpis).
+
+
+      No significant updates detected.
+    confidence: 0
+    overview: >-
+      Ultralytics YOLO is an open‑source computer vision framework and model zoo ⚠️ (from $.business.executiveSummary).
+      It is intended for developers, researchers, and organizations building vision applications such as detection,
+      segmentation, pose, and tracking ⚠️ (from $.business.intendedUse). Typical user populations include students,
+      researchers, enthusiasts, and commercial users under different licensing terms ⚠️ (from
+      $.business.userPopulations). Out‑of‑scope uses include general non‑vision ML tasks and other domains not supported
+      by the library’s models or data pipeline ⚠️ (from $.business.outOfScopeUse). Hazardous use cases include deploying
+      YOLO as the sole decision‑maker in safety‑critical systems ⚠️ (from $.business.hazardousUseCases).
+    textMd: ""
+  project-manager:
+    changes: >-
+      - Refined high-level description of the framework and its capabilities in $.business.executiveSummary⚠️.
+
+      - Clarified intended users (developers, researchers, organizations) and typical workflows in
+      $.business.intendedUse⚠️.
+
+      - Added/updated examples of hazardous deployments (e.g., sole decision-maker in safety‑critical systems) in
+      $.business.hazardousUseCases⚠️.
+
+      - Expanded explicit out-of-scope scenarios, especially non-vision or general-purpose uses, in
+      $.business.outOfScopeUse⚠️.
+
+      - Introduced or adjusted benchmark-driven KPIs (e.g., COCO mAP targets for YOLO26x) in $.business.kpis⚠️.
+
+      - Better segmented primary user populations, including open-source users vs. commercial customers, in
+      $.business.userPopulations⚠️.
+    confidence: 0
+    overview: >-
+      Ultralytics YOLO is documented as an open‑source computer vision framework and model zoo supporting detection,
+      segmentation, pose, classification, and tracking for a wide range of imaging domains (see
+      $.business.executiveSummary⚠️). It is positioned for developers, researchers, and organizations building custom
+      vision solutions rather than end‑user applications (see $.business.intendedUse⚠️). KPIs focus on benchmark
+      accuracy across representative datasets and model families (see $.business.kpis⚠️). The card also distinguishes
+      supported user groups and clarifies high‑risk and out‑of‑scope deployments (see $.business.userPopulations⚠️,
+      $.business.hazardousUseCases⚠️, $.business.outOfScopeUse⚠️).
+    textMd: ""
+  software-developer:
+    changes: >-
+      - No significant updates detected in business-oriented ML System Card fields relevant to software developers.
+
+      - Current draft still emphasizes intended usage patterns and user populations, with hazardous and out-of-scope use
+      cases explicitly called out in $.business.hazardousUseCases and $.business.outOfScopeUse ⚠️.
+
+      - KPI tracking for core models remains centered on standard vision benchmarks (e.g., COCO metrics) in
+      $.business.kpis ⚠️.
+    confidence: 0
+    overview: >-
+      ⚠️ The business section of the ML System Card describes Ultralytics YOLO as an open-source computer vision
+      framework and model zoo used for tasks like detection, segmentation, pose, and classification (see
+      $.business.executiveSummary). ⚠️ Intended users include developers and researchers integrating YOLO into
+      applications via Python, CLIs, and deployment targets (see $.business.intendedUse, $.business.userPopulations). ⚠️
+      Business KPIs track benchmark metrics such as COCO mAP for key model variants to monitor performance over time
+      (see $.business.kpis).
+    textMd: ""
+  ux-researcher:
+    changes: >-
+      - No significant updates detected.
+
+
+      The referenced sections—executive summary ($.business.executiveSummary), intended use ($.business.intendedUse),
+      hazardous and out-of-scope use cases ($.business.hazardousUseCases, $.business.outOfScopeUse), user populations
+      ($.business.userPopulations), and KPIs ($.business.kpis)—appear unchanged in this run. ⚠️
+    confidence: 0
+    overview: >-
+      Ultralytics YOLO is described ⚠️ as an open-source computer vision framework and model zoo
+      ($.business.executiveSummary), intended ⚠️ for developers, researchers, and organizations building vision-based
+      applications ($.business.intendedUse). Current documentation outlines ⚠️ primary user populations such as
+      students, researchers, enthusiasts, and commercial users under different licenses ($.business.userPopulations).
+      The card also enumerates ⚠️ hazardous use cases like using YOLO as a sole decision-maker in safety-critical
+      domains ($.business.hazardousUseCases) and specifies out-of-scope uses including non-vision ML tasks
+      ($.business.outOfScopeUse). Performance KPIs ⚠️ (e.g., COCO mAP targets for YOLO26x) are listed to benchmark model
+      quality ($.business.kpis).
+    textMd: ""

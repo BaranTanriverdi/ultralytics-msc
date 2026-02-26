@@ -1,0 +1,4179 @@
+{
+  "promptId": "reasoner.v1",
+  "promptMetadata": {
+    "id": "reasoner.v1",
+    "audience": "card-fact-reasoner",
+    "version": 1,
+    "max_tokens": 4096,
+    "citations": "required",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.9
+    }
+  },
+  "promptDigest": "2ee3e849e9b648963be4075d86ed0fc7850bbaceb75091dd8c2be27eb4467ded",
+  "mode": "llm",
+  "facts": [
+    {
+      "jsonPath": "$.business.executiveSummary",
+      "jsonPointer": "/business/executiveSummary",
+      "proposedValue": "Ultralytics YOLO is an open-source computer vision framework and model zoo that provides state-of-the-art YOLO-family models (including the latest YOLO26) for object detection, tracking, instance segmentation, classification, pose estimation, and oriented bounding box detection. The library is distributed as a Python package and Docker images, with a unified CLI (`yolo`) and Python API (`ultralytics.YOLO`) for training, validation, prediction, and export across many hardware and deployment targets. Pretrained models are provided for standard benchmarks such as COCO, ImageNet, COCO Keypoints, COCO-Seg, and DOTAv1, with detailed accuracy and latency metrics. The project is backed by extensive documentation, examples, and integrations with experiment tracking and deployment tools, targeting both individual researchers and enterprise users via AGPL-3.0 and commercial licenses.",
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 1,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/README.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "pyproject.toml",
+          "startLine": 1,
+          "endLine": 60,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.business.hazardousUseCases",
+      "jsonPointer": "/business/hazardousUseCases",
+      "proposedValue": [
+        "Using YOLO models as the sole decision-maker in safety-critical systems such as autonomous driving, industrial control, or medical devices without additional validation, redundancies, or human oversight.",
+        "Deploying YOLO-based systems for mass surveillance, biometric identification, or tracking of individuals in ways that may infringe on privacy rights or violate local regulations.",
+        "Relying on YOLO detections for legally binding decisions (e.g., law enforcement, access control, or credit decisions) without appropriate governance, auditing, and fairness assessments."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "docs/en/help/environmental-health-safety.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/help/privacy.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.7,
+      "gate": "Warn"
+    },
+    {
+      "jsonPath": "$.business.intendedUse",
+      "jsonPointer": "/business/intendedUse",
+      "proposedValue": "The library is intended to be used by developers, researchers, and organizations to train, evaluate, and deploy YOLO-based models for computer vision tasks such as object detection, instance segmentation, multi-object tracking, human pose estimation, classification, and oriented bounding box detection on images and videos. Typical uses include analytics, counting, monitoring, region-based analytics, heatmaps, and other vision solutions implemented via the built-in `solutions` module and CLI.",
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 40,
+          "endLine": 160,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/solutions/index.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/tasks/index.md",
+          "startLine": 1,
+          "endLine": 60,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.88,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.business.kpis",
+      "jsonPointer": "/business/kpis",
+      "proposedValue": [
+        {
+          "name": "COCO val2017 detection mAP50-95 for YOLO26x",
+          "target": 57.5,
+          "current": 57.5
+        },
+        {
+          "name": "COCO-Seg val2017 mask mAP50-95 for YOLO26x-seg",
+          "target": 47,
+          "current": 47
+        },
+        {
+          "name": "ImageNet top-1 accuracy for YOLO26x-cls",
+          "target": 79.9,
+          "current": 79.9
+        }
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 120,
+          "endLine": 230,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.business.outOfScopeUse",
+      "jsonPointer": "/business/outOfScopeUse",
+      "proposedValue": [
+        "General-purpose natural language processing or non-vision ML tasks that are unrelated to image or video data.",
+        "Applications that require formal guarantees of fairness, robustness, or certification (e.g., regulated medical diagnostics) without additional domain-specific validation and certification outside this library."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 1,
+          "endLine": 60,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "pyproject.toml",
+          "startLine": 20,
+          "endLine": 60,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.75,
+      "gate": "Warn"
+    },
+    {
+      "jsonPath": "$.business.userPopulations",
+      "jsonPointer": "/business/userPopulations",
+      "currentValue": [],
+      "proposedValue": [
+        "Students, researchers, and enthusiasts using the AGPL-3.0 licensed package for open research and educational projects.",
+        "Applied ML and software engineers integrating YOLO models into analytics, monitoring, and vision-powered products.",
+        "Enterprise teams deploying Ultralytics models commercially under the Ultralytics Enterprise License."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 230,
+          "endLine": 280,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/README.md",
+          "startLine": 60,
+          "endLine": 110,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.86,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.devInsight.architecture.dataFlow",
+      "jsonPointer": "/devInsight/architecture/dataFlow",
+      "proposedValue": [
+        "User specifies a dataset configuration (e.g., coco.yaml, coco8.yaml) that defines image and label locations and metadata.",
+        "Images and labels are loaded via BaseDataset/YOLODataset in ultralytics.data.base and ultralytics.data.dataset, with caching and rectangular batching optionally enabled.",
+        "Data augmentations and transforms (e.g., mosaic, MixUp, CutMix, color and geometric transforms) are applied in ultralytics.data.augment, yielding batches of images plus bounding boxes, segments, and keypoints.",
+        "Batches are fed through model architectures defined in ultralytics.models.* (YOLO26/YOLOv8/YOLOv10, RT-DETR, SAM, etc.) using PyTorch, via training/validation loops in ultralytics.engine.trainer and ultralytics.engine.validator.",
+        "Training and evaluation metrics (e.g., mAP, accuracy, keypoint AP) are computed via ultralytics.utils.metrics and logged to console and optional integrations (TensorBoard, Weights & Biases, MLflow).",
+        "Trained weights and exported artifacts (TorchScript, ONNX, OpenVINO, TensorRT, TFLite, NCNN, etc.) are produced via ultralytics.engine.exporter and ultralytics.utils.export, and can be consumed via the CLI (`yolo predict`, `yolo track`) or Python API (`YOLO(...).predict`, `.track`, `.export`)."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "ultralytics/data/augment.py",
+          "startLine": 1,
+          "endLine": 260,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/data/base.py",
+          "startLine": 1,
+          "endLine": 260,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/engine/exporter.py",
+          "startLine": 1,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/engine/trainer.py",
+          "startLine": 1,
+          "endLine": 200,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/engine/validator.py",
+          "startLine": 1,
+          "endLine": 200,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.devInsight.architecture.depsSummary",
+      "jsonPointer": "/devInsight/architecture/depsSummary",
+      "proposedValue": [
+        "Core training and inference depend on PyTorch (torch>=1.8.0) and torchvision for model definition and tensor operations.",
+        "Numerical computation and data handling rely on numpy, scipy, and polars.",
+        "Image and video I/O and visualization depend on opencv-python, pillow, and matplotlib.",
+        "Export and deployment integrations use optional dependencies such as onnx, onnxruntime, openvino, tensorflow/tfjs, TensorRT, MNN, NCNN, CoreML, and others declared in the `export` optional dependency group.",
+        "Experiment tracking and observability integrate with Weights & Biases, MLflow, TensorBoard, ClearML, Neptune, and DVC via optional `logging` dependencies.",
+        "The library is packaged as a Python project with setuptools, targeting Python>=3.8 across Linux, macOS, and Windows."
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "pyproject.toml",
+          "startLine": 40,
+          "endLine": 140,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.92,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.devInsight.architecture.publicApis",
+      "jsonPointer": "/devInsight/architecture/publicApis",
+      "proposedValue": [
+        {
+          "name": "YOLO CLI entrypoint",
+          "path": "yolo [task] [mode] [args...] (e.g., `yolo detect train`, `yolo predict`, `yolo export`, `yolo track`, `yolo solutions ...`)",
+          "file": "ultralytics/cfg/__init__.py"
+        },
+        {
+          "name": "Python model API",
+          "path": "ultralytics.YOLO(...).train()/val()/predict()/track()/export()",
+          "file": "ultralytics/__init__.py"
+        },
+        {
+          "name": "Python RT-DETR API",
+          "path": "ultralytics.RTDETR(...).train()/val()/predict()/export()",
+          "file": "ultralytics/__init__.py"
+        },
+        {
+          "name": "Ultralytics Solutions CLI",
+          "path": "yolo solutions [count|heatmap|queue|workout|analytics|... ] arg=value ...",
+          "file": "ultralytics/cfg/__init__.py"
+        }
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "pyproject.toml",
+          "startLine": 90,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/__init__.py",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/cfg/__init__.py",
+          "startLine": 250,
+          "endLine": 520,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.93,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.devInsight.codeOverview.components",
+      "jsonPointer": "/devInsight/codeOverview/components",
+      "currentValue": [],
+      "proposedValue": [
+        {
+          "name": "Model architectures",
+          "summary": "Implementations of YOLO family models (YOLO26, YOLO11, YOLOv8–v10, YOLO-World, YOLOE), RT-DETR, SAM/FastSAM, and related heads and backbones.",
+          "keyFiles": [
+            "ultralytics/models/yolo/model.py",
+            "ultralytics/cfg/models/26/yolo26.yaml",
+            "ultralytics/models/rtdetr/model.py",
+            "ultralytics/models/sam/model.py"
+          ]
+        },
+        {
+          "name": "Training and evaluation engine",
+          "summary": "Config-driven training, validation, prediction, export, and hyperparameter tuning loops with callback support.",
+          "keyFiles": [
+            "ultralytics/engine/trainer.py",
+            "ultralytics/engine/validator.py",
+            "ultralytics/engine/predictor.py",
+            "ultralytics/engine/exporter.py",
+            "ultralytics/engine/tuner.py"
+          ]
+        },
+        {
+          "name": "Data pipeline",
+          "summary": "Dataset definitions, loaders, augmentation, dataset conversion utilities, and dataset splitting for multiple tasks and formats.",
+          "keyFiles": [
+            "ultralytics/data/base.py",
+            "ultralytics/data/dataset.py",
+            "ultralytics/data/augment.py",
+            "ultralytics/data/build.py",
+            "ultralytics/data/converter.py"
+          ]
+        },
+        {
+          "name": "Tracking and video analytics",
+          "summary": "Multi-object trackers (BoT-SORT, ByteTrack) and high-level analytics solutions for counting, heatmaps, queue management, parking, and speed estimation.",
+          "keyFiles": [
+            "ultralytics/trackers/bot_sort.py",
+            "ultralytics/trackers/byte_tracker.py",
+            "ultralytics/trackers/track.py",
+            "ultralytics/solutions/object_counter.py",
+            "ultralytics/solutions/heatmap.py",
+            "ultralytics/solutions/queue_management.py"
+          ]
+        },
+        {
+          "name": "Integrations and exports",
+          "summary": "Support for exporting models to ONNX, OpenVINO, TensorRT, CoreML, TFLite, MNN, NCNN, IMX, ExecuTorch, Axelera, and interacting with Triton, SAHI, and various runtimes.",
+          "keyFiles": [
+            "ultralytics/engine/exporter.py",
+            "ultralytics/utils/export/engine.py",
+            "ultralytics/utils/export/tensorflow.py",
+            "ultralytics/utils/export/imx.py",
+            "docs/en/integrations/*.md"
+          ]
+        }
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "docs/en/integrations/index.md",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "ultralytics/data/augment.py",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/engine/trainer.py",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/models/yolo/model.py",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/trackers/README.md",
+          "startLine": 1,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.devInsight.codeOverview.entrypoints",
+      "jsonPointer": "/devInsight/codeOverview/entrypoints",
+      "proposedValue": [
+        "Command-line interface via the `yolo` and `ultralytics` console scripts defined in pyproject.toml, implemented in ultralytics.cfg.entrypoint.",
+        "Python API entrypoint through the `ultralytics` package, exposing model classes such as YOLO, YOLOWorld, YOLOE, NAS, SAM, FastSAM, and RTDETR from ultralytics.__init__.",
+        "High-level solutions entrypoint via `yolo solutions ...` which dispatches to classes in ultralytics.solutions.*.",
+        "Documentation build entrypoint via docs/build_docs.py and docs/build_reference.py for generating and post-processing MkDocs-based documentation."
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "docs/build_docs.py",
+          "startLine": 1,
+          "endLine": 60,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "pyproject.toml",
+          "startLine": 90,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/__init__.py",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/cfg/__init__.py",
+          "startLine": 520,
+          "endLine": 760,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.93,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.devInsight.codeOverview.languages",
+      "jsonPointer": "/devInsight/codeOverview/languages",
+      "proposedValue": [
+        "Python (core library, CLI, training and inference engine, data pipeline, integrations, tests).",
+        "C++ (inference examples for ONNX Runtime, OpenVINO, TensorRT, LibTorch, MNN).",
+        "Rust (ONNX Runtime demos for YOLO series)."
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "examples/YOLOv8-ONNXRuntime-CPP/README.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "examples/YOLOv8-ONNXRuntime-Rust/Cargo.toml",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "pyproject.toml",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.devInsight.qualitySignals.complexityHints",
+      "jsonPointer": "/devInsight/qualitySignals/complexityHints",
+      "proposedValue": [
+        "The data augmentation pipeline in ultralytics.data.augment.py is large and feature-rich (mosaic, MixUp, CutMix, perspective transforms, classification augmentations), indicating a complex area where subtle changes may impact model performance.",
+        "The exporter and multi-backend support in ultralytics.engine.exporter and ultralytics/utils/export/* handle many target formats and edge cases (dynamic shapes, INT8/FP16, NMS-on-graph), making them important but intricate components.",
+        "Tracking and solutions modules (ultralytics.trackers.*, ultralytics.solutions.*) combine model inference, multi-object tracking, and custom business logic (e.g., counting, speed estimation, queue analytics), which increases integration complexity compared to pure model code."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "ultralytics/data/augment.py",
+          "startLine": 1,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/engine/exporter.py",
+          "startLine": 1,
+          "endLine": 160,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/solutions/solutions.py",
+          "startLine": 1,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/trackers/README.md",
+          "startLine": 1,
+          "endLine": 200,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.88,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.devInsight.runtimePerf",
+      "jsonPointer": "/devInsight/runtimePerf",
+      "proposedValue": {
+        "det_yolo26_coco_val2017": {
+          "metric": "mAP50-95",
+          "models": {
+            "yolo26n": {
+              "imgSize": 640,
+              "mAP": 40.9,
+              "cpuOnnxMs": 38.9,
+              "t4TensorRT10Ms": 1.7,
+              "paramsM": 2.4,
+              "flopsB": 5.4
+            },
+            "yolo26x": {
+              "imgSize": 640,
+              "mAP": 57.5,
+              "cpuOnnxMs": 525.8,
+              "t4TensorRT10Ms": 11.8,
+              "paramsM": 55.7,
+              "flopsB": 193.9
+            }
+          }
+        },
+        "seg_yolo26_cocoseg_val2017": {
+          "metric": "mAPbox50-95 / mAPmask50-95",
+          "models": {
+            "yolo26n-seg": {
+              "imgSize": 640,
+              "mAPbox": 39.6,
+              "mAPmask": 33.9,
+              "cpuOnnxMs": 53.3,
+              "t4TensorRT10Ms": 2.1
+            },
+            "yolo26x-seg": {
+              "imgSize": 640,
+              "mAPbox": 56.5,
+              "mAPmask": 47,
+              "cpuOnnxMs": 787,
+              "t4TensorRT10Ms": 16.4
+            }
+          }
+        },
+        "cls_yolo26_imagenet_val": {
+          "metric": "top1 / top5 accuracy",
+          "models": {
+            "yolo26n-cls": {
+              "imgSize": 224,
+              "top1": 71.4,
+              "top5": 90.1,
+              "cpuOnnxMs": 5,
+              "t4TensorRT10Ms": 1.1
+            },
+            "yolo26x-cls": {
+              "imgSize": 224,
+              "top1": 79.9,
+              "top5": 95,
+              "cpuOnnxMs": 41.4,
+              "t4TensorRT10Ms": 3.8
+            }
+          }
+        }
+      },
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 120,
+          "endLine": 230,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.95,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.governance.assessments",
+      "jsonPointer": "/governance/assessments",
+      "proposedValue": [
+        "Extensive automated unit and integration tests cover CLI, training, validation, prediction, exports to many formats, CUDA behavior, integrations (TensorBoard, Ray Tune, MLflow, Triton, faster-coco-eval), and high-level solutions, executed via pytest and GitHub Actions CI workflows.",
+        "Docs build and link-check workflows (e.g., docs.yml, links.yml) validate documentation consistency and external references."
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": ".github/workflows/conda-check-prs.yml",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/workflows/docs.yml",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "tests/test_cli.py",
+          "startLine": 1,
+          "endLine": 200,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.governance.policies",
+      "jsonPointer": "/governance/policies",
+      "proposedValue": [
+        "The core library and docs are licensed under the OSI-approved GNU Affero General Public License v3.0 (AGPL-3.0), with a separate Ultralytics Enterprise License available for commercial use cases to bypass AGPL copyleft obligations.",
+        "Contribution and collaboration are guided by documented contributing instructions and a code of conduct in the docs/help section, alongside explicit privacy, security, and environmental health & safety help pages.",
+        "The project maintains clear licensing for documentation and models, and encourages open collaboration while offering commercial licensing for integrated products and services."
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "LICENSE",
+          "startLine": 1,
+          "endLine": 20,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "README.md",
+          "startLine": 230,
+          "endLine": 280,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/help/code-of-conduct.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/help/contributing.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/help/environmental-health-safety.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/help/privacy.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/help/security.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.governance.riskRegister",
+      "jsonPointer": "/governance/riskRegister",
+      "proposedValue": [
+        "Technical risk: Export and deployment bugs across many backends (ONNX, TensorRT, OpenVINO, TFLite, NCNN, MNN, IMX, ExecuTorch, Axelera) could lead to silent accuracy or performance regressions; mitigated by matrix-style export tests in tests/test_exports.py and explicit version constraints in pyproject.toml.",
+        "Operational risk: Misconfiguration of training or deployment (e.g., incorrect data.yaml, image sizes, or device settings) could cause degraded performance or runtime errors; mitigated by configuration validation in ultralytics.cfg, data utils, and extensive help/docs pages.",
+        "Ethical and safety risk: Misuse in surveillance or safety-critical contexts without appropriate safeguards; partially addressed by environmental health & safety and privacy help pages but ultimately depends on deployer governance."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "docs/en/help/environmental-health-safety.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "tests/test_exports.py",
+          "startLine": 1,
+          "endLine": 260,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/cfg/__init__.py",
+          "startLine": 560,
+          "endLine": 820,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "pyproject.toml",
+          "startLine": 40,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.82,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.integration.api",
+      "jsonPointer": "/integration/api",
+      "proposedValue": {
+        "inputSchema": "For the CLI: `yolo [task] [mode] model=path/to/model.pt data=path/to/data.yaml source=PATH_OR_URL imgsz=INT ...`. For the Python API: `YOLO('model.pt').train(data='data.yaml', epochs=int, imgsz=int, device='cpu|cuda', **kwargs)` and `YOLO('model.pt')(source, imgsz=int, conf=float, iou=float, stream=bool, **kwargs)` where `source` may be file paths, URLs, numpy arrays, PIL Images, or torch.Tensors.",
+        "outputSchema": "CLI commands write metrics to stdout and optionally files (runs/* directories), prediction images/videos, exported model artifacts, labels, and JSON/CSV metrics. Python API calls return `Results` objects (defined in ultralytics.engine.results.Results) containing boxes, masks, keypoints, classification scores, and helper methods (`plot`, `to_df`, `to_json`, `save_txt`, `save_crop`).",
+        "version": "8.4.18"
+      },
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "examples/tutorial.ipynb",
+          "startLine": 80,
+          "endLine": 200,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/__init__.py",
+          "startLine": 1,
+          "endLine": 20,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/cfg/__init__.py",
+          "startLine": 520,
+          "endLine": 880,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/engine/results.py",
+          "startLine": 1,
+          "endLine": 200,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.92,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.integration.driftSignals",
+      "jsonPointer": "/integration/driftSignals",
+      "proposedValue": [
+        "Changes in validation mAP, accuracy, or keypoint AP over time when regularly re-running `yolo val` on a held-out dataset can indicate data or concept drift.",
+        "Dataset profiling via HUBDatasetStats (class distributions, image sizes, annotation completeness) can be used to detect shifts in input data characteristics compared to the training dataset.",
+        "Monitoring the distribution of detection confidence scores and class frequencies from production predictions (e.g., via logging integrations) can surface anomalous patterns that suggest drift."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "docs/en/guides/model-evaluation-insights.md",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/guides/model-monitoring-and-maintenance.md",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "tests/test_python.py",
+          "startLine": 430,
+          "endLine": 520,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.78,
+      "gate": "Warn"
+    },
+    {
+      "jsonPath": "$.integration.errorModel",
+      "jsonPointer": "/integration/errorModel",
+      "proposedValue": [
+        "Detection and segmentation errors manifest as false positives (spurious detections) and false negatives (missed objects), as quantified by COCO-style mAP metrics during validation.",
+        "Localization errors appear as misaligned bounding boxes or masks, especially on small or overlapping objects, which are penalized by IoU-based evaluation.",
+        "Tracking errors include ID switches, track fragmentation, and missed tracks, especially in crowded or low-contrast scenes; these are visible in tracking visualizations and logs.",
+        "Export/runtime errors can arise when target runtimes lack support for specific operators or configurations (e.g., dynamic shapes with INT8), which are mitigated via explicit version checks and export tests."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "docs/en/guides/yolo-performance-metrics.md",
+          "startLine": 1,
+          "endLine": 100,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "tests/test_exports.py",
+          "startLine": 1,
+          "endLine": 200,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/trackers/README.md",
+          "startLine": 40,
+          "endLine": 140,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.82,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.integration.fallbacks",
+      "jsonPointer": "/integration/fallbacks",
+      "proposedValue": [
+        "If CUDA is unavailable or misconfigured, the library automatically falls back to CPU execution, as seen in tests that branch on CUDA availability and use `device='cpu'`.",
+        "For export formats or runtimes that are unsupported in a given environment (e.g., CoreML on non-macOS, TensorFlow/TFLite on certain platforms), tests are conditionally skipped and requirements are checked at runtime, signalling to users that a different deployment path or environment is needed.",
+        "When data caching to RAM or disk is not possible due to resource limits, the data loader gracefully disables caching with informative warnings instead of failing hard."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "tests/test_cuda.py",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "tests/test_exports.py",
+          "startLine": 200,
+          "endLine": 420,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/data/base.py",
+          "startLine": 200,
+          "endLine": 320,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.84,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.integration.observability",
+      "jsonPointer": "/integration/observability",
+      "proposedValue": [
+        "Native support for experiment logging and visualization through integrations with TensorBoard, Weights & Biases, MLflow, ClearML, Neptune, and DVC, configured via `settings` and tested in tests/test_integrations.py.",
+        "Validation and benchmarking commands output detailed per-metric tables and can write JSON/CSV summaries via the Metrics object (`to_df`, `to_csv`, `to_json`) for downstream analysis.",
+        "The solutions module provides custom visualization (overlaid counts, heatmaps, analytics plots) and logs operational metrics such as counts, speeds, queue lengths, and regions of interest over time."
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "docs/en/integrations/tensorboard.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/integrations/weights-biases.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "tests/test_integrations.py",
+          "startLine": 1,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "tests/test_python.py",
+          "startLine": 260,
+          "endLine": 340,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.integration.operationalQualities",
+      "jsonPointer": "/integration/operationalQualities",
+      "proposedValue": [
+        "Cross-platform support for Linux, macOS, and Windows, with Python>=3.8 and GPU/CPU support as declared in project classifiers.",
+        "Multiple hardware backends are supported via exports (CPU-only ONNX/OpenVINO, NVIDIA CUDA/TensorRT, Edge TPU, various NPUs) allowing deployment from edge devices to cloud GPUs.",
+        "The CLI and Python API accept varied input types (paths, URLs, video streams, numpy arrays, PIL Images, tensors) and support streaming inference, making them suitable for batch and real-time workloads.",
+        "Test suite includes CUDA-specific tests, multi-GPU training checks, and export matrices to ensure behavior across devices and configurations."
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 40,
+          "endLine": 100,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "pyproject.toml",
+          "startLine": 20,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "tests/test_cuda.py",
+          "startLine": 1,
+          "endLine": 200,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "tests/test_exports.py",
+          "startLine": 1,
+          "endLine": 200,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.meta.links",
+      "jsonPointer": "/meta/links",
+      "proposedValue": {
+        "repo": "https://github.com/ultralytics/ultralytics",
+        "demo": "https://platform.ultralytics.com/ultralytics/yolo26",
+        "dataset": "https://docs.ultralytics.com/datasets/detect/coco/"
+      },
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/datasets/detect/coco.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.95,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.meta.maturity",
+      "jsonPointer": "/meta/maturity",
+      "proposedValue": "Pilot",
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": ".github/workflows/publish.yml",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "pyproject.toml",
+          "startLine": 20,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.72,
+      "gate": "Warn"
+    },
+    {
+      "jsonPath": "$.meta.owners",
+      "jsonPointer": "/meta/owners",
+      "proposedValue": [
+        {
+          "name": "Glenn Jocher",
+          "role": "Author, Core maintainer"
+        },
+        {
+          "name": "Jing Qiu",
+          "role": "Author, Core maintainer"
+        },
+        {
+          "name": "Ultralytics",
+          "role": "Maintainer and commercial licensor"
+        }
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "pyproject.toml",
+          "startLine": 20,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.96,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.meta.title",
+      "jsonPointer": "/meta/title",
+      "currentValue": "New ML System Card",
+      "proposedValue": "Ultralytics YOLO",
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "pyproject.toml",
+          "startLine": 20,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.mlCore.artifactURIs",
+      "jsonPointer": "/mlCore/artifactURIs",
+      "proposedValue": {
+        "model": "https://github.com/ultralytics/assets/releases (pretrained YOLO weights such as yolo26n.pt, yolo26x.pt)",
+        "dockerImage": "docker.io/ultralytics/ultralytics"
+      },
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 40,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "README.md",
+          "startLine": 120,
+          "endLine": 170,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docker/Dockerfile",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.88,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.mlCore.baselines",
+      "jsonPointer": "/mlCore/baselines",
+      "proposedValue": [
+        "Internal model_data.py compares YOLO26 and YOLO11 against prior YOLO families (YOLOv3, YOLOv5, YOLOv6, YOLOv7, YOLOv8, YOLOv9, YOLOv10), other detectors such as PP-YOLOE+, DAMO-YOLO, YOLOX, RTDETRv2/v3, EfficientDet, Gold-YOLO, D-FINE, RTMDet, YOLO-NAS, FCOS, SSD, LW-DETR, and YOLO-World, with standardized mAP, latency, parameter, and FLOPs metrics.",
+        "These baselines provide reference performance for common COCO-style detection settings at 640×640 resolution and various model scales (n/s/m/l/x)."
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "docs/model_data.py",
+          "startLine": 1,
+          "endLine": 260,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.94,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.mlCore.datasets",
+      "jsonPointer": "/mlCore/datasets",
+      "proposedValue": [
+        {
+          "name": "COCO (val2017, train2017)",
+          "uri": "https://docs.ultralytics.com/datasets/detect/coco/",
+          "license": "See the COCO dataset license on the official site."
+        },
+        {
+          "name": "COCO-Seg (instance segmentation)",
+          "uri": "https://docs.ultralytics.com/datasets/segment/coco/",
+          "license": "See the COCO dataset license on the official site."
+        },
+        {
+          "name": "COCO Keypoints / COCO-Pose",
+          "uri": "https://docs.ultralytics.com/datasets/pose/coco/",
+          "license": "See the COCO Keypoints dataset license on the official site."
+        },
+        {
+          "name": "DOTAv1 (Oriented Object Detection)",
+          "uri": "https://docs.ultralytics.com/datasets/obb/dota-v2/",
+          "license": "See the DOTA dataset license on the official site."
+        },
+        {
+          "name": "ImageNet (classification)",
+          "uri": "https://docs.ultralytics.com/datasets/classify/imagenet/",
+          "license": "See the ImageNet dataset license on the official site."
+        },
+        {
+          "name": "COCO8 / COCO128 mini datasets",
+          "uri": "https://docs.ultralytics.com/datasets/detect/coco/",
+          "license": "Derived subsets of COCO; inherit COCO licensing."
+        }
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 120,
+          "endLine": 210,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/datasets/classify/imagenet.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/datasets/detect/coco.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/datasets/obb/dota-v2.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/datasets/pose/coco.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/datasets/segment/coco.md",
+          "startLine": 1,
+          "endLine": 40,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.9,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.mlCore.failureModes",
+      "jsonPointer": "/mlCore/failureModes",
+      "proposedValue": [
+        "Performance degradation on domains and objects that differ significantly from the training datasets (e.g., COCO, DOTAv1, ImageNet) without appropriate fine-tuning or domain adaptation.",
+        "Lower accuracy on very small, heavily occluded, or motion-blurred objects, especially at low input resolutions or aggressive post-processing thresholds (conf/iou).",
+        "Potential misalignment between exported model behavior and PyTorch reference behavior if export options (dynamic shapes, NMS-in-graph, INT8/FP16 quantization) are misconfigured or unsupported by the deployment runtime.",
+        "Tracking-specific failure modes such as ID switches, track fragmentation, or missed tracks in highly crowded or low-frame-rate video inputs."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "docs/en/guides/model-evaluation-insights.md",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/guides/model-testing.md",
+          "startLine": 1,
+          "endLine": 60,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "tests/test_exports.py",
+          "startLine": 1,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/trackers/README.md",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.78,
+      "gate": "Warn"
+    },
+    {
+      "jsonPath": "$.mlCore.features",
+      "jsonPointer": "/mlCore/features",
+      "proposedValue": [
+        "Unified support for multiple computer vision tasks: object detection, instance segmentation, classification, human pose estimation, oriented bounding box detection, and multi-object tracking.",
+        "Config-driven training, validation, and hyperparameter tuning with automatic device selection, mixed precision support, and distributed training support.",
+        "Rich data augmentation strategies including mosaic, MixUp, CutMix, Albumentations integration, classification-specific augmentations, and grayscale/multispectral support.",
+        "Export to many deployment targets (TorchScript, ONNX, OpenVINO, TensorRT, TFLite, NCNN, MNN, IMX, ExecuTorch, Axelera, RKNN, CoreML, TF.js, EdgeTPU) through a single `yolo export` command.",
+        "High-level, ready-to-use solutions for counting, heatmaps, speed estimation, queue and parking management, similarity search, and security alarm workflows."
+      ],
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 40,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/guides/yolo-data-augmentation.md",
+          "startLine": 1,
+          "endLine": 60,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/modes/export.md",
+          "startLine": 1,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/solutions/index.md",
+          "startLine": 1,
+          "endLine": 60,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.92,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.mlCore.problem",
+      "jsonPointer": "/mlCore/problem",
+      "proposedValue": "Supervised computer vision for images and videos, focusing on object detection, instance segmentation, image classification, keypoint-based human pose estimation, oriented bounding box detection, and multi-object tracking.",
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 40,
+          "endLine": 80,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "docs/en/tasks/index.md",
+          "startLine": 1,
+          "endLine": 60,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.95,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.mlCore.qualities",
+      "jsonPointer": "/mlCore/qualities",
+      "proposedValue": [
+        "YOLO26 detection models achieve COCO val2017 mAP50-95 ranging from 40.9 (YOLO26n) to 57.5 (YOLO26x) at 640×640 resolution with competitive CPU and T4 TensorRT latency.",
+        "YOLO26 segmentation models trained on COCO-Seg produce box mAP50-95 up to 56.5 and mask mAP50-95 up to 47.0.",
+        "YOLO26 classification models trained on ImageNet reach up to 79.9% top-1 and 95.0% top-5 accuracy at 224×224 resolution.",
+        "YOLO26 pose models on COCO Keypoints achieve pose mAP50-95(e2e) up to 71.6 and mAP50(e2e) up to 91.6 for the largest variant.",
+        "DOTAv1-oriented bounding box models yield test-set mAP50-95(e2e) up to 56.7 and mAP50(e2e) up to 81.7 at 1024×1024 resolution."
+      ],
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 120,
+          "endLine": 230,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        }
+      ],
+      "confidence": 0.95,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.mlCore.training",
+      "jsonPointer": "/mlCore/training",
+      "proposedValue": {
+        "framework": "PyTorch",
+        "frameworkVersion": "torch>=1.8.0 (with various tests and constraints up to 2.x as specified in pyproject.toml)",
+        "hyperparams": {
+          "epochs": 100,
+          "imgsz": 640,
+          "batch": 16,
+          "conf": 0.25,
+          "iou": 0.45,
+          "optimizer": "SGD or AdamW (configurable)",
+          "augmentations": "mosaic, MixUp, CutMix, hsv, flip, scale, translate",
+          "taskSpecific": "task=detect|segment|classify|pose|obb"
+        },
+        "hardware": "Training and benchmarking demonstrated on NVIDIA GPUs (e.g., Amazon EC2 P4d with TensorRT T4 latency reports) and CPU-only environments; supports Linux, macOS, and Windows."
+      },
+      "source": {
+        "kind": "inferred"
+      },
+      "repoSources": [
+        {
+          "path": "README.md",
+          "startLine": 80,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "README.md",
+          "startLine": 120,
+          "endLine": 210,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "docs"
+        },
+        {
+          "path": "pyproject.toml",
+          "startLine": 40,
+          "endLine": 90,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": "ultralytics/cfg/default.yaml",
+          "startLine": 1,
+          "endLine": 120,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "config"
+        }
+      ],
+      "confidence": 0.8,
+      "gate": "OK"
+    },
+    {
+      "jsonPath": "$.provenance.changelog[0]",
+      "jsonPointer": "/provenance/changelog/0",
+      "proposedValue": {
+        "date": "2026-02-26T21:59:50.507Z",
+        "summary": "ML System Card run run-2026-02-26-21-59-23 observed 845 changed files",
+        "files": [
+          {
+            "path": ".dockerignore"
+          },
+          {
+            "path": ".github/ISSUE_TEMPLATE/bug-report.yml"
+          },
+          {
+            "path": ".github/ISSUE_TEMPLATE/config.yml"
+          },
+          {
+            "path": ".github/ISSUE_TEMPLATE/feature-request.yml"
+          },
+          {
+            "path": ".github/ISSUE_TEMPLATE/question.yml"
+          },
+          {
+            "path": ".github/dependabot.yml"
+          },
+          {
+            "path": ".github/workflows/cla.yml"
+          },
+          {
+            "path": ".github/workflows/conda-check-prs.yml"
+          },
+          {
+            "path": ".github/workflows/docker.yml"
+          },
+          {
+            "path": ".github/workflows/docs.yml"
+          },
+          {
+            "path": ".github/workflows/format.yml"
+          },
+          {
+            "path": ".github/workflows/links.yml"
+          },
+          {
+            "path": ".github/workflows/merge-main-into-prs.yml"
+          },
+          {
+            "path": ".github/workflows/mirror.yml"
+          },
+          {
+            "path": ".github/workflows/publish.yml"
+          },
+          {
+            "path": ".github/workflows/stale.yml"
+          },
+          {
+            "path": ".gitignore"
+          },
+          {
+            "path": "CITATION.cff"
+          },
+          {
+            "path": "CONTRIBUTING.md"
+          },
+          {
+            "path": "LICENSE"
+          },
+          {
+            "path": "README.md"
+          },
+          {
+            "path": "README.zh-CN.md"
+          },
+          {
+            "path": "docker/Dockerfile"
+          },
+          {
+            "path": "docker/Dockerfile-arm64"
+          },
+          {
+            "path": "docker/Dockerfile-conda"
+          },
+          {
+            "path": "docker/Dockerfile-cpu"
+          },
+          {
+            "path": "docker/Dockerfile-export"
+          },
+          {
+            "path": "docker/Dockerfile-jetson-jetpack4"
+          },
+          {
+            "path": "docker/Dockerfile-jetson-jetpack5"
+          },
+          {
+            "path": "docker/Dockerfile-jetson-jetpack6"
+          },
+          {
+            "path": "docker/Dockerfile-jupyter"
+          },
+          {
+            "path": "docker/Dockerfile-nvidia-arm64"
+          },
+          {
+            "path": "docker/Dockerfile-python"
+          },
+          {
+            "path": "docker/Dockerfile-python-export"
+          },
+          {
+            "path": "docker/Dockerfile-runner"
+          },
+          {
+            "path": "docs/README.md"
+          },
+          {
+            "path": "docs/build_docs.py"
+          },
+          {
+            "path": "docs/build_reference.py"
+          },
+          {
+            "path": "docs/coming_soon_template.md"
+          },
+          {
+            "path": "docs/en/CNAME"
+          },
+          {
+            "path": "docs/en/datasets/classify/caltech101.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/caltech256.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/cifar10.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/cifar100.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/fashion-mnist.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/imagenet.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/imagenet10.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/imagenette.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/imagewoof.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/index.md"
+          },
+          {
+            "path": "docs/en/datasets/classify/mnist.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/african-wildlife.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/argoverse.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/brain-tumor.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/coco.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/coco12-formats.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/coco128.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/coco8-grayscale.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/coco8-multispectral.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/coco8.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/construction-ppe.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/globalwheat2020.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/homeobjects-3k.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/index.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/kitti.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/lvis.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/medical-pills.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/objects365.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/open-images-v7.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/roboflow-100.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/signature.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/sku-110k.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/tt100k.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/visdrone.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/voc.md"
+          },
+          {
+            "path": "docs/en/datasets/detect/xview.md"
+          },
+          {
+            "path": "docs/en/datasets/explorer/api.md"
+          },
+          {
+            "path": "docs/en/datasets/explorer/dashboard.md"
+          },
+          {
+            "path": "docs/en/datasets/explorer/explorer.md"
+          },
+          {
+            "path": "docs/en/datasets/explorer/index.md"
+          },
+          {
+            "path": "docs/en/datasets/index.md"
+          },
+          {
+            "path": "docs/en/datasets/obb/dota-v2.md"
+          },
+          {
+            "path": "docs/en/datasets/obb/dota8.md"
+          },
+          {
+            "path": "docs/en/datasets/obb/index.md"
+          },
+          {
+            "path": "docs/en/datasets/pose/coco.md"
+          },
+          {
+            "path": "docs/en/datasets/pose/coco8-pose.md"
+          },
+          {
+            "path": "docs/en/datasets/pose/dog-pose.md"
+          },
+          {
+            "path": "docs/en/datasets/pose/hand-keypoints.md"
+          },
+          {
+            "path": "docs/en/datasets/pose/index.md"
+          },
+          {
+            "path": "docs/en/datasets/pose/tiger-pose.md"
+          },
+          {
+            "path": "docs/en/datasets/segment/carparts-seg.md"
+          },
+          {
+            "path": "docs/en/datasets/segment/coco.md"
+          },
+          {
+            "path": "docs/en/datasets/segment/coco128-seg.md"
+          },
+          {
+            "path": "docs/en/datasets/segment/coco8-seg.md"
+          },
+          {
+            "path": "docs/en/datasets/segment/crack-seg.md"
+          },
+          {
+            "path": "docs/en/datasets/segment/index.md"
+          },
+          {
+            "path": "docs/en/datasets/segment/package-seg.md"
+          },
+          {
+            "path": "docs/en/datasets/track/index.md"
+          },
+          {
+            "path": "docs/en/guides/analytics.md"
+          },
+          {
+            "path": "docs/en/guides/azureml-quickstart.md"
+          },
+          {
+            "path": "docs/en/guides/conda-quickstart.md"
+          },
+          {
+            "path": "docs/en/guides/coral-edge-tpu-on-raspberry-pi.md"
+          },
+          {
+            "path": "docs/en/guides/custom-trainer.md"
+          },
+          {
+            "path": "docs/en/guides/data-collection-and-annotation.md"
+          },
+          {
+            "path": "docs/en/guides/deepstream-nvidia-jetson.md"
+          },
+          {
+            "path": "docs/en/guides/defining-project-goals.md"
+          },
+          {
+            "path": "docs/en/guides/distance-calculation.md"
+          },
+          {
+            "path": "docs/en/guides/docker-quickstart.md"
+          },
+          {
+            "path": "docs/en/guides/heatmaps.md"
+          },
+          {
+            "path": "docs/en/guides/hyperparameter-tuning.md"
+          },
+          {
+            "path": "docs/en/guides/index.md"
+          },
+          {
+            "path": "docs/en/guides/instance-segmentation-and-tracking.md"
+          },
+          {
+            "path": "docs/en/guides/isolating-segmentation-objects.md"
+          },
+          {
+            "path": "docs/en/guides/kfold-cross-validation.md"
+          },
+          {
+            "path": "docs/en/guides/model-deployment-options.md"
+          },
+          {
+            "path": "docs/en/guides/model-deployment-practices.md"
+          },
+          {
+            "path": "docs/en/guides/model-evaluation-insights.md"
+          },
+          {
+            "path": "docs/en/guides/model-monitoring-and-maintenance.md"
+          },
+          {
+            "path": "docs/en/guides/model-testing.md"
+          },
+          {
+            "path": "docs/en/guides/model-training-tips.md"
+          },
+          {
+            "path": "docs/en/guides/model-yaml-config.md"
+          },
+          {
+            "path": "docs/en/guides/nvidia-dgx-spark.md"
+          },
+          {
+            "path": "docs/en/guides/nvidia-jetson.md"
+          },
+          {
+            "path": "docs/en/guides/object-blurring.md"
+          },
+          {
+            "path": "docs/en/guides/object-counting.md"
+          },
+          {
+            "path": "docs/en/guides/object-cropping.md"
+          },
+          {
+            "path": "docs/en/guides/optimizing-openvino-latency-vs-throughput-modes.md"
+          },
+          {
+            "path": "docs/en/guides/parking-management.md"
+          },
+          {
+            "path": "docs/en/guides/preprocessing_annotated_data.md"
+          },
+          {
+            "path": "docs/en/guides/queue-management.md"
+          },
+          {
+            "path": "docs/en/guides/raspberry-pi.md"
+          },
+          {
+            "path": "docs/en/guides/region-counting.md"
+          },
+          {
+            "path": "docs/en/guides/ros-quickstart.md"
+          },
+          {
+            "path": "docs/en/guides/sahi-tiled-inference.md"
+          },
+          {
+            "path": "docs/en/guides/security-alarm-system.md"
+          },
+          {
+            "path": "docs/en/guides/similarity-search.md"
+          },
+          {
+            "path": "docs/en/guides/speed-estimation.md"
+          },
+          {
+            "path": "docs/en/guides/steps-of-a-cv-project.md"
+          },
+          {
+            "path": "docs/en/guides/streamlit-live-inference.md"
+          },
+          {
+            "path": "docs/en/guides/trackzone.md"
+          },
+          {
+            "path": "docs/en/guides/triton-inference-server.md"
+          },
+          {
+            "path": "docs/en/guides/vertex-ai-deployment-with-docker.md"
+          },
+          {
+            "path": "docs/en/guides/view-results-in-terminal.md"
+          },
+          {
+            "path": "docs/en/guides/vision-eye.md"
+          },
+          {
+            "path": "docs/en/guides/workouts-monitoring.md"
+          },
+          {
+            "path": "docs/en/guides/yolo-common-issues.md"
+          },
+          {
+            "path": "docs/en/guides/yolo-data-augmentation.md"
+          },
+          {
+            "path": "docs/en/guides/yolo-performance-metrics.md"
+          },
+          {
+            "path": "docs/en/guides/yolo-thread-safe-inference.md"
+          },
+          {
+            "path": "docs/en/help/CI.md"
+          },
+          {
+            "path": "docs/en/help/CLA.md"
+          },
+          {
+            "path": "docs/en/help/FAQ.md"
+          },
+          {
+            "path": "docs/en/help/code-of-conduct.md"
+          },
+          {
+            "path": "docs/en/help/contributing.md"
+          },
+          {
+            "path": "docs/en/help/environmental-health-safety.md"
+          },
+          {
+            "path": "docs/en/help/index.md"
+          },
+          {
+            "path": "docs/en/help/minimum-reproducible-example.md"
+          },
+          {
+            "path": "docs/en/help/privacy.md"
+          },
+          {
+            "path": "docs/en/help/security.md"
+          },
+          {
+            "path": "docs/en/index.md"
+          },
+          {
+            "path": "docs/en/integrations/albumentations.md"
+          },
+          {
+            "path": "docs/en/integrations/amazon-sagemaker.md"
+          },
+          {
+            "path": "docs/en/integrations/axelera.md"
+          },
+          {
+            "path": "docs/en/integrations/clearml.md"
+          },
+          {
+            "path": "docs/en/integrations/comet.md"
+          },
+          {
+            "path": "docs/en/integrations/coreml.md"
+          },
+          {
+            "path": "docs/en/integrations/dvc.md"
+          },
+          {
+            "path": "docs/en/integrations/edge-tpu.md"
+          },
+          {
+            "path": "docs/en/integrations/executorch.md"
+          },
+          {
+            "path": "docs/en/integrations/google-colab.md"
+          },
+          {
+            "path": "docs/en/integrations/gradio.md"
+          },
+          {
+            "path": "docs/en/integrations/ibm-watsonx.md"
+          },
+          {
+            "path": "docs/en/integrations/index.md"
+          },
+          {
+            "path": "docs/en/integrations/jupyterlab.md"
+          },
+          {
+            "path": "docs/en/integrations/kaggle.md"
+          },
+          {
+            "path": "docs/en/integrations/mlflow.md"
+          },
+          {
+            "path": "docs/en/integrations/mnn.md"
+          },
+          {
+            "path": "docs/en/integrations/ncnn.md"
+          },
+          {
+            "path": "docs/en/integrations/neptune.md"
+          },
+          {
+            "path": "docs/en/integrations/neural-magic.md"
+          },
+          {
+            "path": "docs/en/integrations/onnx.md"
+          },
+          {
+            "path": "docs/en/integrations/openvino.md"
+          },
+          {
+            "path": "docs/en/integrations/paddlepaddle.md"
+          },
+          {
+            "path": "docs/en/integrations/paperspace.md"
+          },
+          {
+            "path": "docs/en/integrations/ray-tune.md"
+          },
+          {
+            "path": "docs/en/integrations/roboflow.md"
+          },
+          {
+            "path": "docs/en/integrations/rockchip-rknn.md"
+          },
+          {
+            "path": "docs/en/integrations/seeedstudio-recamera.md"
+          },
+          {
+            "path": "docs/en/integrations/sony-imx500.md"
+          },
+          {
+            "path": "docs/en/integrations/tensorboard.md"
+          },
+          {
+            "path": "docs/en/integrations/tensorrt.md"
+          },
+          {
+            "path": "docs/en/integrations/tf-graphdef.md"
+          },
+          {
+            "path": "docs/en/integrations/tf-savedmodel.md"
+          },
+          {
+            "path": "docs/en/integrations/tfjs.md"
+          },
+          {
+            "path": "docs/en/integrations/tflite.md"
+          },
+          {
+            "path": "docs/en/integrations/torchscript.md"
+          },
+          {
+            "path": "docs/en/integrations/vscode.md"
+          },
+          {
+            "path": "docs/en/integrations/weights-biases.md"
+          },
+          {
+            "path": "docs/en/models/fast-sam.md"
+          },
+          {
+            "path": "docs/en/models/index.md"
+          },
+          {
+            "path": "docs/en/models/mobile-sam.md"
+          },
+          {
+            "path": "docs/en/models/rtdetr.md"
+          },
+          {
+            "path": "docs/en/models/sam-2.md"
+          },
+          {
+            "path": "docs/en/models/sam-3.md"
+          },
+          {
+            "path": "docs/en/models/sam.md"
+          },
+          {
+            "path": "docs/en/models/yolo-nas.md"
+          },
+          {
+            "path": "docs/en/models/yolo-world.md"
+          },
+          {
+            "path": "docs/en/models/yolo11.md"
+          },
+          {
+            "path": "docs/en/models/yolo12.md"
+          },
+          {
+            "path": "docs/en/models/yolo26.md"
+          },
+          {
+            "path": "docs/en/models/yoloe.md"
+          },
+          {
+            "path": "docs/en/models/yolov10.md"
+          },
+          {
+            "path": "docs/en/models/yolov3.md"
+          },
+          {
+            "path": "docs/en/models/yolov4.md"
+          },
+          {
+            "path": "docs/en/models/yolov5.md"
+          },
+          {
+            "path": "docs/en/models/yolov6.md"
+          },
+          {
+            "path": "docs/en/models/yolov7.md"
+          },
+          {
+            "path": "docs/en/models/yolov8.md"
+          },
+          {
+            "path": "docs/en/models/yolov9.md"
+          },
+          {
+            "path": "docs/en/modes/benchmark.md"
+          },
+          {
+            "path": "docs/en/modes/export.md"
+          },
+          {
+            "path": "docs/en/modes/index.md"
+          },
+          {
+            "path": "docs/en/modes/predict.md"
+          },
+          {
+            "path": "docs/en/modes/track.md"
+          },
+          {
+            "path": "docs/en/modes/train.md"
+          },
+          {
+            "path": "docs/en/modes/val.md"
+          },
+          {
+            "path": "docs/en/platform/account/activity.md"
+          },
+          {
+            "path": "docs/en/platform/account/api-keys.md"
+          },
+          {
+            "path": "docs/en/platform/account/billing.md"
+          },
+          {
+            "path": "docs/en/platform/account/index.md"
+          },
+          {
+            "path": "docs/en/platform/account/settings.md"
+          },
+          {
+            "path": "docs/en/platform/account/trash.md"
+          },
+          {
+            "path": "docs/en/platform/api/index.md"
+          },
+          {
+            "path": "docs/en/platform/data/annotation.md"
+          },
+          {
+            "path": "docs/en/platform/data/datasets.md"
+          },
+          {
+            "path": "docs/en/platform/data/index.md"
+          },
+          {
+            "path": "docs/en/platform/deploy/endpoints.md"
+          },
+          {
+            "path": "docs/en/platform/deploy/index.md"
+          },
+          {
+            "path": "docs/en/platform/deploy/inference.md"
+          },
+          {
+            "path": "docs/en/platform/deploy/monitoring.md"
+          },
+          {
+            "path": "docs/en/platform/explore.md"
+          },
+          {
+            "path": "docs/en/platform/index.md"
+          },
+          {
+            "path": "docs/en/platform/quickstart.md"
+          },
+          {
+            "path": "docs/en/platform/train/cloud-training.md"
+          },
+          {
+            "path": "docs/en/platform/train/index.md"
+          },
+          {
+            "path": "docs/en/platform/train/models.md"
+          },
+          {
+            "path": "docs/en/platform/train/projects.md"
+          },
+          {
+            "path": "docs/en/quickstart.md"
+          },
+          {
+            "path": "docs/en/reference/__init__.md"
+          },
+          {
+            "path": "docs/en/reference/cfg/__init__.md"
+          },
+          {
+            "path": "docs/en/reference/data/annotator.md"
+          },
+          {
+            "path": "docs/en/reference/data/augment.md"
+          },
+          {
+            "path": "docs/en/reference/data/base.md"
+          },
+          {
+            "path": "docs/en/reference/data/build.md"
+          },
+          {
+            "path": "docs/en/reference/data/converter.md"
+          },
+          {
+            "path": "docs/en/reference/data/dataset.md"
+          },
+          {
+            "path": "docs/en/reference/data/loaders.md"
+          },
+          {
+            "path": "docs/en/reference/data/split.md"
+          },
+          {
+            "path": "docs/en/reference/data/split_dota.md"
+          },
+          {
+            "path": "docs/en/reference/data/utils.md"
+          },
+          {
+            "path": "docs/en/reference/engine/exporter.md"
+          },
+          {
+            "path": "docs/en/reference/engine/model.md"
+          },
+          {
+            "path": "docs/en/reference/engine/predictor.md"
+          },
+          {
+            "path": "docs/en/reference/engine/results.md"
+          },
+          {
+            "path": "docs/en/reference/engine/trainer.md"
+          },
+          {
+            "path": "docs/en/reference/engine/tuner.md"
+          },
+          {
+            "path": "docs/en/reference/engine/validator.md"
+          },
+          {
+            "path": "docs/en/reference/hub/__init__.md"
+          },
+          {
+            "path": "docs/en/reference/hub/auth.md"
+          },
+          {
+            "path": "docs/en/reference/hub/google/__init__.md"
+          },
+          {
+            "path": "docs/en/reference/hub/session.md"
+          },
+          {
+            "path": "docs/en/reference/hub/utils.md"
+          },
+          {
+            "path": "docs/en/reference/models/fastsam/model.md"
+          },
+          {
+            "path": "docs/en/reference/models/fastsam/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/fastsam/utils.md"
+          },
+          {
+            "path": "docs/en/reference/models/fastsam/val.md"
+          },
+          {
+            "path": "docs/en/reference/models/nas/model.md"
+          },
+          {
+            "path": "docs/en/reference/models/nas/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/nas/val.md"
+          },
+          {
+            "path": "docs/en/reference/models/rtdetr/model.md"
+          },
+          {
+            "path": "docs/en/reference/models/rtdetr/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/rtdetr/train.md"
+          },
+          {
+            "path": "docs/en/reference/models/rtdetr/val.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/amg.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/build.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/build_sam3.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/model.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/modules/blocks.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/modules/decoders.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/modules/encoders.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/modules/memory_attention.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/modules/sam.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/modules/tiny_encoder.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/modules/transformer.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/modules/utils.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/decoder.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/encoder.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/geometry_encoders.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/maskformer_segmentation.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/model_misc.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/necks.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/sam3_image.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/text_encoder_ve.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/vitdet.md"
+          },
+          {
+            "path": "docs/en/reference/models/sam/sam3/vl_combiner.md"
+          },
+          {
+            "path": "docs/en/reference/models/utils/loss.md"
+          },
+          {
+            "path": "docs/en/reference/models/utils/ops.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/classify/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/classify/train.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/classify/val.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/detect/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/detect/train.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/detect/val.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/model.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/obb/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/obb/train.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/obb/val.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/pose/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/pose/train.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/pose/val.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/segment/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/segment/train.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/segment/val.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/world/train.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/world/train_world.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/yoloe/predict.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/yoloe/train.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/yoloe/train_seg.md"
+          },
+          {
+            "path": "docs/en/reference/models/yolo/yoloe/val.md"
+          },
+          {
+            "path": "docs/en/reference/nn/autobackend.md"
+          },
+          {
+            "path": "docs/en/reference/nn/modules/activation.md"
+          },
+          {
+            "path": "docs/en/reference/nn/modules/block.md"
+          },
+          {
+            "path": "docs/en/reference/nn/modules/conv.md"
+          },
+          {
+            "path": "docs/en/reference/nn/modules/head.md"
+          },
+          {
+            "path": "docs/en/reference/nn/modules/transformer.md"
+          },
+          {
+            "path": "docs/en/reference/nn/modules/utils.md"
+          },
+          {
+            "path": "docs/en/reference/nn/tasks.md"
+          },
+          {
+            "path": "docs/en/reference/nn/text_model.md"
+          },
+          {
+            "path": "docs/en/reference/optim/muon.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/ai_gym.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/analytics.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/config.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/distance_calculation.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/heatmap.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/instance_segmentation.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/object_blurrer.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/object_counter.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/object_cropper.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/parking_management.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/queue_management.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/region_counter.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/security_alarm.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/similarity_search.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/solutions.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/speed_estimation.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/streamlit_inference.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/trackzone.md"
+          },
+          {
+            "path": "docs/en/reference/solutions/vision_eye.md"
+          },
+          {
+            "path": "docs/en/reference/trackers/basetrack.md"
+          },
+          {
+            "path": "docs/en/reference/trackers/bot_sort.md"
+          },
+          {
+            "path": "docs/en/reference/trackers/byte_tracker.md"
+          },
+          {
+            "path": "docs/en/reference/trackers/track.md"
+          },
+          {
+            "path": "docs/en/reference/trackers/utils/gmc.md"
+          },
+          {
+            "path": "docs/en/reference/trackers/utils/kalman_filter.md"
+          },
+          {
+            "path": "docs/en/reference/trackers/utils/matching.md"
+          },
+          {
+            "path": "docs/en/reference/utils/__init__.md"
+          },
+          {
+            "path": "docs/en/reference/utils/autobatch.md"
+          },
+          {
+            "path": "docs/en/reference/utils/autodevice.md"
+          },
+          {
+            "path": "docs/en/reference/utils/benchmarks.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/base.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/clearml.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/comet.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/dvc.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/hub.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/mlflow.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/neptune.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/platform.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/raytune.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/tensorboard.md"
+          },
+          {
+            "path": "docs/en/reference/utils/callbacks/wb.md"
+          },
+          {
+            "path": "docs/en/reference/utils/checks.md"
+          },
+          {
+            "path": "docs/en/reference/utils/cpu.md"
+          },
+          {
+            "path": "docs/en/reference/utils/dist.md"
+          },
+          {
+            "path": "docs/en/reference/utils/downloads.md"
+          },
+          {
+            "path": "docs/en/reference/utils/errors.md"
+          },
+          {
+            "path": "docs/en/reference/utils/events.md"
+          },
+          {
+            "path": "docs/en/reference/utils/export/engine.md"
+          },
+          {
+            "path": "docs/en/reference/utils/export/executorch.md"
+          },
+          {
+            "path": "docs/en/reference/utils/export/imx.md"
+          },
+          {
+            "path": "docs/en/reference/utils/export/tensorflow.md"
+          },
+          {
+            "path": "docs/en/reference/utils/files.md"
+          },
+          {
+            "path": "docs/en/reference/utils/git.md"
+          },
+          {
+            "path": "docs/en/reference/utils/instance.md"
+          },
+          {
+            "path": "docs/en/reference/utils/logger.md"
+          },
+          {
+            "path": "docs/en/reference/utils/loss.md"
+          },
+          {
+            "path": "docs/en/reference/utils/metrics.md"
+          },
+          {
+            "path": "docs/en/reference/utils/nms.md"
+          },
+          {
+            "path": "docs/en/reference/utils/ops.md"
+          },
+          {
+            "path": "docs/en/reference/utils/patches.md"
+          },
+          {
+            "path": "docs/en/reference/utils/plotting.md"
+          },
+          {
+            "path": "docs/en/reference/utils/tal.md"
+          },
+          {
+            "path": "docs/en/reference/utils/torch_utils.md"
+          },
+          {
+            "path": "docs/en/reference/utils/tqdm.md"
+          },
+          {
+            "path": "docs/en/reference/utils/triton.md"
+          },
+          {
+            "path": "docs/en/reference/utils/tuner.md"
+          },
+          {
+            "path": "docs/en/reference/utils/uploads.md"
+          },
+          {
+            "path": "docs/en/robots.txt"
+          },
+          {
+            "path": "docs/en/solutions/index.md"
+          },
+          {
+            "path": "docs/en/tasks/classify.md"
+          },
+          {
+            "path": "docs/en/tasks/detect.md"
+          },
+          {
+            "path": "docs/en/tasks/index.md"
+          },
+          {
+            "path": "docs/en/tasks/obb.md"
+          },
+          {
+            "path": "docs/en/tasks/pose.md"
+          },
+          {
+            "path": "docs/en/tasks/segment.md"
+          },
+          {
+            "path": "docs/en/usage/callbacks.md"
+          },
+          {
+            "path": "docs/en/usage/cfg.md"
+          },
+          {
+            "path": "docs/en/usage/cli.md"
+          },
+          {
+            "path": "docs/en/usage/engine.md"
+          },
+          {
+            "path": "docs/en/usage/python.md"
+          },
+          {
+            "path": "docs/en/usage/simple-utilities.md"
+          },
+          {
+            "path": "docs/en/yolov5/environments/aws_quickstart_tutorial.md"
+          },
+          {
+            "path": "docs/en/yolov5/environments/azureml_quickstart_tutorial.md"
+          },
+          {
+            "path": "docs/en/yolov5/environments/docker_image_quickstart_tutorial.md"
+          },
+          {
+            "path": "docs/en/yolov5/environments/google_cloud_quickstart_tutorial.md"
+          },
+          {
+            "path": "docs/en/yolov5/index.md"
+          },
+          {
+            "path": "docs/en/yolov5/quickstart_tutorial.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/architecture_description.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/clearml_logging_integration.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/comet_logging_integration.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/hyperparameter_evolution.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/model_ensembling.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/model_export.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/model_pruning_and_sparsity.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/multi_gpu_training.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/neural_magic_pruning_quantization.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/pytorch_hub_model_loading.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/test_time_augmentation.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/tips_for_best_training_results.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/train_custom_data.md"
+          },
+          {
+            "path": "docs/en/yolov5/tutorials/transfer_learning_with_frozen_layers.md"
+          },
+          {
+            "path": "docs/macros/augmentation-args.md"
+          },
+          {
+            "path": "docs/macros/export-args.md"
+          },
+          {
+            "path": "docs/macros/export-table.md"
+          },
+          {
+            "path": "docs/macros/predict-args.md"
+          },
+          {
+            "path": "docs/macros/sam-auto-annotate.md"
+          },
+          {
+            "path": "docs/macros/solutions-args.md"
+          },
+          {
+            "path": "docs/macros/track-args.md"
+          },
+          {
+            "path": "docs/macros/train-args.md"
+          },
+          {
+            "path": "docs/macros/validation-args.md"
+          },
+          {
+            "path": "docs/macros/visualization-args.md"
+          },
+          {
+            "path": "docs/macros/yolo-cls-perf.md"
+          },
+          {
+            "path": "docs/macros/yolo-det-perf.md"
+          },
+          {
+            "path": "docs/macros/yolo-obb-perf.md"
+          },
+          {
+            "path": "docs/macros/yolo-pose-perf.md"
+          },
+          {
+            "path": "docs/macros/yolo-seg-perf.md"
+          },
+          {
+            "path": "docs/mkdocs_github_authors.yaml"
+          },
+          {
+            "path": "docs/ml_system_card.yaml"
+          },
+          {
+            "path": "docs/model_data.py"
+          },
+          {
+            "path": "docs/overrides/javascript/benchmark.js"
+          },
+          {
+            "path": "docs/overrides/javascript/chart-widget.js"
+          },
+          {
+            "path": "docs/overrides/javascript/extra.js"
+          },
+          {
+            "path": "docs/overrides/javascript/giscus.js"
+          },
+          {
+            "path": "docs/overrides/javascript/tablesort.js"
+          },
+          {
+            "path": "docs/overrides/main.html"
+          },
+          {
+            "path": "docs/overrides/partials/comments.html"
+          },
+          {
+            "path": "docs/overrides/stylesheets/style.css"
+          },
+          {
+            "path": "docs/stakeholders.yaml"
+          },
+          {
+            "path": "examples/README.md"
+          },
+          {
+            "path": "examples/RTDETR-ONNXRuntime-Python/README.md"
+          },
+          {
+            "path": "examples/RTDETR-ONNXRuntime-Python/main.py"
+          },
+          {
+            "path": "examples/RTDETR-ONNXRuntime-Python/requirements.txt"
+          },
+          {
+            "path": "examples/YOLO-Interactive-Tracking-UI/README.md"
+          },
+          {
+            "path": "examples/YOLO-Interactive-Tracking-UI/interactive_tracker.py"
+          },
+          {
+            "path": "examples/YOLO-Series-ONNXRuntime-Rust/Cargo.toml"
+          },
+          {
+            "path": "examples/YOLO-Series-ONNXRuntime-Rust/README.md"
+          },
+          {
+            "path": "examples/YOLO-Series-ONNXRuntime-Rust/src/main.rs"
+          },
+          {
+            "path": "examples/YOLO11-Triton-CPP/CMakeLists.txt"
+          },
+          {
+            "path": "examples/YOLO11-Triton-CPP/README.md"
+          },
+          {
+            "path": "examples/YOLO11-Triton-CPP/inference.cpp"
+          },
+          {
+            "path": "examples/YOLO11-Triton-CPP/inference.hpp"
+          },
+          {
+            "path": "examples/YOLO11-Triton-CPP/main.cpp"
+          },
+          {
+            "path": "examples/YOLOv8-Action-Recognition/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-Action-Recognition/action_recognition.py"
+          },
+          {
+            "path": "examples/YOLOv8-Action-Recognition/requirements.txt"
+          },
+          {
+            "path": "examples/YOLOv8-CPP-Inference/CMakeLists.txt"
+          },
+          {
+            "path": "examples/YOLOv8-CPP-Inference/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-CPP-Inference/inference.cpp"
+          },
+          {
+            "path": "examples/YOLOv8-CPP-Inference/inference.h"
+          },
+          {
+            "path": "examples/YOLOv8-CPP-Inference/main.cpp"
+          },
+          {
+            "path": "examples/YOLOv8-LibTorch-CPP-Inference/CMakeLists.txt"
+          },
+          {
+            "path": "examples/YOLOv8-LibTorch-CPP-Inference/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-LibTorch-CPP-Inference/main.cc"
+          },
+          {
+            "path": "examples/YOLOv8-MNN-CPP/CMakeLists.txt"
+          },
+          {
+            "path": "examples/YOLOv8-MNN-CPP/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-MNN-CPP/main.cpp"
+          },
+          {
+            "path": "examples/YOLOv8-MNN-CPP/main_interpreter.cpp"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-CPP/CMakeLists.txt"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-CPP/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-CPP/inference.cpp"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-CPP/inference.h"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-CPP/main.cpp"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-Rust/Cargo.toml"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-Rust/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-Rust/src/cli.rs"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-Rust/src/lib.rs"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-Rust/src/main.rs"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-Rust/src/model.rs"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-Rust/src/ort_backend.rs"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime-Rust/src/yolo_result.rs"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime/main.py"
+          },
+          {
+            "path": "examples/YOLOv8-ONNXRuntime/requirements.txt"
+          },
+          {
+            "path": "examples/YOLOv8-OpenCV-ONNX-Python/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-OpenCV-ONNX-Python/main.py"
+          },
+          {
+            "path": "examples/YOLOv8-OpenCV-ONNX-Python/requirements.txt"
+          },
+          {
+            "path": "examples/YOLOv8-OpenVINO-CPP-Inference/CMakeLists.txt"
+          },
+          {
+            "path": "examples/YOLOv8-OpenVINO-CPP-Inference/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-OpenVINO-CPP-Inference/inference.cc"
+          },
+          {
+            "path": "examples/YOLOv8-OpenVINO-CPP-Inference/inference.h"
+          },
+          {
+            "path": "examples/YOLOv8-OpenVINO-CPP-Inference/main.cc"
+          },
+          {
+            "path": "examples/YOLOv8-Region-Counter/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-Region-Counter/yolov8_region_counter.py"
+          },
+          {
+            "path": "examples/YOLOv8-SAHI-Inference-Video/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-SAHI-Inference-Video/yolov8_sahi.py"
+          },
+          {
+            "path": "examples/YOLOv8-Segmentation-ONNXRuntime-Python/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-Segmentation-ONNXRuntime-Python/main.py"
+          },
+          {
+            "path": "examples/YOLOv8-TFLite-Python/README.md"
+          },
+          {
+            "path": "examples/YOLOv8-TFLite-Python/main.py"
+          },
+          {
+            "path": "examples/heatmaps.ipynb"
+          },
+          {
+            "path": "examples/hub.ipynb"
+          },
+          {
+            "path": "examples/object_counting.ipynb"
+          },
+          {
+            "path": "examples/object_tracking.ipynb"
+          },
+          {
+            "path": "examples/tutorial.ipynb"
+          },
+          {
+            "path": "mkdocs.yml"
+          },
+          {
+            "path": "pyproject.toml"
+          },
+          {
+            "path": "tests/__init__.py"
+          },
+          {
+            "path": "tests/conftest.py"
+          },
+          {
+            "path": "tests/test_cli.py"
+          },
+          {
+            "path": "tests/test_cuda.py"
+          },
+          {
+            "path": "tests/test_engine.py"
+          },
+          {
+            "path": "tests/test_exports.py"
+          },
+          {
+            "path": "tests/test_integrations.py"
+          },
+          {
+            "path": "tests/test_python.py"
+          },
+          {
+            "path": "tests/test_solutions.py"
+          },
+          {
+            "path": "ultralytics/__init__.py"
+          },
+          {
+            "path": "ultralytics/assets/bus.jpg"
+          },
+          {
+            "path": "ultralytics/assets/zidane.jpg"
+          },
+          {
+            "path": "ultralytics/cfg/__init__.py"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/Argoverse.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/DOTAv1.5.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/DOTAv1.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/GlobalWheat2020.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/HomeObjects-3K.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/ImageNet.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/Objects365.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/SKU-110K.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/TT100K.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/VOC.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/VisDrone.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/african-wildlife.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/brain-tumor.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/carparts-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco-pose.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco12-formats.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco128-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco128.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco8-grayscale.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco8-multispectral.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco8-pose.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco8-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/coco8.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/construction-ppe.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/crack-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/dog-pose.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/dota8-multispectral.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/dota8.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/hand-keypoints.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/kitti.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/lvis.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/medical-pills.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/open-images-v7.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/package-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/signature.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/tiger-pose.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/datasets/xView.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/default.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/11/yolo11-cls-resnet18.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/11/yolo11-cls.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/11/yolo11-obb.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/11/yolo11-pose.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/11/yolo11-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/11/yolo11.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/11/yoloe-11-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/11/yoloe-11.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/12/yolo12-cls.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/12/yolo12-obb.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/12/yolo12-pose.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/12/yolo12-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/12/yolo12.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/26/yolo26-cls.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/26/yolo26-obb.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/26/yolo26-p2.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/26/yolo26-p6.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/26/yolo26-pose.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/26/yolo26-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/26/yolo26.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/26/yoloe-26-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/26/yoloe-26.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/README.md"
+          },
+          {
+            "path": "ultralytics/cfg/models/rt-detr/rtdetr-l.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/rt-detr/rtdetr-resnet101.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/rt-detr/rtdetr-resnet50.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/rt-detr/rtdetr-x.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v10/yolov10b.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v10/yolov10l.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v10/yolov10m.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v10/yolov10n.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v10/yolov10s.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v10/yolov10x.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v3/yolov3-spp.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v3/yolov3-tiny.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v3/yolov3.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v5/yolov5-p6.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v5/yolov5.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v6/yolov6.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yoloe-v8-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yoloe-v8.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-cls-resnet101.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-cls-resnet50.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-cls.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-ghost-p2.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-ghost-p6.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-ghost.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-obb.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-p2.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-p6.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-pose-p6.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-pose.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-rtdetr.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-seg-p6.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-world.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8-worldv2.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v8/yolov8.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v9/yolov9c-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v9/yolov9c.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v9/yolov9e-seg.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v9/yolov9e.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v9/yolov9m.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v9/yolov9s.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/models/v9/yolov9t.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/trackers/botsort.yaml"
+          },
+          {
+            "path": "ultralytics/cfg/trackers/bytetrack.yaml"
+          },
+          {
+            "path": "ultralytics/data/__init__.py"
+          },
+          {
+            "path": "ultralytics/data/annotator.py"
+          },
+          {
+            "path": "ultralytics/data/augment.py"
+          },
+          {
+            "path": "ultralytics/data/base.py"
+          },
+          {
+            "path": "ultralytics/data/build.py"
+          },
+          {
+            "path": "ultralytics/data/converter.py"
+          },
+          {
+            "path": "ultralytics/data/dataset.py"
+          },
+          {
+            "path": "ultralytics/data/loaders.py"
+          },
+          {
+            "path": "ultralytics/data/scripts/download_weights.sh"
+          },
+          {
+            "path": "ultralytics/data/scripts/get_coco.sh"
+          },
+          {
+            "path": "ultralytics/data/scripts/get_coco128.sh"
+          },
+          {
+            "path": "ultralytics/data/scripts/get_imagenet.sh"
+          },
+          {
+            "path": "ultralytics/data/split.py"
+          },
+          {
+            "path": "ultralytics/data/split_dota.py"
+          },
+          {
+            "path": "ultralytics/data/utils.py"
+          },
+          {
+            "path": "ultralytics/engine/__init__.py"
+          },
+          {
+            "path": "ultralytics/engine/exporter.py"
+          },
+          {
+            "path": "ultralytics/engine/model.py"
+          },
+          {
+            "path": "ultralytics/engine/predictor.py"
+          },
+          {
+            "path": "ultralytics/engine/results.py"
+          },
+          {
+            "path": "ultralytics/engine/trainer.py"
+          },
+          {
+            "path": "ultralytics/engine/tuner.py"
+          },
+          {
+            "path": "ultralytics/engine/validator.py"
+          },
+          {
+            "path": "ultralytics/hub/__init__.py"
+          },
+          {
+            "path": "ultralytics/hub/auth.py"
+          },
+          {
+            "path": "ultralytics/hub/google/__init__.py"
+          },
+          {
+            "path": "ultralytics/hub/session.py"
+          },
+          {
+            "path": "ultralytics/hub/utils.py"
+          },
+          {
+            "path": "ultralytics/models/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/fastsam/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/fastsam/model.py"
+          },
+          {
+            "path": "ultralytics/models/fastsam/predict.py"
+          },
+          {
+            "path": "ultralytics/models/fastsam/utils.py"
+          },
+          {
+            "path": "ultralytics/models/fastsam/val.py"
+          },
+          {
+            "path": "ultralytics/models/nas/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/nas/model.py"
+          },
+          {
+            "path": "ultralytics/models/nas/predict.py"
+          },
+          {
+            "path": "ultralytics/models/nas/val.py"
+          },
+          {
+            "path": "ultralytics/models/rtdetr/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/rtdetr/model.py"
+          },
+          {
+            "path": "ultralytics/models/rtdetr/predict.py"
+          },
+          {
+            "path": "ultralytics/models/rtdetr/train.py"
+          },
+          {
+            "path": "ultralytics/models/rtdetr/val.py"
+          },
+          {
+            "path": "ultralytics/models/sam/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/sam/amg.py"
+          },
+          {
+            "path": "ultralytics/models/sam/build.py"
+          },
+          {
+            "path": "ultralytics/models/sam/build_sam3.py"
+          },
+          {
+            "path": "ultralytics/models/sam/model.py"
+          },
+          {
+            "path": "ultralytics/models/sam/modules/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/sam/modules/blocks.py"
+          },
+          {
+            "path": "ultralytics/models/sam/modules/decoders.py"
+          },
+          {
+            "path": "ultralytics/models/sam/modules/encoders.py"
+          },
+          {
+            "path": "ultralytics/models/sam/modules/memory_attention.py"
+          },
+          {
+            "path": "ultralytics/models/sam/modules/sam.py"
+          },
+          {
+            "path": "ultralytics/models/sam/modules/tiny_encoder.py"
+          },
+          {
+            "path": "ultralytics/models/sam/modules/transformer.py"
+          },
+          {
+            "path": "ultralytics/models/sam/modules/utils.py"
+          },
+          {
+            "path": "ultralytics/models/sam/predict.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/decoder.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/encoder.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/geometry_encoders.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/maskformer_segmentation.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/model_misc.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/necks.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/sam3_image.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/text_encoder_ve.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/vitdet.py"
+          },
+          {
+            "path": "ultralytics/models/sam/sam3/vl_combiner.py"
+          },
+          {
+            "path": "ultralytics/models/utils/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/utils/loss.py"
+          },
+          {
+            "path": "ultralytics/models/utils/ops.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/classify/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/classify/predict.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/classify/train.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/classify/val.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/detect/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/detect/predict.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/detect/train.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/detect/val.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/model.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/obb/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/obb/predict.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/obb/train.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/obb/val.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/pose/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/pose/predict.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/pose/train.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/pose/val.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/segment/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/segment/predict.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/segment/train.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/segment/val.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/world/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/world/train.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/world/train_world.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/yoloe/__init__.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/yoloe/predict.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/yoloe/train.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/yoloe/train_seg.py"
+          },
+          {
+            "path": "ultralytics/models/yolo/yoloe/val.py"
+          },
+          {
+            "path": "ultralytics/nn/__init__.py"
+          },
+          {
+            "path": "ultralytics/nn/autobackend.py"
+          },
+          {
+            "path": "ultralytics/nn/modules/__init__.py"
+          },
+          {
+            "path": "ultralytics/nn/modules/activation.py"
+          },
+          {
+            "path": "ultralytics/nn/modules/block.py"
+          },
+          {
+            "path": "ultralytics/nn/modules/conv.py"
+          },
+          {
+            "path": "ultralytics/nn/modules/head.py"
+          },
+          {
+            "path": "ultralytics/nn/modules/transformer.py"
+          },
+          {
+            "path": "ultralytics/nn/modules/utils.py"
+          },
+          {
+            "path": "ultralytics/nn/tasks.py"
+          },
+          {
+            "path": "ultralytics/nn/text_model.py"
+          },
+          {
+            "path": "ultralytics/optim/__init__.py"
+          },
+          {
+            "path": "ultralytics/optim/muon.py"
+          },
+          {
+            "path": "ultralytics/py.typed"
+          },
+          {
+            "path": "ultralytics/solutions/__init__.py"
+          },
+          {
+            "path": "ultralytics/solutions/ai_gym.py"
+          },
+          {
+            "path": "ultralytics/solutions/analytics.py"
+          },
+          {
+            "path": "ultralytics/solutions/config.py"
+          },
+          {
+            "path": "ultralytics/solutions/distance_calculation.py"
+          },
+          {
+            "path": "ultralytics/solutions/heatmap.py"
+          },
+          {
+            "path": "ultralytics/solutions/instance_segmentation.py"
+          },
+          {
+            "path": "ultralytics/solutions/object_blurrer.py"
+          },
+          {
+            "path": "ultralytics/solutions/object_counter.py"
+          },
+          {
+            "path": "ultralytics/solutions/object_cropper.py"
+          },
+          {
+            "path": "ultralytics/solutions/parking_management.py"
+          },
+          {
+            "path": "ultralytics/solutions/queue_management.py"
+          },
+          {
+            "path": "ultralytics/solutions/region_counter.py"
+          },
+          {
+            "path": "ultralytics/solutions/security_alarm.py"
+          },
+          {
+            "path": "ultralytics/solutions/similarity_search.py"
+          },
+          {
+            "path": "ultralytics/solutions/solutions.py"
+          },
+          {
+            "path": "ultralytics/solutions/speed_estimation.py"
+          },
+          {
+            "path": "ultralytics/solutions/streamlit_inference.py"
+          },
+          {
+            "path": "ultralytics/solutions/templates/similarity-search.html"
+          },
+          {
+            "path": "ultralytics/solutions/trackzone.py"
+          },
+          {
+            "path": "ultralytics/solutions/vision_eye.py"
+          },
+          {
+            "path": "ultralytics/trackers/README.md"
+          },
+          {
+            "path": "ultralytics/trackers/__init__.py"
+          },
+          {
+            "path": "ultralytics/trackers/basetrack.py"
+          },
+          {
+            "path": "ultralytics/trackers/bot_sort.py"
+          },
+          {
+            "path": "ultralytics/trackers/byte_tracker.py"
+          },
+          {
+            "path": "ultralytics/trackers/track.py"
+          },
+          {
+            "path": "ultralytics/trackers/utils/__init__.py"
+          },
+          {
+            "path": "ultralytics/trackers/utils/gmc.py"
+          },
+          {
+            "path": "ultralytics/trackers/utils/kalman_filter.py"
+          },
+          {
+            "path": "ultralytics/trackers/utils/matching.py"
+          },
+          {
+            "path": "ultralytics/utils/__init__.py"
+          },
+          {
+            "path": "ultralytics/utils/autobatch.py"
+          },
+          {
+            "path": "ultralytics/utils/autodevice.py"
+          },
+          {
+            "path": "ultralytics/utils/benchmarks.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/__init__.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/base.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/clearml.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/comet.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/dvc.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/hub.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/mlflow.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/neptune.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/platform.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/raytune.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/tensorboard.py"
+          },
+          {
+            "path": "ultralytics/utils/callbacks/wb.py"
+          },
+          {
+            "path": "ultralytics/utils/checks.py"
+          },
+          {
+            "path": "ultralytics/utils/cpu.py"
+          },
+          {
+            "path": "ultralytics/utils/dist.py"
+          },
+          {
+            "path": "ultralytics/utils/downloads.py"
+          },
+          {
+            "path": "ultralytics/utils/errors.py"
+          },
+          {
+            "path": "ultralytics/utils/events.py"
+          },
+          {
+            "path": "ultralytics/utils/export/__init__.py"
+          },
+          {
+            "path": "ultralytics/utils/export/engine.py"
+          },
+          {
+            "path": "ultralytics/utils/export/executorch.py"
+          },
+          {
+            "path": "ultralytics/utils/export/imx.py"
+          },
+          {
+            "path": "ultralytics/utils/export/tensorflow.py"
+          },
+          {
+            "path": "ultralytics/utils/files.py"
+          },
+          {
+            "path": "ultralytics/utils/git.py"
+          },
+          {
+            "path": "ultralytics/utils/instance.py"
+          },
+          {
+            "path": "ultralytics/utils/logger.py"
+          },
+          {
+            "path": "ultralytics/utils/loss.py"
+          },
+          {
+            "path": "ultralytics/utils/metrics.py"
+          },
+          {
+            "path": "ultralytics/utils/nms.py"
+          },
+          {
+            "path": "ultralytics/utils/ops.py"
+          },
+          {
+            "path": "ultralytics/utils/patches.py"
+          },
+          {
+            "path": "ultralytics/utils/plotting.py"
+          },
+          {
+            "path": "ultralytics/utils/tal.py"
+          },
+          {
+            "path": "ultralytics/utils/torch_utils.py"
+          },
+          {
+            "path": "ultralytics/utils/tqdm.py"
+          },
+          {
+            "path": "ultralytics/utils/triton.py"
+          },
+          {
+            "path": "ultralytics/utils/tuner.py"
+          },
+          {
+            "path": "ultralytics/utils/uploads.py"
+          }
+        ],
+        "runId": "run-2026-02-26-21-59-23",
+        "headSha": "ea6df6e3fbdfdb93b8578a980bc80934de923d04"
+      },
+      "source": {
+        "kind": "extracted"
+      },
+      "repoSources": [
+        {
+          "path": ".dockerignore",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/bug-report.yml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/config.yml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/feature-request.yml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/question.yml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/dependabot.yml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/workflows/cla.yml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/workflows/conda-check-prs.yml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/workflows/docker.yml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        },
+        {
+          "path": ".github/workflows/docs.yml",
+          "startLine": 1,
+          "endLine": 1,
+          "commit": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+          "kind": "code"
+        }
+      ],
+      "confidence": 0.7,
+      "gate": "Warn",
+      "verifierNotes": "Review high-change volume"
+    }
+  ],
+  "coverageNonNull": 1,
+  "lowConfidence": [
+    {
+      "jsonPath": "$.business.hazardousUseCases",
+      "reason": "low confidence"
+    },
+    {
+      "jsonPath": "$.business.outOfScopeUse",
+      "reason": "low confidence"
+    },
+    {
+      "jsonPath": "$.integration.driftSignals",
+      "reason": "low confidence"
+    },
+    {
+      "jsonPath": "$.meta.maturity",
+      "reason": "low confidence"
+    },
+    {
+      "jsonPath": "$.mlCore.failureModes",
+      "reason": "low confidence"
+    },
+    {
+      "jsonPath": "$.provenance.changelog[0]",
+      "reason": "Review high-change volume"
+    }
+  ],
+  "extractorArtifact": "docs/.proposals/run-2026-02-26-21-59-23.extractor.json",
+  "analysisArtifact": "docs/.analysis/run-2026-02-26-21-59-23.json",
+  "generatedAt": "2026-02-26T22:14:45.342Z",
+  "attempts": 1,
+  "retryReasons": [
+    "Low confidence for $.business.hazardousUseCases: low confidence",
+    "Low confidence for $.business.outOfScopeUse: low confidence",
+    "Low confidence for $.integration.driftSignals: low confidence",
+    "Low confidence for $.meta.maturity: low confidence",
+    "Low confidence for $.mlCore.failureModes: low confidence",
+    "Low confidence for $.provenance.changelog[0]: Review high-change volume",
+    "Fact $.business.hazardousUseCases gated as Warn",
+    "Fact $.business.outOfScopeUse gated as Warn",
+    "Fact $.integration.driftSignals gated as Warn",
+    "Fact $.meta.maturity gated as Warn",
+    "Fact $.mlCore.failureModes gated as Warn",
+    "Fact $.provenance.changelog[0] gated as Warn"
+  ],
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-5.1",
+    "requestDigest": "5f861a22d3e19dca5fb84cdedee7aaaefd5326745dd514e8355daabad86ac458",
+    "responseDigest": "66f69361f6153e271fb6e820e2c92a82f8b755022138733cad16a632cf4f816f",
+    "metrics": {
+      "promptTokens": 94704,
+      "completionTokens": 37500,
+      "latencyMs": 279451.386558
+    },
+    "promptPreview": "You reconcile extractor suggestions with the current ML System Card to produce the vetted fact list.\n\nDeterminism requirements:\n- Evaluate each extracted fact independently and in `jsonPath` order.\n- Clamp confidence to `[0, 1]` with two decimals.\n- Downgrade gate to `Warn` when anchors are missing; set to `Require` when confidence < 0.65.\n- Never elevate confidence above the extractor's value.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-cpu, docker/Dockerfile-export, docker/Dockerfile-jetson-jetpack4, docker/Dockerfile-jetson-jetpack5, docker/Dockerfile-jetson-jetpack6, docker/Dockerfile-jupyter, docker/Dockerfile-nvidia-arm64, docker/Dockerfile-python, docker/Dockerfile-python-export, docker/Dockerfile-runner, docs/README.md, docs/build_docs.py, docs/build_reference.py, docs/coming_soon_template.md, docs/en/CNAME, docs/en/datasets/classify/caltech101.md, docs/en/datasets/classify/caltech256.md, docs/en/datasets/classify/cifar10.md, docs/en/datasets/classify/cifar100.md, docs/en/datasets/classify/fashion-mnist.md, docs/en/datasets/classify/imagenet.md, docs/en/datasets/classify/imagenet10.md, docs/en/datasets/classify/imagenette.md, docs/en/datasets/classify/imagewoof.md, docs/en/dat",
+    "contentPreview": "{\n  \"facts\": [\n    {\n      \"jsonPath\": \"$.business.executiveSummary\",\n      \"value\": \"Ultralytics YOLO is an open-source computer vision framework and model zoo that provides state-of-the-art YOLO-family models (including the latest YOLO26) for object detection, tracking, instance segmentation, classification, pose estimation, and oriented bounding box detection. The library is distributed as a Python package and Docker images, with a unified CLI (`yolo`) and Python API (`ultralytics.YOLO`) for training, validation, prediction, and export across many hardware and deployment targets. Pretrained models are provided for standard benchmarks such as COCO, ImageNet, COCO Keypoints, COCO-Seg, and DOTAv1, with detailed accuracy and latency metrics. The project is backed by extensive documentation, examples, and integrations with experiment tracking and deployment tools, targeting both individual researchers and enterprise users via AGPL-3.0 and commercial licenses.\",\n      \"confidence\": 0.90,\n      \"gate\": \"OK\",\n      \"repoSources\": [\n        {\n          \"path\": \"README.md\",\n          \"startLine\": 1,\n          \"endLine\": 120,\n          \"commit\": \"ea6df6e3fbdfdb93b8578a980bc80934de923d04\",\n          \"kind\": \"docs\"\n        },\n        {\n          \"path\": \"docs/README.md\",\n          \"startLine\": 1,\n          \"endLine\": 40,\n          \"commit\": \"ea6df6e3fbdfdb93b8578a980bc80934de923d04\",\n          \"kind\": \"docs\"\n        },\n        {\n          \"path\": \"pyproject.toml\",\n          \"startLine\": 1,\n          \"endLine\": 60,\n          \"commit\": \"ea6df6e3fbdfdb93b8578a980bc80934de923d04\",\n          \"kind\": \"code\"\n        }\n      ],\n      \"verifierNotes\": null\n    },\n    {\n      \"jsonPath\": \"$.business.hazardousUseCases\",\n      \"value\": [\n        \"Using YOLO models as the sole decision-maker in safety-critical systems such as autonomous driving, industrial control, or medical devices without additional validation, redundancies, or human oversight.\",\n        \"Deploying YOLO-based systems f"
+  }
+}

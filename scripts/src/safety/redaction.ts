@@ -30,7 +30,7 @@ export function isPathDenied(path: string): boolean {
 
 /**
  * Paths belonging to the MSC (ML System Card) generator infrastructure.
- * These must never be analysed as project source code because they would
+ * These must never be analyzed as project source code because they would
  * pollute the card content with references to the tooling itself.
  *
  * IMPORTANT: Only list paths that are **unambiguously** part of the MSC

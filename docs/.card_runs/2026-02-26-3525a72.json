@@ -1,0 +1,111 @@
+{
+  "engine": "ml-system-card-local",
+  "run_id": "run-2026-02-26-21-59-23",
+  "base_sha": "ea6df6e3fbdfdb93b8578a980bc80934de923d04",
+  "changed_paths": [
+    "$.business.executiveSummary",
+    "$.business.hazardousUseCases",
+    "$.business.intendedUse",
+    "$.business.kpis",
+    "$.business.outOfScopeUse",
+    "$.business.userPopulations",
+    "$.devInsight.architecture.dataFlow",
+    "$.devInsight.architecture.depsSummary",
+    "$.devInsight.architecture.publicApis",
+    "$.devInsight.codeOverview.components",
+    "$.devInsight.codeOverview.entrypoints",
+    "$.devInsight.codeOverview.languages",
+    "$.devInsight.qualitySignals.complexityHints",
+    "$.devInsight.runtimePerf",
+    "$.governance.policies",
+    "$.integration.api",
+    "$.integration.fallbacks",
+    "$.meta.links",
+    "$.meta.maturity",
+    "$.meta.owners",
+    "$.meta.title",
+    "$.mlCore.artifactURIs",
+    "$.mlCore.baselines",
+    "$.mlCore.datasets",
+    "$.mlCore.failureModes",
+    "$.mlCore.features",
+    "$.mlCore.problem",
+    "$.mlCore.training",
+    "$.provenance.changelog[0]"
+  ],
+  "low_confidence_rows_only": [
+    {
+      "path": "$.governance.assessments",
+      "confidence": 0.3,
+      "sources": [
+        ".github/workflows/conda-check-prs.yml#L1-L80",
+        ".github/workflows/docs.yml#L1-L80",
+        "tests/test_cli.py#L1-L200"
+      ],
+      "disposition": "rejected"
+    },
+    {
+      "path": "$.governance.riskRegister",
+      "confidence": 0.2,
+      "sources": [
+        "docs/en/help/environmental-health-safety.md#L1-L40",
+        "tests/test_exports.py#L1-L260",
+        "ultralytics/cfg/__init__.py#L560-L820",
+        "pyproject.toml#L40-L120"
+      ],
+      "disposition": "rejected"
+    },
+    {
+      "path": "$.integration.driftSignals",
+      "confidence": 0,
+      "sources": [
+        "docs/en/guides/model-evaluation-insights.md#L1-L80",
+        "docs/en/guides/model-monitoring-and-maintenance.md#L1-L80",
+        "tests/test_python.py#L430-L520"
+      ],
+      "disposition": "rejected"
+    },
+    {
+      "path": "$.integration.errorModel",
+      "confidence": 0.3,
+      "sources": [
+        "docs/en/guides/yolo-performance-metrics.md#L1-L100",
+        "tests/test_exports.py#L1-L200",
+        "ultralytics/trackers/README.md#L40-L140"
+      ],
+      "disposition": "rejected"
+    },
+    {
+      "path": "$.integration.observability",
+      "confidence": 0.2,
+      "sources": [
+        "docs/en/integrations/tensorboard.md#L1-L40",
+        "docs/en/integrations/weights-biases.md#L1-L40",
+        "tests/test_integrations.py#L1-L120",
+        "tests/test_python.py#L260-L340"
+      ],
+      "disposition": "rejected"
+    },
+    {
+      "path": "$.integration.operationalQualities",
+      "confidence": 0.3,
+      "sources": [
+        "README.md#L40-L100",
+        "pyproject.toml#L20-L80",
+        "tests/test_cuda.py#L1-L200",
+        "tests/test_exports.py#L1-L200"
+      ],
+      "disposition": "rejected"
+    },
+    {
+      "path": "$.mlCore.qualities",
+      "confidence": 0.4,
+      "sources": ["README.md#L120-L230"],
+      "disposition": "rejected"
+    }
+  ],
+  "yaml_hash": "3525a72137fcc35f206ab65af62e966857deb61b4d3fbe7732471e5c5a363c61",
+  "schema_id": "https://ml-system-card.dev/schema/v1",
+  "coverage_non_null": 1,
+  "timestamp": "2026-02-26T23:23:47.931Z"
+}
