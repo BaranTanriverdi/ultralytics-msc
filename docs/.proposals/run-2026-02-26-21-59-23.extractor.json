@@ -9170,121 +9170,87 @@
         {
           "name": "tutorial",
           "summary": "Jupyter Notebook Experiment/Analysis",
-          "keyFiles": [
-            "examples/tutorial.ipynb"
-          ]
+          "keyFiles": ["examples/tutorial.ipynb"]
         },
         {
           "name": "object_tracking",
           "summary": "Jupyter Notebook Experiment/Analysis",
-          "keyFiles": [
-            "examples/object_tracking.ipynb"
-          ]
+          "keyFiles": ["examples/object_tracking.ipynb"]
         },
         {
           "name": "object_counting",
           "summary": "Jupyter Notebook Experiment/Analysis",
-          "keyFiles": [
-            "examples/object_counting.ipynb"
-          ]
+          "keyFiles": ["examples/object_counting.ipynb"]
         },
         {
           "name": "hub",
           "summary": "Jupyter Notebook Experiment/Analysis",
-          "keyFiles": [
-            "examples/hub.ipynb"
-          ]
+          "keyFiles": ["examples/hub.ipynb"]
         },
         {
           "name": "heatmaps",
           "summary": "Jupyter Notebook Experiment/Analysis",
-          "keyFiles": [
-            "examples/heatmaps.ipynb"
-          ]
+          "keyFiles": ["examples/heatmaps.ipynb"]
         },
         {
           "name": "__init__",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "ultralytics/__init__.py"
-          ]
+          "keyFiles": ["ultralytics/__init__.py"]
         },
         {
           "name": "test_solutions",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "tests/test_solutions.py"
-          ]
+          "keyFiles": ["tests/test_solutions.py"]
         },
         {
           "name": "test_python",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "tests/test_python.py"
-          ]
+          "keyFiles": ["tests/test_python.py"]
         },
         {
           "name": "test_integrations",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "tests/test_integrations.py"
-          ]
+          "keyFiles": ["tests/test_integrations.py"]
         },
         {
           "name": "test_exports",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "tests/test_exports.py"
-          ]
+          "keyFiles": ["tests/test_exports.py"]
         },
         {
           "name": "test_engine",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "tests/test_engine.py"
-          ]
+          "keyFiles": ["tests/test_engine.py"]
         },
         {
           "name": "test_cuda",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "tests/test_cuda.py"
-          ]
+          "keyFiles": ["tests/test_cuda.py"]
         },
         {
           "name": "test_cli",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "tests/test_cli.py"
-          ]
+          "keyFiles": ["tests/test_cli.py"]
         },
         {
           "name": "__init__",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "tests/__init__.py"
-          ]
+          "keyFiles": ["tests/__init__.py"]
         },
         {
           "name": "model_data",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "docs/model_data.py"
-          ]
+          "keyFiles": ["docs/model_data.py"]
         },
         {
           "name": "build_reference",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "docs/build_reference.py"
-          ]
+          "keyFiles": ["docs/build_reference.py"]
         },
         {
           "name": "build_docs",
           "summary": "Python Script Module",
-          "keyFiles": [
-            "docs/build_docs.py"
-          ]
+          "keyFiles": ["docs/build_docs.py"]
         }
       ],
       "source": {

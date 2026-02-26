@@ -10946,61 +10946,42 @@
       "kind": "inferred",
       "confidence": 0.3,
       "gate": "Require",
-      "sources": [
-        "README.md#L1-L120",
-        "docs/README.md#L1-L40",
-        "pyproject.toml#L1-L60"
-      ]
+      "sources": ["README.md#L1-L120", "docs/README.md#L1-L40", "pyproject.toml#L1-L60"]
     },
     {
       "jsonPath": "$.business.hazardousUseCases",
       "kind": "inferred",
       "confidence": 0,
       "gate": "Require",
-      "sources": [
-        "docs/en/help/environmental-health-safety.md#L1-L40",
-        "docs/en/help/privacy.md#L1-L40"
-      ]
+      "sources": ["docs/en/help/environmental-health-safety.md#L1-L40", "docs/en/help/privacy.md#L1-L40"]
     },
     {
       "jsonPath": "$.business.intendedUse",
       "kind": "inferred",
       "confidence": 0.4,
       "gate": "Require",
-      "sources": [
-        "README.md#L40-L160",
-        "docs/en/solutions/index.md#L1-L40",
-        "docs/en/tasks/index.md#L1-L60"
-      ]
+      "sources": ["README.md#L40-L160", "docs/en/solutions/index.md#L1-L40", "docs/en/tasks/index.md#L1-L60"]
     },
     {
       "jsonPath": "$.business.kpis",
       "kind": "extracted",
       "confidence": 0.4,
       "gate": "Require",
-      "sources": [
-        "README.md#L120-L230"
-      ]
+      "sources": ["README.md#L120-L230"]
     },
     {
       "jsonPath": "$.business.outOfScopeUse",
       "kind": "inferred",
       "confidence": 0.2,
       "gate": "Warn",
-      "sources": [
-        "README.md#L1-L60",
-        "pyproject.toml#L20-L60"
-      ]
+      "sources": ["README.md#L1-L60", "pyproject.toml#L20-L60"]
     },
     {
       "jsonPath": "$.business.userPopulations",
       "kind": "inferred",
       "confidence": 0.3,
       "gate": "OK",
-      "sources": [
-        "README.md#L230-L280",
-        "docs/README.md#L60-L110"
-      ]
+      "sources": ["README.md#L230-L280", "docs/README.md#L60-L110"]
     },
     {
       "jsonPath": "$.devInsight.architecture.dataFlow",
@@ -11020,20 +11001,14 @@
       "kind": "extracted",
       "confidence": 0.92,
       "gate": "Warn",
-      "sources": [
-        "pyproject.toml#L40-L140"
-      ]
+      "sources": ["pyproject.toml#L40-L140"]
     },
     {
       "jsonPath": "$.devInsight.architecture.publicApis",
       "kind": "extracted",
       "confidence": 0,
       "gate": "Require",
-      "sources": [
-        "pyproject.toml#L90-L120",
-        "ultralytics/__init__.py#L1-L40",
-        "ultralytics/cfg/__init__.py#L250-L520"
-      ]
+      "sources": ["pyproject.toml#L90-L120", "ultralytics/__init__.py#L1-L40", "ultralytics/cfg/__init__.py#L250-L520"]
     },
     {
       "jsonPath": "$.devInsight.codeOverview.components",
@@ -11088,9 +11063,7 @@
       "kind": "extracted",
       "confidence": 0.3,
       "gate": "Require",
-      "sources": [
-        "README.md#L120-L230"
-      ]
+      "sources": ["README.md#L120-L230"]
     },
     {
       "jsonPath": "$.governance.assessments",
@@ -11169,11 +11142,7 @@
       "kind": "inferred",
       "confidence": 0.84,
       "gate": "OK",
-      "sources": [
-        "tests/test_cuda.py#L1-L80",
-        "tests/test_exports.py#L200-L420",
-        "ultralytics/data/base.py#L200-L320"
-      ]
+      "sources": ["tests/test_cuda.py#L1-L80", "tests/test_exports.py#L200-L420", "ultralytics/data/base.py#L200-L320"]
     },
     {
       "jsonPath": "$.integration.observability",
@@ -11204,59 +11173,42 @@
       "kind": "extracted",
       "confidence": 0.4,
       "gate": "Require",
-      "sources": [
-        "README.md#L1-L40",
-        "docs/en/datasets/detect/coco.md#L1-L40"
-      ]
+      "sources": ["README.md#L1-L40", "docs/en/datasets/detect/coco.md#L1-L40"]
     },
     {
       "jsonPath": "$.meta.maturity",
       "kind": "inferred",
       "confidence": 0.1,
       "gate": "Require",
-      "sources": [
-        ".github/workflows/publish.yml#L1-L80",
-        "pyproject.toml#L20-L40"
-      ]
+      "sources": [".github/workflows/publish.yml#L1-L80", "pyproject.toml#L20-L40"]
     },
     {
       "jsonPath": "$.meta.owners",
       "kind": "extracted",
       "confidence": 0.5,
       "gate": "Require",
-      "sources": [
-        "pyproject.toml#L20-L40"
-      ]
+      "sources": ["pyproject.toml#L20-L40"]
     },
     {
       "jsonPath": "$.meta.title",
       "kind": "inferred",
       "confidence": 0.9,
       "gate": "OK",
-      "sources": [
-        "README.md#L1-L40",
-        "pyproject.toml#L20-L40"
-      ]
+      "sources": ["README.md#L1-L40", "pyproject.toml#L20-L40"]
     },
     {
       "jsonPath": "$.mlCore.artifactURIs",
       "kind": "extracted",
       "confidence": 0.4,
       "gate": "Require",
-      "sources": [
-        "README.md#L40-L80",
-        "README.md#L120-L170",
-        "docker/Dockerfile#L1-L40"
-      ]
+      "sources": ["README.md#L40-L80", "README.md#L120-L170", "docker/Dockerfile#L1-L40"]
     },
     {
       "jsonPath": "$.mlCore.baselines",
       "kind": "extracted",
       "confidence": 0.2,
       "gate": "Require",
-      "sources": [
-        "docs/model_data.py#L1-L260"
-      ]
+      "sources": ["docs/model_data.py#L1-L260"]
     },
     {
       "jsonPath": "$.mlCore.datasets",
@@ -11301,19 +11253,14 @@
       "kind": "inferred",
       "confidence": 0.2,
       "gate": "Require",
-      "sources": [
-        "README.md#L40-L80",
-        "docs/en/tasks/index.md#L1-L60"
-      ]
+      "sources": ["README.md#L40-L80", "docs/en/tasks/index.md#L1-L60"]
     },
     {
       "jsonPath": "$.mlCore.qualities",
       "kind": "extracted",
       "confidence": 0.4,
       "gate": "Require",
-      "sources": [
-        "README.md#L120-L230"
-      ]
+      "sources": ["README.md#L120-L230"]
     },
     {
       "jsonPath": "$.mlCore.training",
