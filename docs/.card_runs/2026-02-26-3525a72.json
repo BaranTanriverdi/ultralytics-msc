@@ -100,9 +100,7 @@
     {
       "path": "$.mlCore.qualities",
       "confidence": 0.4,
-      "sources": [
-        "README.md#L120-L230"
-      ],
+      "sources": ["README.md#L120-L230"],
       "disposition": "rejected"
     }
   ],
