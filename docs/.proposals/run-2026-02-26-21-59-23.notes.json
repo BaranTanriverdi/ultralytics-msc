@@ -1,0 +1,296 @@
+{
+  "promptId": "notes.v1",
+  "promptMetadata": {
+    "id": "notes.v1",
+    "audience": "card-stakeholder-notes",
+    "version": 1,
+    "max_tokens": 768,
+    "citations": "preferred",
+    "sampling": {
+      "temperature": 0.25,
+      "top_p": 0.85
+    }
+  },
+  "mode": "llm",
+  "notes": {
+    "data-engineer": {
+      "textMd": "",
+      "overview": "This system is a Python-centric computer vision stack with a configurable data pipeline. Data flows from user-specified dataset configs (e.g., COCO, VOC) through loaders and augmentation into training and inference, as captured in $.devInsight.architecture.dataFlow. Core dependencies are PyTorch and torchvision, plus ecosystem tools for export and deployment noted in $.devInsight.architecture.depsSummary. Component structure ⚠️, including model architectures, data loaders, and tracking/solutions layers, is summarized in $.devInsight.codeOverview.components. Runtime performance profiles ⚠️ for detector variants on COCO are tracked in $.devInsight.runtimePerf to guide dataset and model selection trade-offs.",
+      "changes": "- No significant updates detected.",
+      "confidence": 0.2
+    },
+    "data-scientist": {
+      "textMd": "",
+      "overview": "The ML system card (docs/ml_system_card.yaml) describes Ultralytics YOLO as an open‑source computer vision framework and model zoo ⚠️ (see $.business.executiveSummary). It documents intended users as developers and researchers applying detection, segmentation, pose, and related vision tasks ⚠️ ($.business.intendedUse, $.business.userPopulations). Out‑of‑scope applications include non‑vision ML and certain general‑purpose NLP uses ⚠️ ($.business.outOfScopeUse). Hazardous uses focus on YOLO not acting as the sole decision‑maker in safety‑critical settings ⚠️ ($.business.hazardousUseCases). Key model KPIs are primarily COCO mAP metrics across YOLO variants ⚠️ ($.business.kpis).",
+      "changes": "- No significant updates detected in the business-facing portions of the system card for this run relative to the provided baseline; any apparent content in $.business.executiveSummary, $.business.intendedUse, $.business.userPopulations, $.business.outOfScopeUse, $.business.hazardousUseCases, and $.business.kpis should be treated as potentially unchanged ⚠️.",
+      "confidence": 0
+    },
+    "domain-expert": {
+      "textMd": "",
+      "overview": "⚠️ $.business.executiveSummary describes Ultralytics YOLO as an open-source computer vision framework and model zoo used for image- and video-based tasks. ⚠️ According to $.business.intendedUse, it targets developers, researchers, and organizations building detection, segmentation, classification, pose, and tracking systems. ⚠️ $.business.userPopulations distinguishes AGPL-3.0 package users from commercial-license customers deploying in production or at scale. ⚠️ $.business.outOfScopeUse and $.business.hazardousUseCases emphasize that YOLO should not be the sole decision-maker in safety‑critical, surveillance, or legally consequential workflows without human oversight and domain‑specific validation.",
+      "changes": "- No significant updates detected to high-level business framing in $.business.* for this run.\n- ⚠️ Current content for $.business.hazardousUseCases, $.business.outOfScopeUse, and $.business.userPopulations may differ from the baseline, but the diff could not be reliably established from the available signals.\n- Domain experts should treat all business-level descriptions (intended use, KPIs in $.business.kpis, and user segments) as provisional and verify against the rendered ML System Card in docs/ml_system_card.yaml.",
+      "confidence": 0
+    },
+    "governance-compliance-ethics-officer": {
+      "textMd": "",
+      "overview": "The ML System Card’s governance section describes how the project approaches testing, licensing, and technical risk management across the codebase. It references governance assessments, policies, and a risk register for the Ultralytics ecosystem, including models, training, export, and deployment components. These entries help Governance, Compliance & Ethics functions understand how reliability, open-source obligations, and safety-related technical risks are being tracked and mitigated over time across multiple backends and integrations. ⚠️",
+      "changes": "- $.governance.assessments: Expanded description of automated unit and integration test coverage for CLI, training, validation, and related workflows, emphasizing continuous quality checks across critical paths. ⚠️\n- $.governance.policies: Clarified licensing and policy language, including reference to OSI-approved GNU Affero General Public License terms for core library and documentation, aligning with open-source governance expectations. ⚠️\n- $.governance.riskRegister: Updated technical risk entry highlighting potential export and deployment bugs across diverse inference backends (e.g., ONNX, TensorRT, TFLite), with corresponding mitigation considerations. ⚠️",
+      "confidence": 0.2
+    },
+    "governance-officer": {
+      "textMd": "",
+      "overview": "The ML system’s governance focuses on testing, licensing, and operational risk tracking. ⚠️ Automated quality checks reportedly include unit and integration tests for CLI, training, validation, export, and deployment workflows (see $.governance.assessments). ⚠️ Project artifacts appear to be covered by an OSI‑approved GNU Affero GPL‑family license, with additional terms for models and datasets (see $.governance.policies). ⚠️ A risk register tracks technical issues across multi‑backend export and deployment (see $.governance.riskRegister).",
+      "changes": "- No significant updates detected to governance structures or practices in $.governance.assessments, $.governance.policies, or $.governance.riskRegister based on the current run vs. baseline.",
+      "confidence": 0.2
+    },
+    "ml-engineer": {
+      "textMd": "",
+      "overview": "The vision stack centers on a configurable training/inference engine defined in $.devInsight.architecture.dataFlow. Users select dataset YAMLs (e.g., COCO variants) and model YAMLs (e.g., YOLOv5–YOLO12, RT-DETR, SAM) which drive a unified pipeline spanning data loading, augmentation, model construction, loss/metrics, and export. Core dependencies are PyTorch and torchvision per $.devInsight.architecture.depsSummary, with optional integrations for ONNX, TensorRT, OpenVINO, and other runtimes. Public access is primarily through a YOLO-style CLI and Python APIs in the ultralytics package ⚠️ (from $.devInsight.architecture.publicApis).",
+      "changes": "- Updated or revalidated dependency assumptions for core training/inference on PyTorch and torchvision, and their relationship to export/inference runtimes, as captured in $.devInsight.architecture.depsSummary.\n- Clarified end-to-end data and model configuration flow in $.devInsight.architecture.dataFlow, including how dataset and model YAMLs feed into the unified engine.\n- Added or revised documentation of CLI/Python public entrypoints in $.devInsight.architecture.publicApis ⚠️.\n- Added or updated benchmark records for detection task det_yolo26_coco_val2017 in $.devInsight.runtimePerf, covering mAP and latency/throughput across yolo26 variants ⚠️.",
+      "confidence": 0
+    },
+    "product-manager": {
+      "textMd": "",
+      "overview": "Ultralytics YOLO is an open‑source computer vision framework and model zoo ⚠️ (from $.business.executiveSummary). It is intended for developers, researchers, and organizations building vision applications such as detection, segmentation, pose, and tracking ⚠️ (from $.business.intendedUse). Typical user populations include students, researchers, enthusiasts, and commercial users under different licensing terms ⚠️ (from $.business.userPopulations). Out‑of‑scope uses include general non‑vision ML tasks and other domains not supported by the library’s models or data pipeline ⚠️ (from $.business.outOfScopeUse). Hazardous use cases include deploying YOLO as the sole decision‑maker in safety‑critical systems ⚠️ (from $.business.hazardousUseCases).",
+      "changes": "- Business positioning and high‑level description of Ultralytics YOLO remain focused on open‑source computer vision tooling ⚠️ (from $.business.executiveSummary).\n- Intended use continues to emphasize developer and research workflows for vision tasks, with no clearly detectable scope expansion ⚠️ (from $.business.intendedUse).\n- User population segments and examples appear stable, with no clearly identifiable shifts in target users ⚠️ (from $.business.userPopulations).\n- KPIs for model performance (e.g., COCO mAP targets) are defined but no baseline deltas are inferable from this run ⚠️ (from $.business.kpis).\n\nNo significant updates detected.",
+      "confidence": 0
+    },
+    "project-manager": {
+      "textMd": "",
+      "overview": "Ultralytics YOLO is documented as an open‑source computer vision framework and model zoo supporting detection, segmentation, pose, classification, and tracking for a wide range of imaging domains (see $.business.executiveSummary⚠️). It is positioned for developers, researchers, and organizations building custom vision solutions rather than end‑user applications (see $.business.intendedUse⚠️). KPIs focus on benchmark accuracy across representative datasets and model families (see $.business.kpis⚠️). The card also distinguishes supported user groups and clarifies high‑risk and out‑of‑scope deployments (see $.business.userPopulations⚠️, $.business.hazardousUseCases⚠️, $.business.outOfScopeUse⚠️).",
+      "changes": "- Refined high-level description of the framework and its capabilities in $.business.executiveSummary⚠️.\n- Clarified intended users (developers, researchers, organizations) and typical workflows in $.business.intendedUse⚠️.\n- Added/updated examples of hazardous deployments (e.g., sole decision-maker in safety‑critical systems) in $.business.hazardousUseCases⚠️.\n- Expanded explicit out-of-scope scenarios, especially non-vision or general-purpose uses, in $.business.outOfScopeUse⚠️.\n- Introduced or adjusted benchmark-driven KPIs (e.g., COCO mAP targets for YOLO26x) in $.business.kpis⚠️.\n- Better segmented primary user populations, including open-source users vs. commercial customers, in $.business.userPopulations⚠️.",
+      "confidence": 0
+    },
+    "software-developer": {
+      "textMd": "",
+      "overview": "⚠️ The business section of the ML System Card describes Ultralytics YOLO as an open-source computer vision framework and model zoo used for tasks like detection, segmentation, pose, and classification (see $.business.executiveSummary). ⚠️ Intended users include developers and researchers integrating YOLO into applications via Python, CLIs, and deployment targets (see $.business.intendedUse, $.business.userPopulations). ⚠️ Business KPIs track benchmark metrics such as COCO mAP for key model variants to monitor performance over time (see $.business.kpis).",
+      "changes": "- No significant updates detected in business-oriented ML System Card fields relevant to software developers.\n- Current draft still emphasizes intended usage patterns and user populations, with hazardous and out-of-scope use cases explicitly called out in $.business.hazardousUseCases and $.business.outOfScopeUse ⚠️.\n- KPI tracking for core models remains centered on standard vision benchmarks (e.g., COCO metrics) in $.business.kpis ⚠️.",
+      "confidence": 0
+    },
+    "ux-researcher": {
+      "textMd": "",
+      "overview": "Ultralytics YOLO is described ⚠️ as an open-source computer vision framework and model zoo ($.business.executiveSummary), intended ⚠️ for developers, researchers, and organizations building vision-based applications ($.business.intendedUse). Current documentation outlines ⚠️ primary user populations such as students, researchers, enthusiasts, and commercial users under different licenses ($.business.userPopulations). The card also enumerates ⚠️ hazardous use cases like using YOLO as a sole decision-maker in safety-critical domains ($.business.hazardousUseCases) and specifies out-of-scope uses including non-vision ML tasks ($.business.outOfScopeUse). Performance KPIs ⚠️ (e.g., COCO mAP targets for YOLO26x) are listed to benchmark model quality ($.business.kpis).",
+      "changes": "- No significant updates detected.\n\nThe referenced sections—executive summary ($.business.executiveSummary), intended use ($.business.intendedUse), hazardous and out-of-scope use cases ($.business.hazardousUseCases, $.business.outOfScopeUse), user populations ($.business.userPopulations), and KPIs ($.business.kpis)—appear unchanged in this run. ⚠️",
+      "confidence": 0
+    }
+  },
+  "deterministicFallback": {
+    "product-manager": {
+      "textMd": "Business highlights:\n- $.business.executiveSummary: updated with confidence 30%\n- $.business.hazardousUseCases: updated with confidence 0%\n- $.business.intendedUse: updated with confidence 40%\n- $.business.kpis: updated with confidence 40%\n- $.business.outOfScopeUse: updated with confidence 20%\n- $.business.userPopulations: updated with confidence 30%",
+      "confidence": 0.8
+    },
+    "ml-engineer": {
+      "textMd": "Developer view:\n- $.devInsight.architecture.dataFlow: anchors 5\n- $.devInsight.architecture.depsSummary: anchors 1\n- $.devInsight.architecture.publicApis: anchors 3\n- $.devInsight.codeOverview.components: anchors 5\n- $.devInsight.codeOverview.entrypoints: anchors 4\n- $.devInsight.codeOverview.languages: anchors 3\n- $.devInsight.qualitySignals.complexityHints: anchors 4\n- $.devInsight.runtimePerf: anchors 1",
+      "confidence": 0.85
+    },
+    "governance-officer": {
+      "textMd": "Provenance updates:\n- $.provenance.changelog[0] (10 anchors)",
+      "confidence": 0.75
+    }
+  },
+  "reasonerArtifact": "memory",
+  "analysisArtifact": "docs/.analysis/run-2026-02-26-21-59-23.json",
+  "generatedAt": "2026-02-26T22:29:16.885Z",
+  "perStakeholder": [
+    {
+      "stakeholderId": "data-engineer",
+      "promptDigest": "f84a3eadf97656c093ff613045fc5241b9e10c4e30db58323342962eeabf2535",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "This system is a Python-centric computer vision stack with a configurable data pipeline. Data flows from user-specified dataset configs (e.g., COCO, VOC) through loaders and augmentation into training and inference, as captured in $.devInsight.architecture.dataFlow. Core dependencies are PyTorch and torchvision, plus ecosystem tools for export and deployment noted in $.devInsight.architecture.depsSummary. Component structure ⚠️, including model architectures, data loaders, and tracking/solutions layers, is summarized in $.devInsight.codeOverview.components. Runtime performance profiles ⚠️ for detector variants on COCO are tracked in $.devInsight.runtimePerf to guide dataset and model selection trade-offs.",
+        "changes": "- No significant updates detected.",
+        "confidence": 0.2
+      },
+      "fallback": null,
+      "llm": {
+        "requestDigest": "27be062623e80af6c50c0af5e4588f838e3b19375f980fff892a797b26cde36a",
+        "responseDigest": "434549a9eabf24f41011966ae9d01c7abb4ea8720417aca2f72c5aba628d3e0a",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{\n  \"note\": {\n    \"overview\": \"This system is a Python-centric computer vision stack with a configurable data pipeline. Data flows from user-specified dataset configs (e.g., COCO, VOC) through loaders and augmentation into training and inference, as captured in $.devInsight.architecture.dataFlow. Core dependencies are PyTorch and torchvision, plus ecosystem tools for export and deployment noted in $.devInsight.architecture.depsSummary. Component structure ⚠️, including model architectures, data loaders, and tracking/solutions layers, is summarized in $.devInsight.codeOverview.components. Runtime performance profiles ⚠️ for detector variants on COCO are tracked in $.devInsight.runtimePerf to guide dataset and model selection trade-offs.\",\n    \"changes\": \"- No significant updates detected.\",\n    \"confidence\": 0.2\n  }\n}"
+      }
+    },
+    {
+      "stakeholderId": "data-scientist",
+      "promptDigest": "3bebfeeebb46a721315f1a0d2e193f1c0a8368523c755e420ccf5d1ed26454ad",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "The ML system card (docs/ml_system_card.yaml) describes Ultralytics YOLO as an open‑source computer vision framework and model zoo ⚠️ (see $.business.executiveSummary). It documents intended users as developers and researchers applying detection, segmentation, pose, and related vision tasks ⚠️ ($.business.intendedUse, $.business.userPopulations). Out‑of‑scope applications include non‑vision ML and certain general‑purpose NLP uses ⚠️ ($.business.outOfScopeUse). Hazardous uses focus on YOLO not acting as the sole decision‑maker in safety‑critical settings ⚠️ ($.business.hazardousUseCases). Key model KPIs are primarily COCO mAP metrics across YOLO variants ⚠️ ($.business.kpis).",
+        "changes": "- No significant updates detected in the business-facing portions of the system card for this run relative to the provided baseline; any apparent content in $.business.executiveSummary, $.business.intendedUse, $.business.userPopulations, $.business.outOfScopeUse, $.business.hazardousUseCases, and $.business.kpis should be treated as potentially unchanged ⚠️.",
+        "confidence": 0
+      },
+      "fallback": null,
+      "llm": {
+        "requestDigest": "2b3d24acf88836717a058f8446c444fe863cbaebd9f0d587b34875ee65e2bed4",
+        "responseDigest": "5f3af1146c423c3b90ca44ea7dd75ce5135bf9f01d145ab53b25d47a1c5f9bbd",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{\n  \"note\": {\n    \"overview\": \"The ML system card (docs/ml_system_card.yaml) describes Ultralytics YOLO as an open‑source computer vision framework and model zoo ⚠️ (see $.business.executiveSummary). It documents intended users as developers and researchers applying detection, segmentation, pose, and related vision tasks ⚠️ ($.business.intendedUse, $.business.userPopulations). Out‑of‑scope applications include non‑vision ML and certain general‑purpose NLP uses ⚠️ ($.business.outOfScopeUse). Hazardous uses focus on YOLO not acting as the sole decision‑maker in safety‑critical settings ⚠️ ($.business.hazardousUseCases). Key model KPIs are primarily COCO mAP metrics across YOLO variants ⚠️ ($.business.kpis).\",\n    \"changes\": \"- No significant updates detected in the business-facing portions of the system card for this run relative to the provided baseline; any apparent content in $.business.executiveSummary, $.business.intendedUse, $.business.userPopulations, $.business.outOfScopeUse, $.business.hazardousUseCases, and $.business.kpis should be treated as potentially unchanged ⚠️.\",\n    \"confidence\": 0\n  }\n}"
+      }
+    },
+    {
+      "stakeholderId": "domain-expert",
+      "promptDigest": "c6a4e2d5312511c30261ffae069b15fc80cd34be08f2f7bd9fe1dd348ae7ba98",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "⚠️ $.business.executiveSummary describes Ultralytics YOLO as an open-source computer vision framework and model zoo used for image- and video-based tasks. ⚠️ According to $.business.intendedUse, it targets developers, researchers, and organizations building detection, segmentation, classification, pose, and tracking systems. ⚠️ $.business.userPopulations distinguishes AGPL-3.0 package users from commercial-license customers deploying in production or at scale. ⚠️ $.business.outOfScopeUse and $.business.hazardousUseCases emphasize that YOLO should not be the sole decision-maker in safety‑critical, surveillance, or legally consequential workflows without human oversight and domain‑specific validation.",
+        "changes": "- No significant updates detected to high-level business framing in $.business.* for this run.\n- ⚠️ Current content for $.business.hazardousUseCases, $.business.outOfScopeUse, and $.business.userPopulations may differ from the baseline, but the diff could not be reliably established from the available signals.\n- Domain experts should treat all business-level descriptions (intended use, KPIs in $.business.kpis, and user segments) as provisional and verify against the rendered ML System Card in docs/ml_system_card.yaml.",
+        "confidence": 0
+      },
+      "fallback": null,
+      "llm": {
+        "requestDigest": "10ca58b13da3c1629059d8005a69b68399325bfa56dbfc01e3c0dcda3627d740",
+        "responseDigest": "36e887d0e3fe907a324aa2b4157bd5e6f6ccbc5c120d83efbf8a8d61ff3ff7ee",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{ \"note\": { \"overview\": \"⚠️ $.business.executiveSummary describes Ultralytics YOLO as an open-source computer vision framework and model zoo used for image- and video-based tasks. ⚠️ According to $.business.intendedUse, it targets developers, researchers, and organizations building detection, segmentation, classification, pose, and tracking systems. ⚠️ $.business.userPopulations distinguishes AGPL-3.0 package users from commercial-license customers deploying in production or at scale. ⚠️ $.business.outOfScopeUse and $.business.hazardousUseCases emphasize that YOLO should not be the sole decision-maker in safety‑critical, surveillance, or legally consequential workflows without human oversight and domain‑specific validation.\", \"changes\": \"- No significant updates detected to high-level business framing in $.business.* for this run.\\n- ⚠️ Current content for $.business.hazardousUseCases, $.business.outOfScopeUse, and $.business.userPopulations may differ from the baseline, but the diff could not be reliably established from the available signals.\\n- Domain experts should treat all business-level descriptions (intended use, KPIs in $.business.kpis, and user segments) as provisional an"
+      }
+    },
+    {
+      "stakeholderId": "governance-compliance-ethics-officer",
+      "promptDigest": "49e3cd0afd141e5fb05f37233933991675db9b2cdb49ac42d96f38bf158b82b4",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "The ML System Card’s governance section describes how the project approaches testing, licensing, and technical risk management across the codebase. It references governance assessments, policies, and a risk register for the Ultralytics ecosystem, including models, training, export, and deployment components. These entries help Governance, Compliance & Ethics functions understand how reliability, open-source obligations, and safety-related technical risks are being tracked and mitigated over time across multiple backends and integrations. ⚠️",
+        "changes": "- $.governance.assessments: Expanded description of automated unit and integration test coverage for CLI, training, validation, and related workflows, emphasizing continuous quality checks across critical paths. ⚠️\n- $.governance.policies: Clarified licensing and policy language, including reference to OSI-approved GNU Affero General Public License terms for core library and documentation, aligning with open-source governance expectations. ⚠️\n- $.governance.riskRegister: Updated technical risk entry highlighting potential export and deployment bugs across diverse inference backends (e.g., ONNX, TensorRT, TFLite), with corresponding mitigation considerations. ⚠️",
+        "confidence": 0.2
+      },
+      "fallback": null,
+      "llm": {
+        "requestDigest": "b647054431af677523bb39d836573df0992f3176b1b6888e4ce172526b6b3229",
+        "responseDigest": "ce64f1edee025e5f4318cde09de7b0c45a513b536b62ce58918d13494f563996",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{\n  \"note\": {\n    \"overview\": \"The ML System Card’s governance section describes how the project approaches testing, licensing, and technical risk management across the codebase. It references governance assessments, policies, and a risk register for the Ultralytics ecosystem, including models, training, export, and deployment components. These entries help Governance, Compliance & Ethics functions understand how reliability, open-source obligations, and safety-related technical risks are being tracked and mitigated over time across multiple backends and integrations. ⚠️\",\n    \"changes\": \"- $.governance.assessments: Expanded description of automated unit and integration test coverage for CLI, training, validation, and related workflows, emphasizing continuous quality checks across critical paths. ⚠️\\n- $.governance.policies: Clarified licensing and policy language, including reference to OSI-approved GNU Affero General Public License terms for core library and documentation, aligning with open-source governance expectations. ⚠️\\n- $.governance.riskRegister: Updated technical risk entry highlighting potential export and deployment bugs across diverse inference backends (e.g., ONNX, "
+      }
+    },
+    {
+      "stakeholderId": "governance-officer",
+      "promptDigest": "0867396025240f2d6739f778399a2f154b92590e4d1334e55f8a9b09b872c114",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "The ML system’s governance focuses on testing, licensing, and operational risk tracking. ⚠️ Automated quality checks reportedly include unit and integration tests for CLI, training, validation, export, and deployment workflows (see $.governance.assessments). ⚠️ Project artifacts appear to be covered by an OSI‑approved GNU Affero GPL‑family license, with additional terms for models and datasets (see $.governance.policies). ⚠️ A risk register tracks technical issues across multi‑backend export and deployment (see $.governance.riskRegister).",
+        "changes": "- No significant updates detected to governance structures or practices in $.governance.assessments, $.governance.policies, or $.governance.riskRegister based on the current run vs. baseline.",
+        "confidence": 0.2
+      },
+      "fallback": {
+        "textMd": "Provenance updates:\n- $.provenance.changelog[0] (10 anchors)",
+        "confidence": 0.75
+      },
+      "llm": {
+        "requestDigest": "fe4ae03bf5b6863fb54c4bdd96a22c1d1c848b7977443aa32bed954616396052",
+        "responseDigest": "692b5ef513e405ef7e6f26ec040584f568ebc58b737c7a0eed53030393039087",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{ \"note\": { \"overview\": \"The ML system’s governance focuses on testing, licensing, and operational risk tracking. ⚠️ Automated quality checks reportedly include unit and integration tests for CLI, training, validation, export, and deployment workflows (see $.governance.assessments). ⚠️ Project artifacts appear to be covered by an OSI‑approved GNU Affero GPL‑family license, with additional terms for models and datasets (see $.governance.policies). ⚠️ A risk register tracks technical issues across multi‑backend export and deployment (see $.governance.riskRegister).\", \"changes\": \"- No significant updates detected to governance structures or practices in $.governance.assessments, $.governance.policies, or $.governance.riskRegister based on the current run vs. baseline.\", \"confidence\": 0.2 } }"
+      }
+    },
+    {
+      "stakeholderId": "ml-engineer",
+      "promptDigest": "130b7b982feaa51c6c0ed57ceeafb9bf77ff9cbdd71c1f16a7efe61649c0ab52",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "The vision stack centers on a configurable training/inference engine defined in $.devInsight.architecture.dataFlow. Users select dataset YAMLs (e.g., COCO variants) and model YAMLs (e.g., YOLOv5–YOLO12, RT-DETR, SAM) which drive a unified pipeline spanning data loading, augmentation, model construction, loss/metrics, and export. Core dependencies are PyTorch and torchvision per $.devInsight.architecture.depsSummary, with optional integrations for ONNX, TensorRT, OpenVINO, and other runtimes. Public access is primarily through a YOLO-style CLI and Python APIs in the ultralytics package ⚠️ (from $.devInsight.architecture.publicApis).",
+        "changes": "- Updated or revalidated dependency assumptions for core training/inference on PyTorch and torchvision, and their relationship to export/inference runtimes, as captured in $.devInsight.architecture.depsSummary.\n- Clarified end-to-end data and model configuration flow in $.devInsight.architecture.dataFlow, including how dataset and model YAMLs feed into the unified engine.\n- Added or revised documentation of CLI/Python public entrypoints in $.devInsight.architecture.publicApis ⚠️.\n- Added or updated benchmark records for detection task det_yolo26_coco_val2017 in $.devInsight.runtimePerf, covering mAP and latency/throughput across yolo26 variants ⚠️.",
+        "confidence": 0
+      },
+      "fallback": {
+        "textMd": "Developer view:\n- $.devInsight.architecture.dataFlow: anchors 5\n- $.devInsight.architecture.depsSummary: anchors 1\n- $.devInsight.architecture.publicApis: anchors 3\n- $.devInsight.codeOverview.components: anchors 5\n- $.devInsight.codeOverview.entrypoints: anchors 4\n- $.devInsight.codeOverview.languages: anchors 3\n- $.devInsight.qualitySignals.complexityHints: anchors 4\n- $.devInsight.runtimePerf: anchors 1",
+        "confidence": 0.85
+      },
+      "llm": {
+        "requestDigest": "7a9669dccdcdbc610bef58ab5a8b393529e674ded92b174d4108b659d3898659",
+        "responseDigest": "7f9f6599f3bf05e34e7f154123ea078df22be9b73b5401aea66c1796e6a6064d",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{\n  \"note\": {\n    \"overview\": \"The vision stack centers on a configurable training/inference engine defined in $.devInsight.architecture.dataFlow. Users select dataset YAMLs (e.g., COCO variants) and model YAMLs (e.g., YOLOv5–YOLO12, RT-DETR, SAM) which drive a unified pipeline spanning data loading, augmentation, model construction, loss/metrics, and export. Core dependencies are PyTorch and torchvision per $.devInsight.architecture.depsSummary, with optional integrations for ONNX, TensorRT, OpenVINO, and other runtimes. Public access is primarily through a YOLO-style CLI and Python APIs in the ultralytics package ⚠️ (from $.devInsight.architecture.publicApis).\",\n    \"changes\": \"- Updated or revalidated dependency assumptions for core training/inference on PyTorch and torchvision, and their relationship to export/inference runtimes, as captured in $.devInsight.architecture.depsSummary.\\n- Clarified end-to-end data and model configuration flow in $.devInsight.architecture.dataFlow, including how dataset and model YAMLs feed into the unified engine.\\n- Added or revised documentation of CLI/Python public entrypoints in $.devInsight.architecture.publicApis ⚠️.\\n- Added or updated benc"
+      }
+    },
+    {
+      "stakeholderId": "product-manager",
+      "promptDigest": "e21560bc4d3a2fae1026bf3540ff744b05fbc5ed7039f22d920fbd96ba6e8bf8",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "Ultralytics YOLO is an open‑source computer vision framework and model zoo ⚠️ (from $.business.executiveSummary). It is intended for developers, researchers, and organizations building vision applications such as detection, segmentation, pose, and tracking ⚠️ (from $.business.intendedUse). Typical user populations include students, researchers, enthusiasts, and commercial users under different licensing terms ⚠️ (from $.business.userPopulations). Out‑of‑scope uses include general non‑vision ML tasks and other domains not supported by the library’s models or data pipeline ⚠️ (from $.business.outOfScopeUse). Hazardous use cases include deploying YOLO as the sole decision‑maker in safety‑critical systems ⚠️ (from $.business.hazardousUseCases).",
+        "changes": "- Business positioning and high‑level description of Ultralytics YOLO remain focused on open‑source computer vision tooling ⚠️ (from $.business.executiveSummary).\n- Intended use continues to emphasize developer and research workflows for vision tasks, with no clearly detectable scope expansion ⚠️ (from $.business.intendedUse).\n- User population segments and examples appear stable, with no clearly identifiable shifts in target users ⚠️ (from $.business.userPopulations).\n- KPIs for model performance (e.g., COCO mAP targets) are defined but no baseline deltas are inferable from this run ⚠️ (from $.business.kpis).\n\nNo significant updates detected.",
+        "confidence": 0
+      },
+      "fallback": {
+        "textMd": "Business highlights:\n- $.business.executiveSummary: updated with confidence 30%\n- $.business.hazardousUseCases: updated with confidence 0%\n- $.business.intendedUse: updated with confidence 40%\n- $.business.kpis: updated with confidence 40%\n- $.business.outOfScopeUse: updated with confidence 20%\n- $.business.userPopulations: updated with confidence 30%",
+        "confidence": 0.8
+      },
+      "llm": {
+        "requestDigest": "fad8ba54e83a4700ab277fe48c6995d9d761f1e2c20ce6a6c87d8a5f9a385770",
+        "responseDigest": "f4aeb29eebb78e3bfba2ef8d11df2f7f3c9ae0e52aaeb387249b453939faed43",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{\n  \"note\": {\n    \"overview\": \"Ultralytics YOLO is an open‑source computer vision framework and model zoo ⚠️ (from $.business.executiveSummary). It is intended for developers, researchers, and organizations building vision applications such as detection, segmentation, pose, and tracking ⚠️ (from $.business.intendedUse). Typical user populations include students, researchers, enthusiasts, and commercial users under different licensing terms ⚠️ (from $.business.userPopulations). Out‑of‑scope uses include general non‑vision ML tasks and other domains not supported by the library’s models or data pipeline ⚠️ (from $.business.outOfScopeUse). Hazardous use cases include deploying YOLO as the sole decision‑maker in safety‑critical systems ⚠️ (from $.business.hazardousUseCases).\",\n    \"changes\": \"- Business positioning and high‑level description of Ultralytics YOLO remain focused on open‑source computer vision tooling ⚠️ (from $.business.executiveSummary).\\n- Intended use continues to emphasize developer and research workflows for vision tasks, with no clearly detectable scope expansion ⚠️ (from $.business.intendedUse).\\n- User population segments and examples appear stable, with no clearl"
+      }
+    },
+    {
+      "stakeholderId": "project-manager",
+      "promptDigest": "bb168e9fb49ddca9dce4931dba4ff2f9d9ffc688ce02543634ee5db3f0e47363",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "Ultralytics YOLO is documented as an open‑source computer vision framework and model zoo supporting detection, segmentation, pose, classification, and tracking for a wide range of imaging domains (see $.business.executiveSummary⚠️). It is positioned for developers, researchers, and organizations building custom vision solutions rather than end‑user applications (see $.business.intendedUse⚠️). KPIs focus on benchmark accuracy across representative datasets and model families (see $.business.kpis⚠️). The card also distinguishes supported user groups and clarifies high‑risk and out‑of‑scope deployments (see $.business.userPopulations⚠️, $.business.hazardousUseCases⚠️, $.business.outOfScopeUse⚠️).",
+        "changes": "- Refined high-level description of the framework and its capabilities in $.business.executiveSummary⚠️.\n- Clarified intended users (developers, researchers, organizations) and typical workflows in $.business.intendedUse⚠️.\n- Added/updated examples of hazardous deployments (e.g., sole decision-maker in safety‑critical systems) in $.business.hazardousUseCases⚠️.\n- Expanded explicit out-of-scope scenarios, especially non-vision or general-purpose uses, in $.business.outOfScopeUse⚠️.\n- Introduced or adjusted benchmark-driven KPIs (e.g., COCO mAP targets for YOLO26x) in $.business.kpis⚠️.\n- Better segmented primary user populations, including open-source users vs. commercial customers, in $.business.userPopulations⚠️.",
+        "confidence": 0
+      },
+      "fallback": null,
+      "llm": {
+        "requestDigest": "596ac22d1a29491e60b012c28c2be0d62c3820b39991c6af2a325bed54041835",
+        "responseDigest": "da1fe0e527481cc76fbcad2d9bc4b78844190d65c2c97e57428f0447ca38299d",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{\n  \"note\": {\n    \"overview\": \"Ultralytics YOLO is documented as an open‑source computer vision framework and model zoo supporting detection, segmentation, pose, classification, and tracking for a wide range of imaging domains (see $.business.executiveSummary⚠️). It is positioned for developers, researchers, and organizations building custom vision solutions rather than end‑user applications (see $.business.intendedUse⚠️). KPIs focus on benchmark accuracy across representative datasets and model families (see $.business.kpis⚠️). The card also distinguishes supported user groups and clarifies high‑risk and out‑of‑scope deployments (see $.business.userPopulations⚠️, $.business.hazardousUseCases⚠️, $.business.outOfScopeUse⚠️).\",\n    \"changes\": \"- Refined high-level description of the framework and its capabilities in $.business.executiveSummary⚠️.\\n- Clarified intended users (developers, researchers, organizations) and typical workflows in $.business.intendedUse⚠️.\\n- Added/updated examples of hazardous deployments (e.g., sole decision-maker in safety‑critical systems) in $.business.hazardousUseCases⚠️.\\n- Expanded explicit out-of-scope scenarios, especially non-vision or general-purp"
+      }
+    },
+    {
+      "stakeholderId": "software-developer",
+      "promptDigest": "56700ac9283d21223be3954fd2302d918bcbe1f479cadce018dbd0d7e8dcc438",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "⚠️ The business section of the ML System Card describes Ultralytics YOLO as an open-source computer vision framework and model zoo used for tasks like detection, segmentation, pose, and classification (see $.business.executiveSummary). ⚠️ Intended users include developers and researchers integrating YOLO into applications via Python, CLIs, and deployment targets (see $.business.intendedUse, $.business.userPopulations). ⚠️ Business KPIs track benchmark metrics such as COCO mAP for key model variants to monitor performance over time (see $.business.kpis).",
+        "changes": "- No significant updates detected in business-oriented ML System Card fields relevant to software developers.\n- Current draft still emphasizes intended usage patterns and user populations, with hazardous and out-of-scope use cases explicitly called out in $.business.hazardousUseCases and $.business.outOfScopeUse ⚠️.\n- KPI tracking for core models remains centered on standard vision benchmarks (e.g., COCO metrics) in $.business.kpis ⚠️.",
+        "confidence": 0
+      },
+      "fallback": null,
+      "llm": {
+        "requestDigest": "cee6a52b88a919a2ab2ad7ff6e015e1646537cddcdde6b5b1d5c702f2cf5e7ae",
+        "responseDigest": "f294d05efad6276276be8bbd450700c367c44e180d3ba922f397bd4059928932",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{ \"note\": { \"overview\": \"⚠️ The business section of the ML System Card describes Ultralytics YOLO as an open-source computer vision framework and model zoo used for tasks like detection, segmentation, pose, and classification (see $.business.executiveSummary). ⚠️ Intended users include developers and researchers integrating YOLO into applications via Python, CLIs, and deployment targets (see $.business.intendedUse, $.business.userPopulations). ⚠️ Business KPIs track benchmark metrics such as COCO mAP for key model variants to monitor performance over time (see $.business.kpis).\", \"changes\": \"- No significant updates detected in business-oriented ML System Card fields relevant to software developers.\\n- Current draft still emphasizes intended usage patterns and user populations, with hazardous and out-of-scope use cases explicitly called out in $.business.hazardousUseCases and $.business.outOfScopeUse ⚠️.\\n- KPI tracking for core models remains centered on standard vision benchmarks (e.g., COCO metrics) in $.business.kpis ⚠️.\", \"confidence\": 0 } }"
+      }
+    },
+    {
+      "stakeholderId": "ux-researcher",
+      "promptDigest": "aa8af39ee5365c01cf5ec62d053c13a77aa8687383ad47c8d33a24c38db41bad",
+      "usedFallback": false,
+      "note": {
+        "textMd": "",
+        "overview": "Ultralytics YOLO is described ⚠️ as an open-source computer vision framework and model zoo ($.business.executiveSummary), intended ⚠️ for developers, researchers, and organizations building vision-based applications ($.business.intendedUse). Current documentation outlines ⚠️ primary user populations such as students, researchers, enthusiasts, and commercial users under different licenses ($.business.userPopulations). The card also enumerates ⚠️ hazardous use cases like using YOLO as a sole decision-maker in safety-critical domains ($.business.hazardousUseCases) and specifies out-of-scope uses including non-vision ML tasks ($.business.outOfScopeUse). Performance KPIs ⚠️ (e.g., COCO mAP targets for YOLO26x) are listed to benchmark model quality ($.business.kpis).",
+        "changes": "- No significant updates detected.\n\nThe referenced sections—executive summary ($.business.executiveSummary), intended use ($.business.intendedUse), hazardous and out-of-scope use cases ($.business.hazardousUseCases, $.business.outOfScopeUse), user populations ($.business.userPopulations), and KPIs ($.business.kpis)—appear unchanged in this run. ⚠️",
+        "confidence": 0
+      },
+      "fallback": null,
+      "llm": {
+        "requestDigest": "1611b37419bc36c7e6d2efc36cf1a6b1f25429927a03158629bd99a9f0382845",
+        "responseDigest": "1b4c79209cc2c29e373632975d5c07570aa4716ebb0172d63d8405659259025b",
+        "promptPreview": "You generate concise stakeholder notes that summarize ML System Card updates.\n\nGuidelines:\n- Respect the stakeholder language preference; if `auto`, default to repository locale.\n- Limit responses to 180 words and avoid marketing flourishes.\n- Reference JSON paths when pointing to specific card fields.\n- Mark any mention of low-confidence facts with `⚠️`.\n\nInputs:\nRun ID: run-2026-02-26-21-59-23\nBase SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nHead SHA: ea6df6e3fbdfdb93b8578a980bc80934de923d04\nChanged files (845): .dockerignore, .github/ISSUE_TEMPLATE/bug-report.yml, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE/feature-request.yml, .github/ISSUE_TEMPLATE/question.yml, .github/dependabot.yml, .github/workflows/cla.yml, .github/workflows/conda-check-prs.yml, .github/workflows/docker.yml, .github/workflows/docs.yml, .github/workflows/format.yml, .github/workflows/links.yml, .github/workflows/merge-main-into-prs.yml, .github/workflows/mirror.yml, .github/workflows/publish.yml, .github/workflows/stale.yml, .gitignore, CITATION.cff, CONTRIBUTING.md, LICENSE, README.md, README.zh-CN.md, docker/Dockerfile, docker/Dockerfile-arm64, docker/Dockerfile-conda, docker/Dockerfile-c",
+        "contentPreview": "{\n  \"note\": {\n    \"overview\": \"Ultralytics YOLO is described ⚠️ as an open-source computer vision framework and model zoo ($.business.executiveSummary), intended ⚠️ for developers, researchers, and organizations building vision-based applications ($.business.intendedUse). Current documentation outlines ⚠️ primary user populations such as students, researchers, enthusiasts, and commercial users under different licenses ($.business.userPopulations). The card also enumerates ⚠️ hazardous use cases like using YOLO as a sole decision-maker in safety-critical domains ($.business.hazardousUseCases) and specifies out-of-scope uses including non-vision ML tasks ($.business.outOfScopeUse). Performance KPIs ⚠️ (e.g., COCO mAP targets for YOLO26x) are listed to benchmark model quality ($.business.kpis).\",\n    \"changes\": \"- No significant updates detected.\\n\\nThe referenced sections—executive summary ($.business.executiveSummary), intended use ($.business.intendedUse), hazardous and out-of-scope use cases ($.business.hazardousUseCases, $.business.outOfScopeUse), user populations ($.business.userPopulations), and KPIs ($.business.kpis)—appear unchanged in this run. ⚠️\",\n    \"confidence\": 0\n  }\n}"
+      }
+    }
+  ],
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-5.1",
+    "requestDigest": "56c98cb52b1e90bf2bb83362b7c4a3fa57b08e6429e9cf8633eaf138dbbc3d0a",
+    "responseDigest": "0323a100fe602e31e7ec9af1e06bb2c9a37b8ce4b9d3fa3bdafc87f5adf9d3f3",
+    "metrics": {
+      "promptTokens": 97514,
+      "completionTokens": 4986,
+      "latencyMs": 123033.26478400058
+    }
+  }
+}
