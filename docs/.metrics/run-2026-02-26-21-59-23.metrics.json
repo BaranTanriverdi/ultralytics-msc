@@ -34,5 +34,20 @@
   "pass_notes_completion_tokens": 4986,
   "llm_model": "gpt-5.1",
   "generated_at": "2026-02-26T22:29:16.913Z",
-  "proposal_path": "/home/runner/work/ultralytics-msc/ultralytics-msc/docs/.proposals/run-2026-02-26-21-59-23.json"
+  "proposal_path": "/home/runner/work/ultralytics-msc/ultralytics-msc/docs/.proposals/run-2026-02-26-21-59-23.json",
+  "decision_accepted_count": 36,
+  "decision_edited_count": 0,
+  "decision_rejected_count": 0,
+  "decision_undecided_count": 0,
+  "decision_accepted_pct": 1,
+  "decision_edited_pct": 0,
+  "decision_rejected_pct": 0,
+  "decision_undecided_pct": 0,
+  "decisions_path": "/home/runner/work/ultralytics-msc/ultralytics-msc/docs/.proposals/run-2026-02-26-21-59-23.decisions.json",
+  "apply_success": 0,
+  "schema_valid": 0,
+  "yaml_hash": "",
+  "apply_attempts_until_success": 1,
+  "receipt_path": "",
+  "blocked_reason": "other:apply_failed_unknown"
 }
