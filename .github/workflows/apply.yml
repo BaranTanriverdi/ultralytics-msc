@@ -1,0 +1,122 @@
+name: ML System Card Apply
+
+on:
+  workflow_dispatch:
+    inputs:
+      runId:
+        description: "Run identifier to apply"
+        required: true
+        type: string
+
+concurrency:
+  group: ml-system-card-apply-${{ github.ref }}-${{ inputs.runId }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: write
+
+jobs:
+  apply:
+    name: Apply reviewed proposal
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+          cache-dependency-path: scripts/package-lock.json
+
+      - name: Install script dependencies
+        run: npm ci --prefix scripts
+
+      - name: Build workflow utilities
+        run: npm run build --prefix scripts
+
+      - name: Collect decisions metrics
+        env:
+          RUN_ID: ${{ inputs.runId }}
+        run: npm run workflow:metrics --prefix scripts -- --runId "$RUN_ID" --stage decisions
+
+      - name: Apply decisions and write artifacts
+        id: apply_step
+        continue-on-error: true
+        env:
+          RUN_ID: ${{ inputs.runId }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVAL_STRICT: "1"
+        run: npm run workflow:apply --prefix scripts -- --run-id "$RUN_ID"
+
+      - name: Commit deterministic artifacts
+        id: commit_step
+        if: steps.apply_step.outcome == 'success'
+        env:
+          RUN_ID: ${{ inputs.runId }}
+        run: |
+          if git diff --quiet -- docs/ lib/; then
+            echo "No card updates to commit"
+            echo "committed=false" >> $GITHUB_OUTPUT
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs/ lib/
+            git commit -m "chore(card): apply ${RUN_ID}"
+            git push
+            echo "committed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Collect apply metrics
+        if: always()
+        env:
+          RUN_ID: ${{ inputs.runId }}
+        run: |
+          if [ "${{ steps.apply_step.outcome }}" == "failure" ]; then
+            npm run workflow:metrics --prefix scripts -- --runId "$RUN_ID" --stage apply --applyFailed
+          elif [ "${{ steps.commit_step.outputs.committed }}" == "true" ]; then
+            npm run workflow:metrics --prefix scripts -- --runId "$RUN_ID" --stage apply --baseSha HEAD~1 --headSha HEAD
+          else
+            npm run workflow:metrics --prefix scripts -- --runId "$RUN_ID" --stage apply
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -d docs/.metrics ]; then
+            git add docs/.metrics/
+          fi
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(metrics): record apply metrics for ${RUN_ID}"
+            git push
+          fi
+
+      - name: Fail workflow if apply failed
+        if: steps.apply_step.outcome == 'failure'
+        run: exit 1
+
+      - name: Merge PR into default branch
+        if: steps.apply_step.outcome == 'success'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr merge --squash --delete-branch "${{ github.ref_name }}" \
+            || echo "⚠️ PR merge failed (may require manual merge); continuing."
+
+      - name: Upload card artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-${{ inputs.runId }}
+          path: |
+            docs/ml_system_card.yaml
+            docs/ml_system_card.anchors.json
+            docs/.card_runs
+            docs/.metrics
+          if-no-files-found: warn

@@ -1,0 +1,234 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/ml-system-card/proposal.schema.json",
+  "title": "ML System Card Proposal",
+  "type": "object",
+  "required": ["meta", "facts", "patch", "notes", "diagnostics", "confidence_report", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["runId", "baseSha", "schemaVersion", "thresholds"],
+      "additionalProperties": false,
+      "properties": {
+        "runId": { "type": "string", "minLength": 1 },
+        "baseSha": { "type": "string", "pattern": "^([0-9a-fA-F]{7,40}|<redacted>)$" },
+        "schemaVersion": { "type": "string", "minLength": 1 },
+        "thresholds": {
+          "type": "object",
+          "required": ["ok", "warn"],
+          "additionalProperties": false,
+          "properties": {
+            "ok": { "type": "number", "minimum": 0, "maximum": 1 },
+            "warn": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "promptId": { "type": "string" },
+            "model": { "type": ["string", "null"] },
+            "generatedAt": { "type": "string" }
+          }
+        },
+        "telemetry": {
+          "type": "object",
+          "properties": {
+            "latencyMs": { "type": "number" },
+            "tokens": {
+              "type": "object",
+              "properties": {
+                "prompt": { "type": "number" },
+                "completion": { "type": "number" },
+                "total": { "type": "number" }
+              }
+            },
+            "retries": { "type": "number" }
+          }
+        },
+        "passTelemetry": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "latencyMs": { "type": "number" },
+              "promptTokens": { "type": "number" },
+              "completionTokens": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/fact" }
+    },
+    "patch": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/jsonPatchOperation" }
+    },
+    "card_patch": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/jsonPatchOperation" }
+    },
+    "notes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["textMd", "confidence"],
+        "additionalProperties": true,
+        "properties": {
+          "textMd": { "type": "string" },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    },
+    "diagnostics": {
+      "type": "object",
+      "required": ["coverage_non_null", "low_confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "coverage_non_null": { "type": "number", "minimum": 0, "maximum": 1 },
+        "low_confidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["jsonPath", "reason"],
+            "properties": {
+              "jsonPath": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "confidence_report": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/confidenceReportRow" }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "$defs": {
+    "anchor": {
+      "type": "object",
+      "required": ["path", "startLine", "endLine", "commit"],
+      "additionalProperties": false,
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "startLine": { "type": "integer", "minimum": 0 },
+        "endLine": { "type": "integer", "minimum": 0 },
+        "commit": { "type": "string", "pattern": "^([0-9a-fA-F]{7,40}|<redacted>)$" },
+        "fingerprint": { "type": "string" },
+        "kind": {
+          "type": "string",
+          "enum": ["code", "openapi", "metrics", "docs", "config", "test"]
+        }
+      }
+    },
+    "fact": {
+      "type": "object",
+      "required": [
+        "jsonPath",
+        "proposedValue",
+        "source",
+        "repoSources",
+        "confidence",
+        "gate"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "jsonPath": { "type": "string", "minLength": 1 },
+        "jsonPointer": { "type": "string", "pattern": "^/" },
+        "currentValue": {},
+        "proposedValue": {},
+        "unit": { "type": "string" },
+        "source": {
+          "type": "object",
+          "required": ["kind"],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": ["extracted", "inferred", "manual"]
+            }
+          }
+        },
+        "repoSources": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/anchor" }
+        },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "gate": {
+          "type": "string",
+          "enum": ["OK", "Warn", "Require"]
+        },
+        "verifierNotes": { "type": "string" }
+      }
+    },
+    "confidenceReportRow": {
+      "type": "object",
+      "required": ["jsonPath", "kind", "confidence", "gate", "sources"],
+      "additionalProperties": false,
+      "properties": {
+        "jsonPath": { "type": "string", "minLength": 1 },
+        "kind": {
+          "type": "string",
+          "enum": ["extracted", "inferred", "manual"]
+        },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "gate": {
+          "type": "string",
+          "enum": ["OK", "Warn", "Require"]
+        },
+        "sources": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "jsonPatchOperation": {
+      "type": "object",
+      "required": ["op", "path"],
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": ["add", "remove", "replace", "move", "copy", "test"]
+        },
+        "path": { "type": "string", "pattern": "^/" },
+        "value": {},
+        "from": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "op": { "const": "move" } } },
+          "then": { "required": ["from"] }
+        },
+        {
+          "if": { "properties": { "op": { "const": "copy" } } },
+          "then": { "required": ["from"] }
+        },
+        {
+          "if": { "properties": { "op": { "const": "add" } } },
+          "then": { "required": ["value"] }
+        },
+        {
+          "if": { "properties": { "op": { "const": "replace" } } },
+          "then": { "required": ["value"] }
+        },
+        {
+          "if": { "properties": { "op": { "const": "test" } } },
+          "then": { "required": ["value"] }
+        }
+      ]
+    }
+  }
+}

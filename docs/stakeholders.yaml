@@ -1,0 +1,153 @@
+- id: data-scientist
+  title: Data Scientist
+  description: Builds models & experiments; focuses on datasets, metrics, and open risks.
+  roles:
+    - Data Scientist
+  language: auto
+  field_paths:
+    - $.mlCore.*
+    - $.provenance.*
+  prompt_template: |
+    Summarize datasets, evaluation protocols, and current quality metrics.
+    Highlight outstanding analytical risks and cite relevant card paths.
+  watch_paths:
+    - README.md
+    - scripts/**
+    - app/**
+
+- id: ml-engineer
+  title: ML Engineer
+  description: Operates and productionizes prototypes; cares about deployment readiness.
+  roles:
+    - Machine Learning Engineer
+  language: auto
+  field_paths:
+    - $.devInsight.*
+    - $.integration.*
+    - $.mlCore.qualities[*]
+  prompt_template: |
+    Provide deployment considerations, runtime expectations, and monitoring hooks.
+    Reference operational qualities and architecture slices by JSONPath.
+  watch_paths:
+    - app/**
+    - .github/workflows/**
+
+- id: product-manager
+  title: Product Manager
+  description: Aligns prototype outcomes with business objectives and pilot scope.
+  roles:
+    - Product Manager
+  language: auto
+  field_paths:
+    - $.business.*
+    - $.meta.*
+    - $.provenance.changelog[*]
+  prompt_template: |
+    Summarize the business use case, key non-goals, and any recent changelog entries.
+    Keep it under 160 words and cite fields in brackets, e.g., [$.business.useCase].
+  watch_paths:
+    - README.md
+    - docs/**
+
+- id: governance-officer
+  title: Governance, Compliance & Ethics Officer
+  description: Oversees compliance, risk mitigation, and sign-offs for ML products.
+  roles:
+    - Governance Officer
+  language: auto
+  field_paths:
+    - $.governance.*
+    - $.integration.driftSignals[*]
+    - $.mlCore.qualities[*]
+  prompt_template: |
+    Summarize current risks, policy coverage, and any fairness or drift monitoring provisions.
+    Emphasize mitigation plans and cite each fact with its card path.
+  watch_paths:
+    - README.md
+    - docs/**
+    - .github/workflows/**
+
+- id: data-engineer
+  title: Data Engineer
+  description: Builds and maintains data pipelines feeding the prototype; monitors data quality and freshness.
+  roles:
+    - Data Engineer
+  field_paths:
+    - $.data.inputs[*]
+    - $.data.pipeline[*]
+    - $.mlCore.datasets[*]
+  prompt_template: |
+    Summarize source systems, ingestion cadence, and outstanding data quality issues.
+    Call out dependencies or blockers that impact experimentation or deployment.
+  watch_paths:
+    - data/**
+    - pipelines/**
+    - docs/data/**
+
+- id: software-developer
+  title: Software Developer
+  description: Integrates prototype outputs with product surfaces; focuses on APIs and reliability.
+  roles:
+    - Software Developer
+  field_paths:
+    - $.integration.apis[*]
+    - $.integration.clients[*]
+    - $.nonFunctional.reliability
+  prompt_template: |
+    Outline integration contracts, SDK coverage, and known technical debt impacting release.
+    Cite relevant integration and non-functional requirements.
+  watch_paths:
+    - app/**
+    - src/**
+    - docs/integration/**
+
+- id: ux-researcher
+  title: UX Researcher
+  description: Studies user behavior and feedback to validate prototype usability and value.
+  roles:
+    - UX Researcher
+  field_paths:
+    - $.ux.personas[*]
+    - $.ux.findings[*]
+    - $.business.pilots[*]
+  prompt_template: |
+    Capture user insights, experiment learnings, and outstanding UX risks or questions.
+    Reference personas or pilot notes that influence upcoming iterations.
+  watch_paths:
+    - docs/ux/**
+    - research/**
+    - feedback/**
+
+- id: project-manager
+  title: Project Manager
+  description: Coordinates timelines, dependencies, and resource allocation for the prototype program.
+  roles:
+    - Project Manager
+  field_paths:
+    - $.meta.timeline
+    - $.meta.milestones[*]
+    - $.governance.status
+  prompt_template: |
+    Provide schedule status, upcoming milestones, and cross-team dependencies.
+    Highlight blockers needing leadership attention.
+  watch_paths:
+    - docs/project/**
+    - planning/**
+    - README.md
+
+- id: domain-expert
+  title: Domain Expert
+  description: Supplies subject-matter expertise to validate model outputs for the target domain.
+  roles:
+    - Domain Expert
+  field_paths:
+    - $.domain.context
+    - $.domain.constraints[*]
+    - $.evaluation.qualitative[*]
+  prompt_template: |
+    Summarize domain-specific assumptions, constraints, and review notes.
+    Flag any edge cases that require manual oversight.
+  watch_paths:
+    - docs/domain/**
+    - knowledge/**
+    - evaluation/**
