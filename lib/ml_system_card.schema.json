@@ -772,6 +772,9 @@
         "additionalProperties": false,
         "properties": {
           "textMd": { "type": "string" },
+          "overview": { "type": "string" },
+          "changes": { "type": "string" },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
           "language": { "type": "string" }
         }
       }

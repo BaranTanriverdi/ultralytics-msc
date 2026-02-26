@@ -76,6 +76,15 @@ async function enforcePathAllowList(args: CiArgs): Promise<void> {
 }
 
 async function enforceDiffSafety(args: CiArgs): Promise<void> {
+  const baseCard = await readFileAtCommit(CARD_PATH, args.baseRef);
+
+  // On first runs (no baseline card) the diff is expected to be large
+  // because the entire card is created from scratch. Skip the line limit.
+  if (!baseCard) {
+    logger.info("First run detected — skipping diff line-count limit");
+    return;
+  }
+
   const stats = await diffShortStat(args.baseRef, args.headRef);
   const totalLines = stats.insertions + stats.deletions;
   const lineLimit = MAX_DIFF_LINES;
@@ -83,9 +92,8 @@ async function enforceDiffSafety(args: CiArgs): Promise<void> {
     throw new Error(`Diff too large: ${totalLines} changed lines (limit ${lineLimit})`);
   }
 
-  const baseCard = await readFileAtCommit(CARD_PATH, args.baseRef);
   const headCard = await readFileAtCommit(CARD_PATH, args.headRef);
-  if (!baseCard || !headCard) {
+  if (!headCard) {
     return;
   }
 
